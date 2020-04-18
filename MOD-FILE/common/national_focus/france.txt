@@ -33,8 +33,8 @@ focus_tree = {
 	focus = {
 			id = FRA_French_Navy
 			text = "French Navy"
-			icon = GFX_focus_generic_africa_naval
-			x = 30
+			icon = GFX_focus_fra_french_navy
+			x = 25
 			y = 0
 			offset = {
 					x = 0
@@ -65,11 +65,11 @@ focus_tree = {
 			}
 		}
 	focus = {
-			id = FRA_Cheif_Naval_Elections
-			text = "Cheif Naval Elections"
+			id = FRA_Chief_Naval_Elections
+			text = "Naval Chief Elections"
 			icon = GFX_focus_generic_military_academy
 			x = 0
-			y = 1
+			y = 2
 			cost = 2
 			prerequisite = {focus = FRA_French_Navy}
 			available_if_capitulated = yes
@@ -87,13 +87,13 @@ focus_tree = {
 			text = "Durand-Viel's Command"
 			icon = GFX_focus_generic_military_academy
 			x = -3
-			y = 2
+			y = 1
 			cost = 2
-			prerequisite = {focus = FRA_Cheif_Naval_Elections}
+			prerequisite = {focus = FRA_Chief_Naval_Elections}
 			mutually_exclusive = {focus = FRA_Darlan_Victory}
 			mutually_exclusive = {focus = FRA_Auphan_Victory}
 			available_if_capitulated = yes
-			relative_position_id = FRA_French_Navy
+			relative_position_id = FRA_Chief_Naval_Elections
 			ai_will_do = {
 					factor = 1
 			}
@@ -107,13 +107,13 @@ focus_tree = {
 			text = "Darlan's Command"
 			icon = GFX_focus_generic_military_academy
 			x = 0
-			y = 2
+			y = 1
 			cost = 2
-			prerequisite = {focus = FRA_Cheif_Naval_Elections}
+			prerequisite = {focus = FRA_Chief_Naval_Elections}
 			mutually_exclusive = {focus = FRA_Auphan_Victory}
 			mutually_exclusive = {focus = FRA_Durand_Victory}
 			available_if_capitulated = yes
-			relative_position_id = FRA_French_Navy
+			relative_position_id = FRA_Chief_Naval_Elections
 			ai_will_do = {
 					factor = 1
 			}
@@ -127,13 +127,13 @@ focus_tree = {
 			text = "Auphan's Command"
 			icon = GFX_focus_generic_military_academy
 			x = 3
-			y = 2
+			y = 1
 			cost = 2
-			prerequisite = {focus = FRA_Cheif_Naval_Elections}
+			prerequisite = {focus = FRA_Chief_Naval_Elections}
 			mutually_exclusive = {focus = FRA_Darlan_Victory}
 			mutually_exclusive = {focus = FRA_Durand_Victory}
 			available_if_capitulated = yes
-			relative_position_id = FRA_French_Navy
+			relative_position_id = FRA_Chief_Naval_Elections
 			ai_will_do = {
 					factor = 1
 			}
@@ -142,12 +142,46 @@ focus_tree = {
 			
 			}
 	}
+	
  ##  ### ###       ## ###  ##  ### ###  ##  #  # 
 #  #  #  #  #     #   #   #  #  #   #  #  # ## # 
 ####  #  ###       #  ##  #     #   #  #  # # ## 
 #  #  #  #  #       # #   #  #  #   #  #  # #  # 
 #  # ### #  #     ##  ###  ##   #  ###  ##  #  # 
-
+	focus = {
+			id = FRA_Seperate_Air
+			text = "Seperate The Airforce"
+			icon = GFX_focus_generic_military_academy
+			x = 35
+			y = 0
+			cost = 5
+			available_if_capitulated = yes
+			ai_will_do = {
+					factor = 1
+			}
+			search_filters = {Airforce}
+			completion_reward = {
+			air_experience = 10
+			}
+	}	
+	focus = {
+			id = FRA_Air_Election
+			text = "YEs"
+			icon = GFX_focus_generic_military_academy
+			x = 0
+			y = 2
+			cost = 5
+			prerequisite = {focus = FRA_Seperate_Air}
+			available_if_capitulated = yes
+			relative_position_id = FRA_Seperate_Air
+			ai_will_do = {
+					factor = 1
+			}
+			search_filters = {Airforce}
+			completion_reward = {
+			air_experience = 10
+			}
+	}	
  ##  ###  #   # #   #     ## ###  ##  ### ###  ##  #  #
 #  # #  # ## ##  # #     #   #   #  #  #   #  #  # ## #
 #### ###  # # #   #       #  ##  #     #   #  #  # # ##
@@ -157,7 +191,7 @@ focus_tree = {
 			id = FRA_French_Military
 			text = "French Military"
 			icon = GFX_focus_generic_little_entente
-			x = 40
+			x = 45
 			y = 0
 			offset = {
 					x = 0
@@ -187,13 +221,12 @@ focus_tree = {
 			army_experience = 25
 			}
 		}
-	
 	focus = {
 			id = FRA_First_Supreme_Election
 			text = "First Supreme Election"
 			icon = GFX_focus_generic_military_academy
 			x = 0
-			y = 1
+			y = 2
 			cost = 2
 			prerequisite = {focus = FRA_French_Military}
 			available_if_capitulated = yes
@@ -308,9 +341,9 @@ focus_tree = {
 			text = "Dismantle The Maginot"
 			icon =  GFX_focus_generic_military_academy
 			x = -2
-			y = 3
+			y = 4
 			cost = 5
-			prerequisite = {focus = FRA_Change_Doctrine}
+			prerequisite = {focus = FRA_Train_Generals}
 			relative_position_id = FRA_First_Supreme_Election
 			ai_will_do = {
 					factor 1
@@ -335,10 +368,10 @@ focus_tree = {
 			id = FRA_Modern_Artillery
 			text = "Modern Artillery"
 			icon =  GFX_goal_generic_army_artillery
-			x = -2
+			x = -4
 			y = 4
 			cost = 5
-			prerequisite = {focus = FRA_Dismantle_Maginot}
+			prerequisite = {focus = FRA_Modern_Tanks}
 			relative_position_id = FRA_First_Supreme_Election
 			ai_will_do = {
 					factor 1
