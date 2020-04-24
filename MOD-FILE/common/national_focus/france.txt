@@ -61,7 +61,7 @@ focus_tree = {
 			
 			search_filters = {Navy}
 			completion_reward = {
-			navy_experience = 25
+			navy_experience = 10
 			}
 		}
 	focus = {
@@ -142,7 +142,6 @@ focus_tree = {
 			
 			}
 	}
-	
  ##  ### ###       ## ###  ##  ### ###  ##  #  # 
 #  #  #  #  #     #   #   #  #  #   #  #  # ## # 
 ####  #  ###       #  ##  #     #   #  #  # # ## 
@@ -166,7 +165,7 @@ focus_tree = {
 	}	
 	focus = {
 			id = FRA_Air_Election
-			text = "YEs"
+			text = "Chief Air Army Elections"
 			icon = GFX_focus_generic_military_academy
 			x = 0
 			y = 2
@@ -179,9 +178,93 @@ focus_tree = {
 			}
 			search_filters = {Airforce}
 			completion_reward = {
-			air_experience = 10
+
 			}
-	}	
+	}
+	focus = {
+			id = FRA_Barès_Victory
+			text = "Barès Command"
+			icon = GFX_focus_generic_military_academy
+			x = -2
+			y = 1
+			cost = 5
+			prerequisite = {focus = FRA_Air_Election}
+			mutually_exclusive = {focus = FRA_Denain_Victory}
+			available_if_capitulated = yes
+			relative_position_id = FRA_Air_Election
+			ai_will_do = {
+					factor = 1
+			}
+			search_filters = {Airforce}
+			completion_reward = {
+
+			}
+	}
+		focus = {
+			id = FRA_New_Bombers
+			text = "Develop New Bombers"
+			icon = GFX_focus_generic_military_academy
+			x = -4
+			y = 2
+			cost = 5
+			prerequisite = {focus = FRA_Barès_Victory}
+			available_if_capitulated = yes
+			relative_position_id = FRA_Air_Election
+			ai_will_do = {
+					factor = 1
+			}
+			search_filters = {Airforce}
+			completion_reward = {
+				add_tech_bonus = {
+				name = 
+				bonus = 1.0
+				uses = 2
+				category = heavy_air
+			}
+			}
+	}
+		focus = {
+			id = FRA_New_Bombers
+			text = "Develop New Bombers"
+			icon = GFX_focus_generic_military_academy
+			x = -2
+			y = 2
+			cost = 5
+			prerequisite = {focus = FRA_Barès_Victory}
+			available_if_capitulated = yes
+			relative_position_id = FRA_Air_Election
+			ai_will_do = {
+					factor = 1
+			}
+			search_filters = {Airforce}
+			completion_reward = {
+				add_tech_bonus = {
+				name = FRA_New_Bombers
+				bonus = 1.0
+				uses = 2
+				category = heavy_air
+			}
+			}
+	}
+		focus = {
+			id = FRA_Denain_Victory
+			text = "Denain's Command"
+			icon = GFX_focus_generic_military_academy
+			x = 2
+			y = 1
+			cost = 5
+			prerequisite = {focus = FRA_Air_Election}
+			mutually_exclusive = {focus FRA_Barès_Victory}
+			available_if_capitulated = yes
+			relative_position_id = FRA_Air_Election
+			ai_will_do = {
+					factor = 1
+			}
+			search_filters = {Airforce}
+			completion_reward = {
+
+			}
+	}
  ##  ###  #   # #   #     ## ###  ##  ### ###  ##  #  #
 #  # #  # ## ##  # #     #   #   #  #  #   #  #  # ## #
 #### ###  # # #   #       #  ##  #     #   #  #  # # ##
@@ -255,7 +338,7 @@ focus_tree = {
 			search_filters = {Army}
 			completion_reward = {
 					custom_effect_tooltip = available_theorist
-			show_ideas_tooltip = charles_de_gaulle
+					show_ideas_tooltip = charles_de_gaulle
 			}
 	}
 		focus = {
@@ -482,7 +565,31 @@ focus_tree = {
 				name = FRA_Infantry_Tanks
 				uses = 2
 				bonus = 2.0
-				category = armor
+				category = cat_heavy_armor
+				category = cat_medium_armor
+				}
+			}
+	}
+	focus = {
+			id = FRA_Modernize_The_Cavalry
+			text = "Modernize The Cavalry"
+			icon =  GFX_goal_generic_army_tanks
+			x = 4
+			y = 3
+			cost = 5
+			prerequisite = {focus = FRA_Pétain_Victory}
+			relative_position_id = FRA_First_Supreme_Election
+			ai_will_do = {
+					factor 1
+			}
+			search_filters = {Army}
+			completion_reward = {
+				army_experience = 20
+				add_tech_bonus = {
+				name = SWI_Modernize_The_Cavalry
+				bonus = 1.0
+				uses = 1
+				category = land_doctrine
 				}
 			}
 	}

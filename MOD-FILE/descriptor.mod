@@ -1,4 +1,4 @@
-version="0.00000001"
+version="0.003"
 tags={
 	"Alternative History"
 	"Gameplay"
@@ -8,5 +8,10 @@ tags={
 	"Ideologies"
 	"National Focuses"
 }
+replace_path ="common/bookmarks"
+#replace_path ="events"
+#replace_path ="common/ideas"
+#replace_path ="on_actions"
+#replace_path ="common/ideologies"
 name="A World Flipped"
-supported_version="1.9.0"
+supported_version="1.9.1"
