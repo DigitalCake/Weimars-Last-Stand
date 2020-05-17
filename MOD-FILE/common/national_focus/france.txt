@@ -34,7 +34,7 @@ focus_tree = {
 			id = FRA_French_Navy
 			text = "French Navy"
 			icon = GFX_focus_fra_french_navy
-			x = 25
+			x = 24
 			y = 0
 			offset = {
 					x = 0
@@ -85,7 +85,7 @@ focus_tree = {
 	focus = {
 			id = FRA_Durand_Victory
 			text = "Durand-Viel's Command"
-			icon = GFX_focus_generic_military_academy
+			icon = GFX_goal_generic_navy_doctrines_tactics
 			x = -3
 			y = 1
 			cost = 2
@@ -103,9 +103,99 @@ focus_tree = {
 			}
 	}
 		focus = {
+			id = FRA_Naval_Radar
+			text = "Naval Radar"
+			icon = GFX_goal_generic_radar
+			x = 0
+			y = 1
+			cost = 2
+			prerequisite = {focus = FRA_Durand_Victory}
+			available_if_capitulated = yes
+			relative_position_id = FRA_Durand_Victory
+			ai_will_do = {
+					factor = 1
+			}
+			search_filters = {Navy}
+			completion_reward = {
+			
+			}
+	}
+			focus = {
+			id = FRA_Naval_Engine
+			text = "Better Naval Engines"
+			icon = GFX_goal_generic_navy_cruiser
+			x = 0
+			y = 2
+			cost = 2
+			prerequisite = {focus = FRA_Naval_Radar}
+			available_if_capitulated = yes
+			relative_position_id = FRA_Durand_Victory
+			ai_will_do = {
+					factor = 1
+			}
+			search_filters = {Navy}
+			completion_reward = {
+			
+			}
+	}
+			focus = {
+			id = FRA_Grand_Battlefleet
+			text = "A Grand Battlefleet"
+			icon = GFX_goal_generic_navy_doctrines_tactics
+			x = 0
+			y = 3
+			cost = 2
+			prerequisite = {focus = FRA_Naval_Engine}
+			available_if_capitulated = yes
+			relative_position_id = FRA_Durand_Victory
+			ai_will_do = {
+					factor = 1
+			}
+			search_filters = {Navy}
+			completion_reward = {
+			
+			}
+	}
+			focus = {
+			id = FRA_Fast_Battleships
+			text = "A Fast Battleship"
+			icon = GFX_goal_generic_navy_battleship
+			x = -2
+			y = 1
+			cost = 2
+			prerequisite = {focus = FRA_Durand_Victory}
+			available_if_capitulated = yes
+			relative_position_id = FRA_Durand_Victory
+			ai_will_do = {
+					factor = 1
+			}
+			search_filters = {Navy}
+			completion_reward = {
+			
+			}
+	}
+			focus = {
+			id = FRA_Cruiser_Submarine
+			text = "Cruiser Submarines"
+			icon = GFX_goal_generic_navy_doctrines_tactics
+			x = -2
+			y = 2
+			cost = 2
+			prerequisite = {focus = FRA_Fast_Battleships}
+			available_if_capitulated = yes
+			relative_position_id = FRA_Durand_Victory
+			ai_will_do = {
+					factor = 1
+			}
+			search_filters = {Navy}
+			completion_reward = {
+			
+			}
+	}
+		focus = {
 			id = FRA_Darlan_Victory
 			text = "Darlan's Command"
-			icon = GFX_focus_generic_military_academy
+			icon = GFX_goal_generic_navy_doctrines_tactics
 			x = 0
 			y = 1
 			cost = 2
@@ -122,10 +212,100 @@ focus_tree = {
 			
 			}
 	}
+			focus = {
+			id = FRA_Interwar_Battleships
+			text = "Interwar Battleships"
+			icon = GFX_focus_generic_navy_battleship2
+			x = -1
+			y = 1
+			cost = 2
+			prerequisite = {focus = FRA_Darlan_Victory}
+			available_if_capitulated = yes
+			relative_position_id = FRA_Darlan_Victory
+			ai_will_do = {
+					factor = 1
+			}
+			search_filters = {Navy}
+			completion_reward = {
+			
+			}
+	}
+			focus = {
+			id = FRA_New_Carriers
+			text = "Carrier Groups"
+			icon = GFX_goal_generic_navy_carrier
+			x = 1
+			y = 1
+			cost = 2
+			prerequisite = {focus = FRA_Darlan_Victory}
+			available_if_capitulated = yes
+			relative_position_id = FRA_Darlan_Victory
+			ai_will_do = {
+					factor = 1
+			}
+			search_filters = {Navy}
+			completion_reward = {
+			
+			}
+	}
+			focus = {
+			id = FRA_Light_Cruisers
+			text = "Light Cruisers"
+			icon = GFX_focus_generic_cruiser2
+			x = -1
+			y = 2
+			cost = 2
+			prerequisite = {focus = FRA_Darlan_Victory}
+			available_if_capitulated = yes
+			relative_position_id = FRA_Darlan_Victory
+			ai_will_do = {
+					factor = 1
+			}
+			search_filters = {Navy}
+			completion_reward = {
+			
+			}
+	}
+			focus = {
+			id = FRA_Heavy_Cruisers
+			text = "Heavy Cruisers"
+			icon = GFX_goal_generic_navy_cruiser
+			x = 1
+			y = 2
+			cost = 2
+			prerequisite = {focus = FRA_New_Carriers}
+			available_if_capitulated = yes
+			relative_position_id = FRA_Darlan_Victory
+			ai_will_do = {
+					factor = 1
+			}
+			search_filters = {Navy}
+			completion_reward = {
+			
+			}
+	}
+			focus = {
+			id = FRA_Carrier_Battlegroups
+			text = "Carrier Battlegroups"
+			icon = GFX_goal_generic_navy_doctrines_tactics
+			x = 0
+			y = 3
+			cost = 2
+			prerequisite = { focus = FRA_Light_Cruisers focus = FRA_Heavy_Cruisers}
+			available_if_capitulated = yes
+			relative_position_id = FRA_Darlan_Victory
+			ai_will_do = {
+					factor = 1
+			}
+			search_filters = {Navy}
+			completion_reward = {
+			
+			}
+	}
 		focus = {
 			id = FRA_Auphan_Victory
 			text = "Auphan's Command"
-			icon = GFX_focus_generic_military_academy
+			icon = GFX_goal_generic_navy_doctrines_tactics
 			x = 3
 			y = 1
 			cost = 2
@@ -142,15 +322,106 @@ focus_tree = {
 			
 			}
 	}
+		focus = {
+			id = FRA_Hunter_Killers
+			text = "Wolf Packs"
+			icon = GFX_goal_generic_wolf_pack
+			x = 0
+			y = 1
+			cost = 2
+			prerequisite = {focus = FRA_Auphan_Victory}
+			available_if_capitulated = yes
+			relative_position_id = FRA_Auphan_Victory
+			ai_will_do = {
+					factor = 1
+			}
+			search_filters = {Navy}
+			completion_reward = {
+			
+			}
+	}
+
+		focus = {
+			id = FRA_Super_Destroyers
+			text = "Super Destroyers"
+			icon = GFX_focus_generic_destroyer
+			x = 0
+			y = 2
+			cost = 2
+			prerequisite = {focus = FRA_Hunter_Killers}
+			available_if_capitulated = yes
+			relative_position_id = FRA_Auphan_Victory
+			ai_will_do = {
+					factor = 1
+			}
+			search_filters = {Navy}
+			completion_reward = {
+			
+			}
+	}
+		focus = {
+			id = FRA_Combined_Raiding
+			text = "Combined Raiding"
+			icon = GFX_goal_generic_navy_doctrines_tactics
+			x = 0
+			y = 3
+			cost = 2
+			prerequisite = {focus = FRA_Super_Destroyers}
+			available_if_capitulated = yes
+			relative_position_id = FRA_Auphan_Victory
+			ai_will_do = {
+					factor = 1
+			}
+			search_filters = {Navy}
+			completion_reward = {
+			
+			}
+	}
+		focus = {
+			id = FRA_Develop_Submarines
+			text = "Develop New Submarines"
+			icon = GFX_goal_generic_navy_submarine
+			x = 2
+			y = 1
+			cost = 2
+			prerequisite = {focus = FRA_Auphan_Victory}
+			available_if_capitulated = yes
+			relative_position_id = FRA_Auphan_Victory
+			ai_will_do = {
+					factor = 1
+			}
+			search_filters = {Navy}
+			completion_reward = {
+			
+			}
+	}
+			focus = {
+			id = FRA_Test_Torpedos
+			text = "Test Torpedo Designs"
+			icon = GFX_goal_generic_air_naval_bomber
+			x = 2
+			y = 2
+			cost = 2
+			prerequisite = {focus = FRA_Develop_Submarines}
+			available_if_capitulated = yes
+			relative_position_id = FRA_Auphan_Victory
+			ai_will_do = {
+					factor = 1
+			}
+			search_filters = {Navy}
+			completion_reward = {
+			
+			}
+	}
  ##  ### ###       ## ###  ##  ### ###  ##  #  # 
 #  #  #  #  #     #   #   #  #  #   #  #  # ## # 
 ####  #  ###       #  ##  #     #   #  #  # # ## 
 #  #  #  #  #       # #   #  #  #   #  #  # #  # 
 #  # ### #  #     ##  ###  ##   #  ###  ##  #  # 
 	focus = {
-			id = FRA_Seperate_Air
-			text = "Seperate The Airforce"
-			icon = GFX_focus_generic_military_academy
+			id = FRA_French_Airforce
+			text = "French Airforce"
+			icon = GFX_goal_generic_build_airforce
 			x = 35
 			y = 0
 			cost = 5
@@ -170,9 +441,9 @@ focus_tree = {
 			x = 0
 			y = 2
 			cost = 5
-			prerequisite = {focus = FRA_Seperate_Air}
+			prerequisite = {focus = FRA_French_Airforce}
 			available_if_capitulated = yes
-			relative_position_id = FRA_Seperate_Air
+			relative_position_id = FRA_French_Airforce
 			ai_will_do = {
 					factor = 1
 			}
@@ -184,7 +455,7 @@ focus_tree = {
 	focus = {
 			id = FRA_Barès_Victory
 			text = "Barès Command"
-			icon = GFX_focus_generic_military_academy
+			icon = GFX_goal_generic_air_doctrine
 			x = -2
 			y = 1
 			cost = 5
@@ -203,7 +474,7 @@ focus_tree = {
 		focus = {
 			id = FRA_New_Bombers
 			text = "Develop New Bombers"
-			icon = GFX_focus_generic_military_academy
+			icon = GFX_goal_generic_air_bomber
 			x = -4
 			y = 2
 			cost = 5
@@ -216,7 +487,30 @@ focus_tree = {
 			search_filters = {Airforce}
 			completion_reward = {
 				add_tech_bonus = {
-				name = 
+				name = FRA_New_Bombers 
+				bonus = 1.0
+				uses = 2
+				category = heavy_air
+			}
+			}
+	}
+			focus = {
+			id = FRA_Escort_Fighters
+			text = " Heavy Escort Fighters"
+			icon = GFX_focus_usa_escort_fighters
+			x = -2
+			y = 2
+			cost = 5
+			prerequisite = {focus = FRA_New_Bombers}
+			available_if_capitulated = yes
+			relative_position_id = FRA_Barès_Victory
+			ai_will_do = {
+					factor = 1
+			}
+			search_filters = {Airforce}
+			completion_reward = {
+				add_tech_bonus = {
+				name = FRA_New_Bombers 
 				bonus = 1.0
 				uses = 2
 				category = heavy_air
@@ -224,9 +518,9 @@ focus_tree = {
 			}
 	}
 		focus = {
-			id = FRA_New_Bombers
-			text = "Develop New Bombers"
-			icon = GFX_focus_generic_military_academy
+			id = FRA_Advanced_Air_Radar
+			text = "Advanced Air Radar"
+			icon = GFX_goal_generic_radar
 			x = -2
 			y = 2
 			cost = 5
@@ -246,10 +540,56 @@ focus_tree = {
 			}
 			}
 	}
+			focus = {
+			id = FRA_Block_Out_The_Sun
+			text = "Block Out The Sun"
+			icon = GFX_goal_generic_air_bomber
+			x = -2
+			y = 3
+			cost = 5
+			prerequisite = {focus = FRA_Advanced_Air_Radar}
+			available_if_capitulated = yes
+			relative_position_id = FRA_Air_Election
+			ai_will_do = {
+					factor = 1
+			}
+			search_filters = {Airforce}
+			completion_reward = {
+				add_tech_bonus = {
+				name = FRA_New_Bombers
+				bonus = 1.0
+				uses = 2
+				category = heavy_air
+			}
+			}
+	}
+			focus = {
+			id = FRA_Mass_Destruction
+			text = "Mass Destruction"
+			icon = GFX_goal_generic_air_bomber
+			x = -2
+			y = 4
+			cost = 5
+			prerequisite = {focus = FRA_Block_Out_The_Sun}
+			available_if_capitulated = yes
+			relative_position_id = FRA_Air_Election
+			ai_will_do = {
+					factor = 1
+			}
+			search_filters = {Airforce}
+			completion_reward = {
+				add_tech_bonus = {
+				name = FRA_New_Bombers
+				bonus = 1.0
+				uses = 2
+				category = heavy_air
+			}
+			}
+	}
 		focus = {
 			id = FRA_Denain_Victory
 			text = "Denain's Command"
-			icon = GFX_focus_generic_military_academy
+			icon = GFX_goal_generic_air_doctrine
 			x = 2
 			y = 1
 			cost = 5
@@ -263,6 +603,121 @@ focus_tree = {
 			search_filters = {Airforce}
 			completion_reward = {
 
+			}
+	}
+			focus = {
+			id = FRA_Nationalize_Aircraft
+			text = "Nationalize Air Industry"
+			icon = GFX_goal_generic_air_production
+			x = 0
+			y = 1
+			cost = 5
+			prerequisite = {focus = FRA_Denain_Victory}
+			available_if_capitulated = yes
+			relative_position_id = FRA_Denain_Victory
+			ai_will_do = {
+					factor = 1
+			}
+			search_filters = {Airforce}
+			completion_reward = {
+				add_tech_bonus = {
+				name = FRA_New_Bombers 
+				bonus = 1.0
+				uses = 2
+				category = heavy_air
+			}
+			}
+	}
+			focus = {
+			id = FRA_Increase_Production
+			text = "A Thousand Planes"
+			icon = GFX_goal_continuous_air_production
+			x = 0
+			y = 2
+			cost = 5
+			prerequisite = {focus = FRA_Nationalize_Aircraft}
+			available_if_capitulated = yes
+			relative_position_id = FRA_Denain_Victory
+			ai_will_do = {
+					factor = 1
+			}
+			search_filters = {Airforce}
+			completion_reward = {
+				add_tech_bonus = {
+				name = FRA_New_Bombers 
+				bonus = 1.0
+				uses = 2
+				category = heavy_air
+			}
+			}
+	}
+			focus = {
+			id = FRA_Ground_Support_Integration
+			text = "Ground Support"
+			icon = GFX_goal_generic_air_doctrine
+			x = 0
+			y = 3
+			cost = 5
+			prerequisite = {focus = FRA_Increase_Production}
+			available_if_capitulated = yes
+			relative_position_id = FRA_Denain_Victory
+			ai_will_do = {
+					factor = 1
+			}
+			search_filters = {Airforce}
+			completion_reward = {
+				add_tech_bonus = {
+				name = FRA_New_Bombers 
+				bonus = 1.0
+				uses = 2
+				category = heavy_air
+			}
+			}
+	}
+			focus = {
+			id = FRA_Revolutionary_Fighters
+			text = "Revolutionary Fighters"
+			icon = GFX_goal_generic_air_fighter
+			x = 2
+			y = 1
+			cost = 5
+			prerequisite = {focus = FRA_Denain_Victory}
+			available_if_capitulated = yes
+			relative_position_id = FRA_Denain_Victory
+			ai_will_do = {
+					factor = 1
+			}
+			search_filters = {Airforce}
+			completion_reward = {
+				add_tech_bonus = {
+				name = FRA_New_Bombers 
+				bonus = 1.0
+				uses = 2
+				category = heavy_air
+			}
+			}
+	}
+			focus = {
+			id = FRA_Anti-Air
+			text = "Develop Anti-Air"
+			icon = GFX_focus_generic_air_defense
+			x = 2
+			y = 2
+			cost = 5
+			prerequisite = {focus = FRA_Revolutionary_Fighters}
+			available_if_capitulated = yes
+			relative_position_id = FRA_Denain_Victory
+			ai_will_do = {
+					factor = 1
+			}
+			search_filters = {Airforce}
+			completion_reward = {
+				add_tech_bonus = {
+				name = FRA_New_Bombers 
+				bonus = 1.0
+				uses = 2
+				category = heavy_air
+			}
 			}
 	}
  ##  ###  #   # #   #     ## ###  ##  ### ###  ##  #  #
@@ -325,7 +780,7 @@ focus_tree = {
 	focus = {
 			id = FRA_De_Gaulle_Victory
 			text = "De Gaulle's Command"
-			icon =  GFX_goal_generic_position_armies
+			icon =  GFX_focus_fra_de_gaule_doctrine
 			x = -2
 			y = 1
 			cost = 5
@@ -344,7 +799,7 @@ focus_tree = {
 		focus = {
 			id = FRA_Change_Doctrine
 			text = "Rapid Maneuvers"
-			icon =  GFX_goal_generic_position_armies
+			icon =  GFX_focus_fra_french_rapid_manuevres
 			x = -2
 			y = 2
 			cost = 5
@@ -405,7 +860,7 @@ focus_tree = {
 			focus = {
 			id = FRA_Train_Generals
 			text = "Retrain Generals"
-			icon =  GFX_focus_generic_military_academy
+			icon =  GFX_focus_generic_military_mission
 			x = -2
 			y = 3
 			cost = 5
@@ -435,7 +890,7 @@ focus_tree = {
 			completion_reward = {
 			add_equipment_to_stockpile = {
 				type = infantry_equipment
-				amount = 5000
+				amount = 2500
 				}
 			add_equipment_to_stockpile = {
 				type = support_equipment
@@ -443,7 +898,7 @@ focus_tree = {
 				}
 			add_equipment_to_stockpile = {
 				type = artillery_equipment
-				amount = 1500
+				amount = 750
 			    }
 			}
 	}
@@ -473,7 +928,7 @@ focus_tree = {
 		focus = {
 			id = FRA_Pétain_Victory
 			text = "Pétain's Command"
-			icon =  GFX_goal_generic_position_armies
+			icon =  GFX_focus_fra_petain_doctrine
 			x = 2
 			y = 1
 			cost = 5
@@ -491,7 +946,7 @@ focus_tree = {
 		focus = {
 			id = FRA_Revist_Great_War
 			text = "Revise Great War Tactics"
-			icon =  GFX_goal_generic_defence
+			icon =  GFX_focus_chi_army_reform
 			x = 2
 			y = 2
 			cost = 5
@@ -508,7 +963,7 @@ focus_tree = {
 			focus = {
 			id = FRA_Expand_Maginot
 			text = "Expand The Maginot"
-			icon =  GFX_goal_generic_fortify_city
+			icon =  GFX_focus_fra_extend_maginot
 			x = 2
 			y = 3
 			cost = 5
@@ -550,7 +1005,7 @@ focus_tree = {
 			focus = {
 			id = FRA_Infantry_Tanks
 			text = "A Tank For The Infantry"
-			icon =  GFX_goal_generic_army_tanks
+			icon =  GFX_focus_generic_tank_for_army
 			x = 4
 			y = 2
 			cost = 5
@@ -573,11 +1028,11 @@ focus_tree = {
 	focus = {
 			id = FRA_Modernize_The_Cavalry
 			text = "Modernize The Cavalry"
-			icon =  GFX_goal_generic_army_tanks
+			icon =  GFX_goal_generic_army_motorized
 			x = 4
 			y = 3
 			cost = 5
-			prerequisite = {focus = FRA_Pétain_Victory}
+			prerequisite = {focus = FRA_Infantry_Tanks}
 			relative_position_id = FRA_First_Supreme_Election
 			ai_will_do = {
 					factor 1
@@ -586,7 +1041,30 @@ focus_tree = {
 			completion_reward = {
 				army_experience = 20
 				add_tech_bonus = {
-				name = SWI_Modernize_The_Cavalry
+				name = FRA_Modernize_The_Cavalry
+				bonus = 1.0
+				uses = 1
+				category = land_doctrine
+				}
+			}
+	}
+		focus = {
+			id = FRA_Increased_Cooperation
+			text = "Increased Cooperation"
+			icon =  GFX_focus_fra_french_modernize_something
+			x = 4
+			y = 4
+			cost = 5
+			prerequisite = {focus = FRA_Modernize_The_Cavalry}
+			relative_position_id = FRA_First_Supreme_Election
+			ai_will_do = {
+					factor 1
+			}
+			search_filters = {Army}
+			completion_reward = {
+				army_experience = 20
+				add_tech_bonus = {
+				name = FRA_Modernize_The_Cavalry
 				bonus = 1.0
 				uses = 1
 				category = land_doctrine
