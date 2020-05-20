@@ -1999,4 +1999,188 @@ spriteTypes = {
 		name = "GFX_focus_fra_abolish_maginot"
 		texturefile = "gfx/interface/goals/focus_fra_abolish_maginot.dds"
 	}
+	SpriteType = {
+		name = "GFX_focus_fra_auphan"
+		texturefile = "gfx/interface/goals/focus_fra_auphan.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_focus_fra_carrier_groups"
+		texturefile = "gfx/interface/goals/focus_fra_carrier_groups.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_focus_fra_darlan"
+		texturefile = "gfx/interface/goals/focus_fra_darlan.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_focus_fra_durand_viel"
+		texturefile = "gfx/interface/goals/focus_fra_durand_viel.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_focus_fra_fast_navy"
+		texturefile = "gfx/interface/goals/focus_fra_fast_navy.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_focus_fra_interwar_fleet"
+		texturefile = "gfx/interface/goals/focus_fra_interwar_fleet.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_focus_fra_navy_radar"
+		texturefile = "gfx/interface/goals/focus_fra_navy_radar.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_focus_fra_aa"
+		texturefile = "gfx/interface/goals/focus_fra_aa.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_focus_fra_air_ace"
+		texturefile = "gfx/interface/goals/focus_fra_air_ace.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_focus_fra_air_radar"
+		texturefile = "gfx/interface/goals/fra_air_radar.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_focus_fra_bares"
+		texturefile = "gfx/interface/goals/focus_fra_bares.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_focus_fra_block_sun"
+		texturefile = "gfx/interface/goals/focus_fra_block_sun.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_focus_fra_cas"
+		texturefile = "gfx/interface/goals/focus_fra_cas.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_focus_fra_denain"
+		texturefile = "gfx/interface/goals/focus_fra_denain.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_focus_fra_heavy_escort"
+		texturefile = "gfx/interface/goals/focus_fra_heavy_escort.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_focus_fra_mass_destruction"
+		texturefile = "gfx/interface/goals/focus_fra_mass_destruction.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_focus_fra_nationalize_airforce"
+		texturefile = "gfx/interface/goals/focus_fra_nationalize_airforce.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_focus_fra_new_bomber"
+		texturefile = "gfx/interface/goals/focus_fra_new_bomber.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_focus_fra_thousand_planes"
+		texturefile = "gfx/interface/goals/focus_fra_thousand_planes.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_focus_generic_coordinated_strike"
+		texturefile = "gfx/interface/goals/focus_generic_coordinated_strike.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_focus_generic_cruiser_submarine"
+		texturefile = "gfx/interface/goals/focus_generic_cruiser_submarine.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_focus_generic_grand_fleet"
+		texturefile = "gfx/interface/goals/focus_generic_grand_fleet.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_focus_generic_heavy_cruiser"
+		texturefile = "gfx/interface/goals/focus_generic_heavy_cruiser.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_focus_generic_light_cruiser"
+		texturefile = "gfx/interface/goals/focus_generic_light_cruiser.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_focus_generic_naval_elections"
+		texturefile = "gfx/interface/goals/focus_generic_naval_elections.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_focus_generic_new_carrier"
+		texturefile = "gfx/interface/goals/focus_generic_new_carrier.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_focus_generic_ship_engine"
+		texturefile = "gfx/interface/goals/focus_generic_ship_engine.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_focus_generic_submarine"
+		texturefile = "gfx/interface/goals/focus_generic_submarine.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_focus_generic_super_battleship"
+		texturefile = "gfx/interface/goals/focus_generic_super_battleship.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_focus_generic_torpedo"
+		texturefile = "gfx/interface/goals/focus_generic_torpedo.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_focus_generic_wolf_packs"
+		texturefile = "gfx/interface/goals/focus_generic_wolf_packs.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_generic_aluminum"
+		texturefile = "gfx/interface/goals/goal_generic_aluminum.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_generic_chromium"
+		texturefile = "gfx/interface/goals/goal_generic_chromium.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_generic_chromium2"
+		texturefile = "gfx/interface/goals/goal_generic_chromium2.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_generic_excavation_effort"
+		texturefile = "gfx/interface/goals/goal_generic_excavation_effort.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_generic_steel"
+		texturefile = "gfx/interface/goals/goal_generic_steel.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_generic_tungsten"
+		texturefile = "gfx/interface/goals/goal_generic_tungsten.dds"
+	}
 }
