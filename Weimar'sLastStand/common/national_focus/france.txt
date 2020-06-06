@@ -22,9 +22,233 @@ focus_tree = {
 	}
 	continuous_focus_position = { x = 50 y = 1600 }
 	default = no
+
+	focus = {
+		id = FRA_French_Economy
+		text = "French Economy"
+		icon = GFX_goal_generic_production2
+		x = 35
+		y = 8
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+				factor = 1
+		}
+		search_filters = {Industry}
+		completion_reward = {
+			
+		}
+	}
 	
+	focus = {
+		id = FRA_Airports
+		text = "Construct New Airports"
+		icon = GFX_goal_generic_production2
+		x = -5
+		y = 1
+		prerequisite = {focus = FRA_French_Economy}
+		cost = 5
+		available_if_capitulated = yes
+		relative_position_id = FRA_French_Economy
+		ai_will_do = {
+				factor = 1
+		}
+		search_filters = {Industry}
+		completion_reward = {
+			
+		}
+	}
 	
+	focus = {
+		id = FRA_Airports2
+		text = "Develop Southern Airfields"
+		icon = GFX_goal_generic_production2
+		x = -5
+		y = 2
+		prerequisite = {focus = FRA_Airports}
+		cost = 5
+		available_if_capitulated = yes
+		relative_position_id = FRA_French_Economy
+		ai_will_do = {
+				factor = 1
+		}
+		search_filters = {Industry}
+		search_filters = {Airforce}
+		completion_reward = {
+			
+		}
+	}
 	
+	focus = {
+		id = FRA_Airports3
+		text = "Develop Northern Airfields"
+		icon = GFX_goal_generic_production2
+		x = -5
+		y = 3
+		prerequisite = {focus = FRA_Airports2}
+		cost = 5
+		available_if_capitulated = yes
+		relative_position_id = FRA_French_Economy
+		ai_will_do = {
+				factor = 1
+		}
+		search_filters = {Industry}
+		search_filters = {Airforce}
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = FRA_Ports
+		text = "Construct Northern Ports"
+		icon = GFX_goal_generic_production2
+		x = -3
+		y = 1
+		prerequisite = {focus = FRA_French_Economy}
+		cost = 5
+		available_if_capitulated = yes
+		relative_position_id = FRA_French_Economy
+		ai_will_do = {
+				factor = 1
+		}
+		search_filters = {Industry}
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = FRA_Ports2
+		text = "Construct Southern Ports"
+		icon = GFX_goal_generic_production2
+		x = -3
+		y = 2
+		prerequisite = {focus = FRA_Ports}
+		cost = 5
+		available_if_capitulated = yes
+		relative_position_id = FRA_French_Economy
+		ai_will_do = {
+				factor = 1
+		}
+		search_filters = {Industry}
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = FRA_Ports3
+		text = "Protect Our Ports"
+		icon = GFX_goal_generic_production2
+		x = -3
+		y = 3
+		prerequisite = {focus = FRA_Ports2}
+		cost = 5
+		available_if_capitulated = yes
+		relative_position_id = FRA_French_Economy
+		ai_will_do = {
+				factor = 1
+		}
+		search_filters = {Industry}
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = FRA_Economic_Minister
+		text = "Appoint Economic Minister"
+		icon = GFX_goal_generic_production2
+		x = 0
+		y = 1
+		prerequisite = {focus = FRA_French_Economy}
+		cost = 5
+		available_if_capitulated = yes
+		relative_position_id = FRA_French_Economy
+		ai_will_do = {
+				factor = 1
+		}
+		search_filters = {Industry}
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = FRA_Fiscal_Responsibility
+		text = "Fiscal Responsibility"
+		icon = GFX_goal_generic_production2
+		x = -1
+		y = 1
+		prerequisite = {focus = FRA_Economic_Minister}
+		mutually_exclusive = {focus = FRA_Heavy_Investments}
+		cost = 5
+		available_if_capitulated = yes
+		relative_position_id = FRA_Economic_Minister
+		ai_will_do = {
+				factor = 1
+		}
+		search_filters = {Industry}
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = FRA_Rid_Gold_Standard
+		text = "Remove Gold Standard"
+		icon = GFX_goal_generic_production2
+		x = -1
+		y = 2
+		prerequisite = {focus = FRA_Fiscal_Responsibility}
+		cost = 5
+		available_if_capitulated = yes
+		relative_position_id = FRA_Economic_Minister
+		ai_will_do = {
+				factor = 1
+		}
+		search_filters = {Industry}
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = FRA_Cut_Social_Spending
+		text = "Cut Social Spending"
+		icon = GFX_goal_generic_production2
+		x = -1
+		y = 3
+		prerequisite = {focus = FRA_Rid_Gold_Standard}
+		cost = 5
+		available_if_capitulated = yes
+		relative_position_id = FRA_Economic_Minister
+		ai_will_do = {
+				factor = 1
+		}
+		search_filters = {Industry}
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = FRA_Heavy_Investments
+		text = "Heavy Investments"
+		icon = GFX_goal_generic_production2
+		x = 1
+		y = 1
+		prerequisite = {focus = FRA_Economic_Minister}
+		mutually_exclusive = {focus = FRA_Fiscal_Responsibility}
+		cost = 5
+		available_if_capitulated = yes
+		relative_position_id = FRA_Economic_Minister
+		ai_will_do = {
+				factor = 1
+		}
+		search_filters = {Industry}
+		completion_reward = {
+			
+		}
+	}
 #  #  ##  #   # #   #      ## ###  ##  ### ###  ##  #  # 
 ## # #  # #   #  # #      #   #   #  #  #   #  #  # ## # 
 # ## ####  # #    #        #  ##  #     #   #  #  # # ## 
@@ -61,13 +285,97 @@ focus_tree = {
 			
 			search_filters = {Navy}
 			completion_reward = {
-			navy_experience = 10
+				navy_experience = 10
+				random_owned_controlled_state = {
+				limit = {
+					dockyard > 0
+					free_building_slots = {
+						building = dockyard
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+				}
+				random_owned_controlled_state = {
+				limit = {
+					dockyard > 0
+					free_building_slots = {
+						building = dockyard
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
 			}
+
+			if = {
+				limit = {
+					NOT = {
+						any_owned_state = {
+							dockyard > 0
+							free_building_slots = {
+								building = dockyard
+								size > 0
+								include_locked = yes
+							}
+						}
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = dockyard
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = dockyard
+						level = 2
+						instant_build = yes
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = dockyard
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = dockyard
+						level = 2
+						instant_build = yes
+					}
+				}				
+			}
+
+			add_tech_bonus = {
+				name = naval_doc_bonus
+				bonus = 1.0
+				uses = 2
+				category = naval_doctrine
+			}
+		}
 		}
 	focus = {
 			id = FRA_Chief_Naval_Elections
 			text = "Naval Chief Elections"
-			icon = GFX_focus_generic_military_academy
+			icon = GFX_focus_generic_naval_elections
 			x = 0
 			y = 2
 			cost = 2
@@ -123,7 +431,7 @@ focus_tree = {
 			focus = {
 			id = FRA_Naval_Engine
 			text = "Better Naval Engines"
-			icon = GFX_goal_generic_navy_cruiser
+			icon = GFX_focus_generic_ship_engine
 			x = 0
 			y = 2
 			cost = 2
@@ -141,7 +449,7 @@ focus_tree = {
 			focus = {
 			id = FRA_Grand_Battlefleet
 			text = "A Grand Battlefleet"
-			icon = GFX_goal_generic_navy_doctrines_tactics
+			icon = GFX_focus_generic_grand_fleet
 			x = 0
 			y = 3
 			cost = 2
@@ -157,7 +465,7 @@ focus_tree = {
 			}
 	}
 			focus = {
-			id = FRA_Fast_Battleships
+			id = FRA_Fast_Battleship
 			text = "A Fast Battleship"
 			icon = GFX_focus_fra_fast_navy
 			x = -2
@@ -177,11 +485,11 @@ focus_tree = {
 			focus = {
 			id = FRA_Cruiser_Submarine
 			text = "Cruiser Submarines"
-			icon = GFX_goal_generic_navy_doctrines_tactics
+			icon = GFX_focus_generic_cruiser_submarine
 			x = -2
 			y = 2
 			cost = 2
-			prerequisite = {focus = FRA_Fast_Battleships}
+			prerequisite = {focus = FRA_Fast_Battleship}
 			available_if_capitulated = yes
 			relative_position_id = FRA_Durand_Victory
 			ai_will_do = {
@@ -227,13 +535,26 @@ focus_tree = {
 			}
 			search_filters = {Navy}
 			completion_reward = {
-			
+			add_tech_bonus = {
+				name = bb_bonus
+				bonus = 1.0
+				uses = 2
+				category = bb_tech
+				category = bc_tech
+			}
+			add_tech_bonus = {
+				name = cr_bonus
+				bonus = 1.0
+				uses = 2
+				category = cl_tech
+				category = ca_tech
+			}
 			}
 	}
 			focus = {
 			id = FRA_New_Carriers
 			text = "New Carriers"
-			icon = GFX_goal_generic_navy_carrier
+			icon = GFX_focus_generic_new_carrier
 			x = 1
 			y = 1
 			cost = 2
@@ -245,13 +566,18 @@ focus_tree = {
 			}
 			search_filters = {Navy}
 			completion_reward = {
-			
+			add_tech_bonus = {
+				name = cv_bonus
+				bonus = 1.0
+				uses = 2
+				category = cv_tech
+			}
 			}
 	}
 			focus = {
 			id = FRA_Light_Cruisers
 			text = "Light Cruisers"
-			icon = GFX_focus_generic_cruiser2
+			icon = GFX_focus_generic_light_cruiser
 			x = -1
 			y = 2
 			cost = 2
@@ -269,7 +595,7 @@ focus_tree = {
 			focus = {
 			id = FRA_Heavy_Cruisers
 			text = "Heavy Cruisers"
-			icon = GFX_goal_generic_navy_cruiser
+			icon = GFX_focus_generic_heavy_cruiser
 			x = 1
 			y = 2
 			cost = 2
@@ -325,7 +651,7 @@ focus_tree = {
 		focus = {
 			id = FRA_Hunter_Killers
 			text = "Wolf Packs"
-			icon = GFX_goal_generic_wolf_pack
+			icon = GFX_focus_generic_wolf_packs
 			x = 0
 			y = 1
 			cost = 2
@@ -337,14 +663,23 @@ focus_tree = {
 			}
 			search_filters = {Navy}
 			completion_reward = {
-			
+			add_tech_bonus = {
+				name = sub_op_bonus
+				bonus = 1.0
+				uses = 2
+				category = submarine_doctrine
+				#technology = submarine_operations
+				#technology = undersea_blockade
+				#technology = convoy_interdiction
+				#technology = submarine_offensive
+			}
 			}
 	}
 
 		focus = {
 			id = FRA_Super_Destroyers
 			text = "Super Destroyers"
-			icon = GFX_focus_generic_destroyer
+			icon = GFX_focus_generic_super_battleship
 			x = 0
 			y = 2
 			cost = 2
@@ -356,13 +691,18 @@ focus_tree = {
 			}
 			search_filters = {Navy}
 			completion_reward = {
-			
+			add_tech_bonus = {
+				name = dd_bonus
+				bonus = 2.0
+				uses = 1
+				category = dd_tech
+			}
 			}
 	}
 		focus = {
 			id = FRA_Combined_Raiding
-			text = "Combined Raiding"
-			icon = GFX_goal_generic_navy_doctrines_tactics
+			text = "Coordinated Strikes"
+			icon = GFX_focus_generic_coordinated_strike
 			x = 0
 			y = 3
 			cost = 2
@@ -380,7 +720,7 @@ focus_tree = {
 		focus = {
 			id = FRA_Develop_Submarines
 			text = "Develop New Submarines"
-			icon = GFX_goal_generic_navy_submarine
+			icon = GFX_focus_generic_submarine
 			x = 2
 			y = 1
 			cost = 2
@@ -392,13 +732,18 @@ focus_tree = {
 			}
 			search_filters = {Navy}
 			completion_reward = {
-			
+			add_tech_bonus = {
+				name = ss_bonus
+				bonus = 1.0
+				uses = 1
+				category = ss_tech
+			}
 			}
 	}
 			focus = {
 			id = FRA_Test_Torpedos
 			text = "Test Torpedo Designs"
-			icon = GFX_goal_generic_air_naval_bomber
+			icon = GFX_focus_generic_torpedo
 			x = 2
 			y = 2
 			cost = 2
@@ -410,7 +755,12 @@ focus_tree = {
 			}
 			search_filters = {Navy}
 			completion_reward = {
-			
+			add_tech_bonus = {
+				name = ss_bonus
+				bonus = 3.0
+				uses = 1
+				category = ss_tech
+			}
 			}
 	}
  ##  ### ###       ## ###  ##  ### ###  ##  #  # 
@@ -421,7 +771,7 @@ focus_tree = {
 	focus = {
 			id = FRA_French_Airforce
 			text = "French Airforce"
-			icon = GFX_goal_generic_build_airforce
+			icon = GFX_focus_fra_french_air
 			x = 35
 			y = 0
 			cost = 5
@@ -455,7 +805,7 @@ focus_tree = {
 	focus = {
 			id = FRA_Barès_Victory
 			text = "Barès Command"
-			icon = GFX_goal_generic_air_doctrine
+			icon = GFX_focus_fra_bares
 			x = -2
 			y = 1
 			cost = 5
@@ -474,7 +824,7 @@ focus_tree = {
 		focus = {
 			id = FRA_New_Bombers
 			text = "Develop New Bombers"
-			icon = GFX_goal_generic_air_bomber
+			icon = GFX_focus_fra_new_bomber
 			x = -4
 			y = 2
 			cost = 5
@@ -497,7 +847,7 @@ focus_tree = {
 			focus = {
 			id = FRA_Escort_Fighters
 			text = " Heavy Escort Fighters"
-			icon = GFX_focus_usa_escort_fighters
+			icon = GFX_focus_fra_heavy_escort
 			x = -2
 			y = 2
 			cost = 5
@@ -520,7 +870,7 @@ focus_tree = {
 		focus = {
 			id = FRA_Advanced_Air_Radar
 			text = "Advanced Air Radar"
-			icon = GFX_goal_generic_radar
+			icon = GFX_focus_fra_air_radar
 			x = -2
 			y = 2
 			cost = 5
@@ -543,7 +893,7 @@ focus_tree = {
 			focus = {
 			id = FRA_Block_Out_The_Sun
 			text = "Block Out The Sun"
-			icon = GFX_goal_generic_air_bomber
+			icon = GFX_focus_fra_block_sun
 			x = -2
 			y = 3
 			cost = 5
@@ -566,7 +916,7 @@ focus_tree = {
 			focus = {
 			id = FRA_Mass_Destruction
 			text = "Mass Destruction"
-			icon = GFX_goal_generic_air_bomber
+			icon = GFX_focus_fra_mass_destruction
 			x = -2
 			y = 4
 			cost = 5
@@ -580,16 +930,22 @@ focus_tree = {
 			completion_reward = {
 				add_tech_bonus = {
 				name = FRA_New_Bombers
+				bonus = 2.0
+				uses = 1
+				category = tactical_bomber
+			}
+			add_tech_bonus = {
+				name = air_doc_bonus
 				bonus = 1.0
 				uses = 2
-				category = heavy_air
+				category = air_doctrine
 			}
 			}
 	}
 		focus = {
 			id = FRA_Denain_Victory
 			text = "Denain's Command"
-			icon = GFX_goal_generic_air_doctrine
+			icon = GFX_focus_fra_denain
 			x = 2
 			y = 1
 			cost = 5
@@ -608,7 +964,7 @@ focus_tree = {
 			focus = {
 			id = FRA_Nationalize_Aircraft
 			text = "Nationalize Air Industry"
-			icon = GFX_goal_generic_air_production
+			icon = GFX_focus_fra_nationalize_airforce
 			x = 0
 			y = 1
 			cost = 5
@@ -631,7 +987,7 @@ focus_tree = {
 			focus = {
 			id = FRA_Increase_Production
 			text = "A Thousand Planes"
-			icon = GFX_goal_continuous_air_production
+			icon = GFX_focus_fra_thousand_planes
 			x = 0
 			y = 2
 			cost = 5
@@ -654,7 +1010,7 @@ focus_tree = {
 			focus = {
 			id = FRA_Ground_Support_Integration
 			text = "Ground Support"
-			icon = GFX_goal_generic_air_doctrine
+			icon = GFX_focus_fra_cas
 			x = 0
 			y = 3
 			cost = 5
@@ -667,17 +1023,17 @@ focus_tree = {
 			search_filters = {Airforce}
 			completion_reward = {
 				add_tech_bonus = {
-				name = FRA_New_Bombers 
-				bonus = 1.0
-				uses = 2
-				category = heavy_air
+				name = FRA_bomber_effort
+				bonus = 2.0
+				uses = 1
+				category = cas_bomber
 			}
 			}
 	}
 			focus = {
 			id = FRA_Revolutionary_Fighters
 			text = "Revolutionary Fighters"
-			icon = GFX_goal_generic_air_fighter
+			icon = GFX_focus_fra_air_ace
 			x = 2
 			y = 1
 			cost = 5
@@ -690,17 +1046,17 @@ focus_tree = {
 			search_filters = {Airforce}
 			completion_reward = {
 				add_tech_bonus = {
-				name = FRA_New_Bombers 
-				bonus = 1.0
-				uses = 2
-				category = heavy_air
+				name = fighter_bonus
+				bonus = 2.0
+				uses = 1
+				category = light_fighter
 			}
 			}
 	}
 			focus = {
 			id = FRA_Anti-Air
 			text = "Develop Anti-Air"
-			icon = GFX_focus_generic_air_defense
+			icon = GFX_focus_fra_aa
 			x = 2
 			y = 2
 			cost = 5
@@ -921,7 +1277,6 @@ focus_tree = {
 				uses = 2
 				bonus = 1.0
 				category = artillery
-				category = support_tech
 			}
 			}
 	}

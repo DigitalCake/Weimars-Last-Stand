@@ -1,4 +1,4 @@
-version="0.004"
+version="0.008"
 tags={
 	"Alternative History"
 	"Gameplay"
@@ -13,5 +13,5 @@ replace_path ="common/bookmarks"
 #replace_path ="common/ideas"
 #replace_path ="on_actions"
 #replace_path ="common/ideologies"
-name="A World Flipped"
-supported_version="1.9.1"
+name="Weimar's Last Stand"
+supported_version="1.9.3"
