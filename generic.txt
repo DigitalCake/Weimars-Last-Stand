@@ -1,0 +1,1307 @@
+﻿focus_tree = {
+	id = generic_focus
+	
+	country = {
+		factor = 1
+	}
+	
+	default = yes
+	reset_on_civilwar = no
+
+	focus = {
+		id = industrial_effort
+		text = "Industrial Effort"
+		icon = GFX_goal_generic_production
+		x = 5
+		y = 0
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 1.0
+				uses = 1
+				category = industry
+			}
+		}
+	}
+	
+	focus = {
+		id = continue_industrialising
+		text = "Continue Industrialising"
+		icon = GFX_goal_generic_construction
+		prerequisite = { focus = industrial_effort }
+		x = -4
+		y = 1
+		relative_position_id = industrial_effort
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 0.5
+				uses = 2
+				category = industry
+			}
+		}
+	}
+	
+	focus = {
+		id = infrastructure_effort
+		text = "Infrastructure Effort"
+		icon = GFX_goal_generic_construct_civilian
+		prerequisite = { focus = continue_industrialising }
+		prerequisite = { focus = reestablish_factories }
+		x = -2
+		y = 1
+		relative_position_id = continue_industrialising
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = gen_infrastructure_effort
+		}
+	}
+	
+	focus = {
+		id = infrastructure_construction
+		text = "Infrastructure Construction"
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = continue_industrialising } 
+		prerequisite = { focus = reestablish_factories } 
+		x = 0
+		y = 1
+		relative_position_id = continue_industrialising
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = infrastructure_effort_tt
+				all_owned_state = {			
+					free_building_slots = {
+						building = infrastructure
+						size < 1
+					}
+				}
+			}
+		}
+
+		complete_tooltip = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 0
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 1
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 1
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = infrastructure_construction_2
+		text = "Infrastructure Construction II"
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = infrastructure_construction } 
+		x = 0
+		y = 1
+		relative_position_id = infrastructure_construction
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = infrastructure_effort_tt
+				all_owned_state = {			
+					free_building_slots = {
+						building = infrastructure
+						size < 1
+					}
+				}
+			}
+		}
+
+		complete_tooltip = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 0
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 1
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 1
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = fortification_process
+		text = "Fortification Process"
+		icon = GFX_goal_generic_construct_military
+		prerequisite = { focus = infrastructure_construction } 
+		x = -2
+		y = 1
+		relative_position_id = infrastructure_construction
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = fortification_process
+		}
+	}
+	
+	focus = {
+		id = synthetics_effort
+		text = "Synthetics Effort"
+		icon = GFX_goal_generic_construct_civilian
+		prerequisite = { focus = infrastructure_construction_2 } 
+		x = 0
+		y = 1
+		relative_position_id = infrastructure_construction_2
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = coal_liquidization
+				bonus = 1.0
+				uses = 1
+				category = synth_resources
+			}
+		}
+	}
+	
+	focus = {
+		id = excavation_effort
+		text = "Excavation Effort"
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = infrastructure_construction_2 } 
+		x = -4
+		y = 1
+		relative_position_id = infrastructure_construction_2
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = excavation_tech
+				bonus = 1.0
+				uses = 2
+				category = excavation_tech
+			}
+		}
+	}
+	
+	focus = {
+		id = steel_extraction
+		text = "Steel Extraction"
+		icon = GFX_focus_generic_steel
+		prerequisite = { focus = excavation_effort } 
+		mutually_exclusive = { focus = tungsten_extraction }
+		mutually_exclusive = { focus = aluminium_extraction }
+		x = -2
+		y = 1
+		relative_position_id = excavation_effort
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_resource = {
+					type = steel
+					amount = 16
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = tungsten_extraction
+		text = "Tungsten Extraction"
+		icon = GFX_focus_generic_tungsten
+		prerequisite = { focus = excavation_effort } 
+		mutually_exclusive = { focus = steel_extraction }
+		mutually_exclusive = { focus = aluminium_extraction }
+		x = 0
+		y = 1
+		relative_position_id = excavation_effort
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_resource = {
+					type = tungsten
+					amount = 16
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = aluminium_extraction
+		text = "Aluminium Extraction"
+		icon = GFX_focus_generic_aluminum
+		prerequisite = { focus = excavation_effort } 
+		mutually_exclusive = { focus = steel_extraction }
+		mutually_exclusive = { focus = tungsten_extraction }
+		x = 2
+		y = 1
+		relative_position_id = excavation_effort
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_resource = {
+					type = aluminium
+					amount = 16
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = oil_synthetics
+		text = "Oil Synthetics"
+		icon = GFX_goal_generic_oil_refinery
+		prerequisite = { focus = synthetics_effort }
+		mutually_exclusive = { focus = rubber_synthetics }
+		x = 0
+		y = 1
+		relative_position_id = synthetics_effort
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			modify_building_resources = {
+        	   building = synthetic_refinery
+        	   resource = oil
+        	   amount = 2
+        	}
+		}
+	}
+	
+	focus = {
+		id = rubber_synthetics
+		text = "Rubber Synthetics"
+		icon = GFX_focus_generic_rubber
+		prerequisite = { focus = synthetics_effort } 
+		mutually_exclusive = { focus = oil_synthetics }
+		x = 2
+		y = 1
+		relative_position_id = synthetics_effort
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			modify_building_resources = {
+        	   building = synthetic_refinery
+        	   resource = rubber
+        	   amount = 2
+        	}
+		}
+	}
+	
+	focus = {
+		id = chromium_extraction
+		text = "Chromium Extraction"
+		icon = GFX_goal_gen_extract_chromium
+		prerequisite = { focus = steel_extraction focus = tungsten_extraction focus = aluminium_extraction } 
+		x = 2
+		y = 1
+		relative_position_id = steel_extraction
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_resource = {
+					type = chromium
+					amount = 16
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = synthetics_construction
+		text = "Synthetics Construction"
+		icon = GFX_goal_generic_construct_civilian
+		prerequisite = { focus = oil_synthetics focus = rubber_synthetics } 
+		x = 1
+		y = 1
+		relative_position_id = oil_synthetics
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = synthetic_refinery
+						level = 1
+						instant_build = yes
+				}
+			}
+			
+			add_ideas = synthetics_construction
+		}
+	}
+	
+	
+	focus = {
+		id = electronics_effort
+		text = "Electronics Effort"
+		icon = GFX_goal_continuous_research
+		prerequisite = { focus = industrial_effort }
+		x = 0
+		y = 1
+		relative_position_id = industrial_effort
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		add_tech_bonus = {
+				name = secret_bonus
+				bonus = 1.0
+				uses = 1
+				category = electronics
+			}
+		}
+	}
+	
+	focus = {
+		id = greater_minds
+		text = "Greater Minds"
+		icon = GFX_goal_tfv_generic_tech_sharing
+		prerequisite = { focus = electronics_effort }
+		prerequisite = { focus = reestablish_factories }
+		x = 0
+		y = 1
+		relative_position_id = electronics_effort
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = greater_minds
+		}
+	}
+	
+	focus = {
+		id = radar_technology
+		text = "Radar Technology"
+		icon = GFX_goal_generic_radar
+		prerequisite = { focus = greater_minds }
+		x = -2
+		y = 1
+		relative_position_id = greater_minds
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = secret_bonus
+				bonus = 0.5
+				uses = 2
+				category = radar_tech
+			}
+		}
+	}
+	
+	focus = {
+		id = ciphering_technology
+		text = "Ciphering Technology"
+		icon = GFX_goal_poland_goal
+		prerequisite = { focus = greater_minds }
+		x = 0
+		y = 1
+		relative_position_id = greater_minds
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = secret_bonus
+				bonus = 0.5
+				uses = 2
+				category = computing_tech
+			}
+		}
+	}
+	
+	focus = {
+		id = radar_construction
+		text = "Radar Construction"
+		icon = GFX_goal_generic_radar
+		prerequisite = { focus = radar_technology }
+		prerequisite = { focus = infrastructure_construction_2 }
+		x = 0
+		y = 1
+		relative_position_id = radar_technology
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = radar_construction
+		}
+	}
+	
+	focus = {
+		id = extra_research_slot
+		text = "Extra Research Slot"
+		icon = GFX_focus_research2
+		prerequisite = { focus = ciphering_technology }
+		x = 0
+		y = 1
+		relative_position_id = ciphering_technology
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	
+	focus = {
+		id = nuclear_technology
+		text = "Nuclear Technology"
+		icon = GFX_focus_wonderweapons
+		prerequisite = { focus = ciphering_technology }
+		x = 2
+		y = 1
+		relative_position_id = ciphering_technology
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = nuclear_bonus
+				ahead_reduction = 1
+				bonus = 1.0
+				uses = 1
+				category = nuclear
+			}
+		}
+	}
+	
+	focus = {
+		id = improved_electronics
+		text = "Improved Electronics"
+		icon = GFX_goal_generic_occupy_start_war
+		prerequisite = { focus = extra_research_slot }
+		x = 0
+		y = 1
+		relative_position_id = extra_research_slot
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = secret_bonus
+				bonus = 1.5
+				uses = 1
+				category = electronics
+			}
+		}
+	}
+	
+	focus = {
+		id = rocketry
+		text = "Rocketry"
+		icon = GFX_focus_rocketry
+		prerequisite = { focus = nuclear_technology }
+		x = 0
+		y = 1
+		relative_position_id = nuclear_technology
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = jet_rocket_bonus
+				ahead_reduction = 2
+				uses = 2
+				category = rocketry
+				category = jet_technology
+			}
+		}
+	}
+	
+	focus = {
+		id = extra_research_slot_2
+		text = "Extra Research Slot II"
+		icon = GFX_focus_research2
+		prerequisite = { focus = improved_electronics }
+		prerequisite = { focus = minimize_civilian_usage }
+		x = 3
+		y = 1
+		relative_position_id = improved_electronics
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	
+	focus = {
+		id = reestablish_factories
+		text = "Re-establish Factories"
+		icon = GFX_focus_generic_industry_2
+		prerequisite = { focus = industrial_effort }
+		x = 4
+		y = 1
+		relative_position_id = industrial_effort
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = civilian_effort
+		text = "Civilian Effort"
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = reestablish_factories }
+		mutually_exclusive = { focus = armaments_effort}
+		x = 0
+		y = 1
+		relative_position_id = reestablish_factories
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = armaments_effort
+		text = "Armanents Effort"
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = reestablish_factories }
+		mutually_exclusive = { focus = civilian_effort}
+		x = 4
+		y = 1
+		relative_position_id = reestablish_factories
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = civilian_effort_2
+		text = "Civilian Effort II"
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = civilian_effort focus = armaments_effort }
+		mutually_exclusive = { focus = armaments_effort_2}
+		x = 0
+		y = 1
+		relative_position_id = civilian_effort
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = armaments_effort_2
+		text = "Armanents Effort II"
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = armaments_effort focus = civilian_effort }
+		mutually_exclusive = { focus = civilian_effort_2}
+		x = 0
+		y = 1
+		relative_position_id = armaments_effort
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = civilian_effort_3
+		text = "Civilian Effort III"
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = civilian_effort_2 focus = armaments_effort_2 }
+		mutually_exclusive = { focus = armaments_effort_3}
+		x = 0
+		y = 1
+		relative_position_id = civilian_effort_2
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = armaments_effort_3
+		text = "Armanents Effort III"
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = armaments_effort_2 focus = civilian_effort_2 }
+		mutually_exclusive = { focus = civilian_effort_3}
+		x = 0
+		y = 1
+		relative_position_id = armaments_effort_2
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = improve_civilian_work
+		text = "Improve Civilian Work"
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = armaments_effort_3 focus = civilian_effort_3 }
+		x = 0
+		y = 1
+		relative_position_id = civilian_effort_3
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = improve_civilian_work
+		}
+	}
+	
+	focus = {
+		id = minimize_civilian_usage
+		text = "Minimize Civilian Usage"
+		icon = GFX_goal_generic_consumer_goods
+		prerequisite = { focus = armaments_effort_3 focus = civilian_effort_3 }
+		x = 2
+		y = 1
+		relative_position_id = civilian_effort_3
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_timed_idea = { idea = minimize_civilian_usage days = 365 } 
+		}
+	}
+	
+	focus = {
+		id = prepare_for_war
+		text = "Prepare For War"
+		icon = GFX_focus_generic_license_production
+		prerequisite = { focus = armaments_effort_3 focus = civilian_effort_3 }
+		x = 0
+		y = 1
+		relative_position_id = armaments_effort_3
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = prepare_for_war
+		}
+	}
+	
+	focus = {
+		id = military_construction 
+		text = "Military Construction"
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = minimize_civilian_usage }
+		mutually_exclusive = { focus = armament_improvment }
+		x = 0
+		y = 1
+		relative_position_id = minimize_civilian_usage
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = military_construction
+		}
+	}
+	
+	focus = {
+		id = armament_improvment
+		text = "Armament Improvement"
+		icon = GFX_focus_secret_rearmament
+		prerequisite = { focus = prepare_for_war }
+		mutually_exclusive = { focus = armament_construction }
+		x = 0
+		y = 1
+		relative_position_id = prepare_for_war
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = armament_improvement
+		}
+	}
+	
+	focus = {
+		id = rifle_primary
+		text = "Rifle Primary"
+		icon = GFX_goal_generic_production2
+		prerequisite = { focus = prepare_for_war }
+		x = 2
+		y = 1
+		relative_position_id = prepare_for_war
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = rifle_primary
+		}
+	}
+	
+	focus = {
+		id = enter_the_war_economy
+		text = "Enter The War Economy"
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = military_construction focus = armament_improvment }
+		mutually_exclusive = { focus = enter_total_mobilisation }
+		x = 0
+		y = 1
+		relative_position_id = military_construction
+		cost = 15
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = war_economy
+		}
+	}
+	
+	focus = {
+		id = enter_total_mobilisation
+		text = "Enter Total Mobilisation"
+		icon = GFX_goal_generic_army_tanks
+		prerequisite = { focus = military_construction focus = armament_improvment }
+		mutually_exclusive = { focus = enter_the_war_economy }
+		x = 2
+		y = 1
+		relative_position_id = military_construction
+		cost = 20
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = tot_economic_mobilisation
+		}
+	}
+}
