@@ -2189,8 +2189,4 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/focus_fra_french_air.dds"
 	}
 	
-	SpriteType = { 
-		name = "GFX_goal_gen_extract_chromium"
-		texturefile = "gfx/interface/goals/goal_gen_extract_chromium.dds"
-	}
 }
