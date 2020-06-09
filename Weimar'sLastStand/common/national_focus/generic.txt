@@ -406,7 +406,7 @@
 				}
 				add_resource = {
 					type = steel
-					amount = 16
+					amount = 8
 				}
 			}
 		}
@@ -442,7 +442,7 @@
 				}
 				add_resource = {
 					type = tungsten
-					amount = 16
+					amount = 8
 				}
 			}
 		}
@@ -478,7 +478,7 @@
 				}
 				add_resource = {
 					type = aluminium
-					amount = 16
+					amount = 8
 				}
 			}
 		}
@@ -656,8 +656,8 @@
 		completion_reward = {
 			add_tech_bonus = {
 				name = secret_bonus
-				bonus = 0.5
-				uses = 2
+				bonus = 1
+				uses = 1
 				category = radar_tech
 			}
 		}
@@ -781,7 +781,7 @@
 			add_tech_bonus = {
 				name = jet_rocket_bonus
 				ahead_reduction = 2
-				uses = 2
+				uses = 1
 				category = rocketry
 				category = jet_technology
 			}
@@ -920,10 +920,10 @@
 						}
 					}
 				}
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = industrial_complex
-					level = 2
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -967,10 +967,10 @@
 						}
 					}
 				}
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = arms_factory
-					level = 2
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -1014,10 +1014,10 @@
 						}
 					}
 				}
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = industrial_complex
-					level = 2
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -1061,10 +1061,10 @@
 						}
 					}
 				}
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = arms_factory
-					level = 2
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -1108,10 +1108,10 @@
 						}
 					}
 				}
-				add_extra_state_shared_building_slots = 3
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = industrial_complex
-					level = 3
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -1155,10 +1155,10 @@
 						}
 					}
 				}
-				add_extra_state_shared_building_slots = 3
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory
-					level = 3
+					level = 2
 					instant_build = yes
 				}
 			}
