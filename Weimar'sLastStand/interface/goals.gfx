@@ -2184,9 +2184,18 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/goal_generic_tungsten.dds"
 	}
 	
-		SpriteType = {
+	SpriteType = {
 		name = "GFX_focus_fra_french_air"
 		texturefile = "gfx/interface/goals/focus_fra_french_air.dds"
 	}
 	
+	SpriteType = {
+		name = "GFX_focus_fra_army_elect"
+		texturefile = "gfx/interface/goals/focus_fra_army_elect.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_focus_fra_air_elect"
+		texturefile = "gfx/interface/goals/focus_fra_air_elect.dds"
+	}
 }
