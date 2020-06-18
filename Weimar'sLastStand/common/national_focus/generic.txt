@@ -7,6 +7,8 @@
 	
 	default = yes
 	reset_on_civilwar = no
+	
+	# SectionIndustry
 
 	focus = {
 		id = industrial_effort
@@ -1257,6 +1259,7 @@
 		text = "Rifle Primary"
 		icon = GFX_goal_generic_production2
 		prerequisite = { focus = prepare_for_war }
+		prerequisite = { focus = arms_race }
 		x = 2
 		y = 1
 		relative_position_id = prepare_for_war
@@ -1302,6 +1305,499 @@
 
 		completion_reward = {
 			add_ideas = tot_economic_mobilisation
+		}
+	}
+	
+	# SectionArmy
+	
+	focus = {
+		id = army_effort
+		text = ""
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 23
+		y = 0
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			army_experience = 10
+			
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 1.0
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+	
+	focus = {
+		id = infantry_effort
+		text = "Infantry Effort"
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = army_effort }
+		x = -6
+		y = 1
+		relative_position_id = army_effort
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = infantry_bonus
+				bonus = 1.0
+				uses = 1
+				category = infantry_weapons
+			}
+		}
+	}
+	
+	focus = {
+		id = doctrine_effort
+		text = "Doctrine Effort"
+		icon = GFX_goal_generic_cavalry
+		prerequisite = { focus = infantry_effort focus = armor_effort }
+		x = 3
+		y = 1
+		relative_position_id = infantry_effort
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 1.0
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+	
+	focus = {
+		id = defensive_weapons
+		text = "Defensive Weapons"
+		icon = GFX_goal_generic_military_sphere
+		prerequisite = { focus = infantry_effort }
+		mutually_exclusive = { focus = offensive_weapons }
+		x = -1
+		y = 2
+		relative_position_id = infantry_effort
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = infantry_bonus
+				bonus = 1.0
+				uses = 1
+				technology = support_weapons
+				technology = support_weapons2
+				technology = support_weapons3
+				technology = support_weapons4
+			}
+		}
+	}
+	
+	focus = {
+		id = offensive_weapons
+		text = "Offensive Weapons"
+		icon = GFX_focus_hol_war_on_pacifism
+		prerequisite = { focus = infantry_effort }
+		mutually_exclusive = { focus = defensive_weapons }
+		x = 1
+		y = 2
+		relative_position_id = infantry_effort
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = infantry_bonus
+				bonus = 1.0
+				uses = 1
+				technology = infantry_weapons
+				technology = infantry_weapons1
+				technology = improved_infantry_weapons
+				technology = infantry_weapons2
+				technology = improved_infantry_weapons_2
+				technology = advanced_infantry_weapons
+				technology = advanced_infantry_weapons2
+			}
+		}
+	}
+	
+	focus = {
+		id = doctrine_effort_2
+		text = "Doctrine Effort II"
+		icon = GFX_goal_generic_position_armies
+		prerequisite = { focus = doctrine_effort }
+		x = 0
+		y = 1
+		relative_position_id = doctrine_effort
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 1.0
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+	
+	focus = {
+		id = support_effort
+		text = "Support Effort"
+		icon = GFX_goal_generic_army_artillery
+		prerequisite = { focus = defensive_weapons focus = offensive_weapons }
+		x = 0
+		y = 1
+		relative_position_id = defensive_weapons
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = support_bonus
+				bonus = 1.0
+				uses = 1
+				category = support_tech
+			}
+		}
+	}
+	
+	focus = {
+		id = artillery_effort
+		text = "Artillery Effort"
+		icon = GFX_goal_generic_army_artillery2
+		prerequisite = { focus = defensive_weapons focus = offensive_weapons }
+		x = 2
+		y = 1
+		relative_position_id = defensive_weapons
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = support_bonus
+				bonus = 1.0
+				uses = 1
+				category = artillery
+			}
+		}
+	}
+	
+	focus = {
+		id = arms_race
+		text = "Arms Race"
+		icon = GFX_focus_generic_little_entente
+		prerequisite = { focus = support_effort }
+		prerequisite = { focus = artillery_effort }
+		x = 1
+		y = 1
+		relative_position_id = support_effort
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = infantry_bonus
+				ahead_reduction = 1.5
+				uses = 1
+				category = infantry_weapons
+			}
+		}
+	}
+	
+	focus = {
+		id = armor_effort
+		text = "Armor Effort"
+		icon = GFX_goal_generic_army_tanks
+		prerequisite = { focus = army_effort }
+		x = 0
+		y = 1
+		relative_position_id = army_effort
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = armor_bonus
+				bonus = 1.0
+				uses = 1
+				category = armor
+			}
+		}
+	}
+	
+	focus = {
+		id = motorization_effort
+		text = "Motorization Effort"
+		icon = GFX_goal_generic_army_motorized
+		prerequisite = { focus = armor_effort }
+		x = -1
+		y = 2
+		relative_position_id = armor_effort
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = motorized_bonus
+				bonus = 2.0
+				uses = 1
+				technology = motorised_infantry
+			}
+		}
+	}
+	
+	focus = {
+		id = light_tanks
+		text = "Light Tanks"
+		icon = GFX_goal_continuous_armor_production
+		prerequisite = { focus = armor_effort }
+		x = 1
+		y = 2
+		relative_position_id = armor_effort
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = motorized_bonus
+				bonus = 1.0
+				uses = 1
+				technology = gwtank
+				technology = basic_light_tank
+				technology = improved_light_tank
+				technology = advanced_light_tank
+			}
+		}
+	}
+	
+	focus = {
+		id = mechanization_effort
+		text = "Mechanization Effort"
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = motorization_effort }
+		x = 0
+		y = 1
+		relative_position_id = motorization_effort
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = motorized_bonus
+				bonus = 1.0
+				uses = 1
+				category = motorized_equipment
+			}
+		}
+	}
+	
+	focus = {
+		id = tanks_for_the_future
+		text = "Tanks For The Future"
+		icon = GFX_focus_generic_tank_production
+		prerequisite = { focus = light_tanks }
+		x = 0
+		y = 1
+		relative_position_id = light_tanks
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = motorized_bonus
+				ahead_reduction = 1.0
+				uses = 1
+				category = armor
+			}
+		}
+	}
+	
+	focus = {
+		id = lightning_war
+		text = "Lightning War"
+		icon = GFX_focus_generic_license_production
+		prerequisite = { focus = mechanization_effort }
+		prerequisite = { focus = tanks_for_the_future }
+		x = 0
+		y = 1
+		relative_position_id = mechanization_effort
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = rolling_breakthrough
+		text = "Rolling Breakthrough"
+		icon = GFX_focus_generic_combined_arms
+		prerequisite = { focus = mechanization_effort }
+		prerequisite = { focus = tanks_for_the_future }
+		x = 2
+		y = 1
+		relative_position_id = mechanization_effort
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = special_forces
+		text = ""
+		icon = GFX_goal_generic_special_forces
+		prerequisite = { focus = army_effort }
+		x = 5
+		y = 1
+		relative_position_id = army_effort
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = water_soldiers
+		text = ""
+		icon = GFX_goal_generic_amphibious_assault
+		prerequisite = { focus = special_forces }
+		mutually_exclusive = { focus = mountain_commandos }
+		mutually_exclusive = { focus = sky_attack }
+		x = -2
+		y = 1
+		relative_position_id = special_forces
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = mountain_commandos
+		text = ""
+		icon = GFX_focus_secret_rearmament
+		prerequisite = { focus = special_forces }
+		mutually_exclusive = { focus = water_soldiers }
+		mutually_exclusive = { focus = sky_attack }
+		x = 0
+		y = 1
+		relative_position_id = special_forces
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = sky_attack
+		text = ""
+		icon = GFX_focus_generic_paratrooper
+		prerequisite = { focus = special_forces }
+		mutually_exclusive = { focus = water_soldiers }
+		mutually_exclusive = { focus = mountain_commandos }
+		x = 2
+		y = 1
+		relative_position_id = special_forces
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = marine_landings
+		text = ""
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		prerequisite = { focus = water_soldiers }
+		x = 0
+		y = 1
+		relative_position_id = water_soldiers
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = terrain_adaptations
+		text = ""
+		icon = GFX_goal_continuous_reduce_training_time
+		prerequisite = { focus = mountain_commandos }
+		x = 0
+		y = 1
+		relative_position_id = mountain_commandos
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = secure_the_skies
+		text = ""
+		icon = GFX_focus_usa_escort_fighters
+		prerequisite = { focus = sky_attack }
+		x = 0
+		y = 1
+		relative_position_id = sky_attack
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = professional_battles
+		text = ""
+		icon = GFX_goal_generic_air_doctrine
+		prerequisite = { focus = marine_landings focus = terrain_adaptations focus = secure_the_skies }
+		x = 2
+		y = 1
+		relative_position_id = marine_landings
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
 		}
 	}
 }
