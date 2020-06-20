@@ -1669,7 +1669,7 @@
 	
 	focus = {
 		id = special_forces
-		text = ""
+		text = "Special Forces"
 		icon = GFX_goal_generic_special_forces
 		prerequisite = { focus = army_effort }
 		x = 5
@@ -1680,12 +1680,13 @@
 		available_if_capitulated = yes
 
 		completion_reward = {
+			add_ideas = special_forces
 		}
 	}
 	
 	focus = {
 		id = water_soldiers
-		text = ""
+		text = "Water Soldiers"
 		icon = GFX_goal_generic_amphibious_assault
 		prerequisite = { focus = special_forces }
 		mutually_exclusive = { focus = mountain_commandos }
@@ -1698,12 +1699,19 @@
 		available_if_capitulated = yes
 
 		completion_reward = {
+			add_tech_bonus = {
+				name = special_forces_bonus
+				bonus = 1.0
+				uses = 1
+				technology = marines
+				technology = marines2
+			}
 		}
 	}
 	
 	focus = {
 		id = mountain_commandos
-		text = ""
+		text = "Mountain Commandos"
 		icon = GFX_focus_secret_rearmament
 		prerequisite = { focus = special_forces }
 		mutually_exclusive = { focus = water_soldiers }
@@ -1716,12 +1724,19 @@
 		available_if_capitulated = yes
 
 		completion_reward = {
+			add_tech_bonus = {
+				name = special_forces_bonus
+				bonus = 1.0
+				uses = 1
+				technology = tech_mountaineers
+				technology = tech_mountaineers2
+			}
 		}
 	}
 	
 	focus = {
 		id = sky_attack
-		text = ""
+		text = "Sky Attack"
 		icon = GFX_focus_generic_paratrooper
 		prerequisite = { focus = special_forces }
 		mutually_exclusive = { focus = water_soldiers }
@@ -1734,12 +1749,19 @@
 		available_if_capitulated = yes
 
 		completion_reward = {
+			add_tech_bonus = {
+				name = special_forces_bonus
+				bonus = 1.0
+				uses = 1
+				technology = paratroopers
+				technology = paratroopers2
+			}
 		}
 	}
 	
 	focus = {
 		id = marine_landings
-		text = ""
+		text = "Marine Landings"
 		icon = GFX_goal_generic_navy_doctrines_tactics
 		prerequisite = { focus = water_soldiers }
 		x = 0
@@ -1755,7 +1777,7 @@
 	
 	focus = {
 		id = terrain_adaptations
-		text = ""
+		text = "Terrain Adaptations"
 		icon = GFX_goal_continuous_reduce_training_time
 		prerequisite = { focus = mountain_commandos }
 		x = 0
@@ -1771,7 +1793,7 @@
 	
 	focus = {
 		id = secure_the_skies
-		text = ""
+		text = "Secure The Skies"
 		icon = GFX_focus_usa_escort_fighters
 		prerequisite = { focus = sky_attack }
 		x = 0
@@ -1787,7 +1809,7 @@
 	
 	focus = {
 		id = professional_battles
-		text = ""
+		text = "Professional Battles"
 		icon = GFX_goal_generic_air_doctrine
 		prerequisite = { focus = marine_landings focus = terrain_adaptations focus = secure_the_skies }
 		x = 2
