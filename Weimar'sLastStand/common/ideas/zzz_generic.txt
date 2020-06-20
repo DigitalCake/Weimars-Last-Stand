@@ -1097,7 +1097,7 @@ ideas = {
 			}
 		}
 		
-		# AWF Spirits
+		# WLS Spirits
 		fortification_process = {
 			
 			allowed = {
@@ -1308,6 +1308,24 @@ ideas = {
 				infantry_equipment = {
 					build_cost_ic = -0.1 instant = yes
 				}
+			}
+		}
+		
+		arms_race = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = no
+			}
+			
+			removal_cost = -1
+
+			picture = generic_infantry_bonus
+			modifier = {
+				conscription = 0.02
 			}
 		}
 	}
