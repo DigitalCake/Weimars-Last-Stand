@@ -1648,6 +1648,7 @@
 		available_if_capitulated = yes
 
 		completion_reward = {
+			add_ideas = lightning_war
 		}
 	}
 	
@@ -1665,6 +1666,7 @@
 		available_if_capitulated = yes
 
 		completion_reward = {
+			add_ideas = rolling_breakthrough
 		}
 	}
 	
@@ -1768,11 +1770,12 @@
 		x = 0
 		y = 1
 		relative_position_id = water_soldiers
-		cost = 10
+		cost = 20
 		
 		available_if_capitulated = yes
 
 		completion_reward = {
+			add_ideas = marine_landings
 		}
 	}
 	
@@ -1784,11 +1787,12 @@
 		x = 0
 		y = 1
 		relative_position_id = mountain_commandos
-		cost = 10
+		cost = 20
 		
 		available_if_capitulated = yes
 
 		completion_reward = {
+			add_ideas = terrain_adaptations
 		}
 	}
 	
@@ -1800,18 +1804,19 @@
 		x = 0
 		y = 1
 		relative_position_id = sky_attack
-		cost = 10
+		cost = 20
 		
 		available_if_capitulated = yes
 
 		completion_reward = {
+			add_ideas = secure_the_skies
 		}
 	}
 	
 	focus = {
 		id = professional_battles
 		text = "Professional Battles"
-		icon = GFX_goal_generic_air_doctrine
+		icon = GFX_goal_generic_army_doctrines
 		prerequisite = { focus = marine_landings focus = terrain_adaptations focus = secure_the_skies }
 		x = 2
 		y = 1
@@ -1821,6 +1826,7 @@
 		available_if_capitulated = yes
 
 		completion_reward = {
+			add_ideas = professional_battles
 		}
 	}
 }
