@@ -22,12 +22,13 @@ focus_tree = {
 	}
 	continuous_focus_position = { x = 50 y = 1600 }
 	default = no
+########################################################
 
 	focus = {
 		id = FRA_French_Economy
 		text = "French Economy"
 		icon = GFX_goal_generic_production2
-		x = 35
+		x = 24
 		y = 8
 		cost = 5
 		available_if_capitulated = yes
@@ -42,9 +43,9 @@ focus_tree = {
 	
 	focus = {
 		id = FRA_Airports
-		text = "Construct New Airports"
+		text = "Develop Northern Airfields"
 		icon = GFX_goal_generic_production2
-		x = -5
+		x = -7
 		y = 1
 		prerequisite = {focus = FRA_French_Economy}
 		cost = 5
@@ -63,7 +64,7 @@ focus_tree = {
 		id = FRA_Airports2
 		text = "Develop Southern Airfields"
 		icon = GFX_goal_generic_production2
-		x = -5
+		x = -7
 		y = 2
 		prerequisite = {focus = FRA_Airports}
 		cost = 5
@@ -81,9 +82,9 @@ focus_tree = {
 	
 	focus = {
 		id = FRA_Airports3
-		text = "Develop Northern Airfields"
-		icon = GFX_goal_generic_production2
-		x = -5
+		text = "Anti-Air Defenses"
+		icon = GFX_focus_generic_air_defense
+		x = -7
 		y = 3
 		prerequisite = {focus = FRA_Airports2}
 		cost = 5
@@ -102,8 +103,8 @@ focus_tree = {
 	focus = {
 		id = FRA_Ports
 		text = "Construct Northern Ports"
-		icon = GFX_goal_generic_production2
-		x = -3
+		icon = GFX_goal_generic_construct_naval_dockyard
+		x = -5
 		y = 1
 		prerequisite = {focus = FRA_French_Economy}
 		cost = 5
@@ -121,8 +122,8 @@ focus_tree = {
 	focus = {
 		id = FRA_Ports2
 		text = "Construct Southern Ports"
-		icon = GFX_goal_generic_production2
-		x = -3
+		icon = GFX_goal_generic_construct_naval_dockyard
+		x = -5
 		y = 2
 		prerequisite = {focus = FRA_Ports}
 		cost = 5
@@ -140,8 +141,8 @@ focus_tree = {
 	focus = {
 		id = FRA_Ports3
 		text = "Protect Our Ports"
-		icon = GFX_goal_generic_production2
-		x = -3
+		icon = GFX_focus_generic_coastal_fort
+		x = -5
 		y = 3
 		prerequisite = {focus = FRA_Ports2}
 		cost = 5
@@ -159,7 +160,7 @@ focus_tree = {
 		id = FRA_Economic_Minister
 		text = "Appoint Economic Minister"
 		icon = GFX_goal_generic_production2
-		x = 0
+		x = -2
 		y = 1
 		prerequisite = {focus = FRA_French_Economy}
 		cost = 5
@@ -197,7 +198,7 @@ focus_tree = {
 	focus = {
 		id = FRA_Rid_Gold_Standard
 		text = "Remove Gold Standard"
-		icon = GFX_goal_generic_production2
+		icon = GFX_focus_usa_reestablish_the_gold_standard
 		x = -1
 		y = 2
 		prerequisite = {focus = FRA_Fiscal_Responsibility}
@@ -212,6 +213,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = FRA_Cut_Social_Spending
 		text = "Cut Social Spending"
@@ -230,6 +232,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = FRA_Heavy_Investments
 		text = "Heavy Investments"
@@ -241,6 +244,236 @@ focus_tree = {
 		cost = 5
 		available_if_capitulated = yes
 		relative_position_id = FRA_Economic_Minister
+		ai_will_do = {
+				factor = 1
+		}
+		search_filters = {Industry}
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = FRA_Encourage_Development
+		text = "Encourage Development"
+		icon = GFX_goal_generic_production2
+		x = 1
+		y = 2
+		prerequisite = {focus = FRA_Heavy_Investments}
+		cost = 5
+		available_if_capitulated = yes
+		relative_position_id = FRA_Economic_Minister
+		ai_will_do = {
+				factor = 1
+		}
+		search_filters = {Industry}
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = FRA_Usual_Buisness
+		text = "Buisness As 'Usual'"
+		icon = GFX_goal_generic_production2
+		x = 1
+		y = 3
+		prerequisite = {focus = FRA_Encourage_Development}
+		cost = 5
+		available_if_capitulated = yes
+		relative_position_id = FRA_Economic_Minister
+		ai_will_do = {
+				factor = 1
+		}
+		search_filters = {Industry}
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = FRA_French_Recovery
+		text = "French Recovery"
+		icon = GFX_goal_generic_production2
+		x = 0
+		y = 4
+		prerequisite = {focus = FRA_Usual_Buisness focus = FRA_Cut_Social_Spending}
+		cost = 5
+		available_if_capitulated = yes
+		relative_position_id = FRA_Economic_Minister
+		ai_will_do = {
+				factor = 1
+		}
+		search_filters = {Industry}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = FRA_Economic_Focus
+		text = "Economic Focus"
+		icon = GFX_goal_generic_production2
+		x = 2
+		y = 1
+		prerequisite = {focus = FRA_French_Economy}
+		cost = 5
+		available_if_capitulated = yes
+		relative_position_id = FRA_French_Economy
+		ai_will_do = {
+				factor = 1
+		}
+		search_filters = {Industry}
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = FRA_Industrialization
+		text = "Increased Industrialization"
+		icon = GFX_goal_generic_production2
+		x = -1
+		y = 1
+		prerequisite = {focus = FRA_Economic_Focus}
+		mutually_exclusive = {focus = FRA_Agriculture}
+		cost = 5
+		available_if_capitulated = yes
+		relative_position_id = FRA_Economic_Focus
+		ai_will_do = {
+				factor = 1
+		}
+		search_filters = {Industry}
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = FRA_Industrialization2
+		text = "Flexible Production"
+		icon = GFX_goal_generic_production2
+		x = -1
+		y = 2
+		prerequisite = {focus = FRA_Industrialization}
+		cost = 5
+		available_if_capitulated = yes
+		relative_position_id = FRA_Economic_Focus
+		ai_will_do = {
+				factor = 1
+		}
+		search_filters = {Industry}
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = FRA_Industrialization2
+		text = "Flexible Production"
+		icon = GFX_goal_generic_production2
+		x = -1
+		y = 2
+		prerequisite = {focus = FRA_Industrialization}
+		cost = 5
+		available_if_capitulated = yes
+		relative_position_id = FRA_Economic_Focus
+		ai_will_do = {
+				factor = 1
+		}
+		search_filters = {Industry}
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = FRA_Industrialization3
+		text = "Import Foreign Machines"
+		icon = GFX_goal_generic_production2
+		x = -1
+		y = 3
+		prerequisite = {focus = FRA_Industrialization2}
+		cost = 5
+		available_if_capitulated = yes
+		relative_position_id = FRA_Economic_Focus
+		ai_will_do = {
+				factor = 1
+		}
+		search_filters = {Industry}
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = FRA_Economic_Focus2
+		text = "A Richer France"
+		icon = GFX_goal_generic_production2
+		x = 0
+		y = 4
+		prerequisite = {focus = FRA_Industrialization3 focus = FRA_Agriculture3}
+		cost = 5
+		available_if_capitulated = yes
+		relative_position_id = FRA_Economic_Focus
+		ai_will_do = {
+				factor = 1
+		}
+		search_filters = {Industry}
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = FRA_Agriculture
+		text = "New Farming Techniques"
+		icon = GFX_goal_generic_production2
+		x = 1
+		y = 1
+		prerequisite = {focus = FRA_Economic_Focus}
+		mutually_exclusive = {focus = FRA_Industrialization}
+		cost = 5
+		available_if_capitulated = yes
+		relative_position_id = FRA_Economic_Focus
+		ai_will_do = {
+				factor = 1
+		}
+		search_filters = {Industry}
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = FRA_Agriculture2
+		text = "Increased Food Output"
+		icon = GFX_goal_generic_production2
+		x = 1
+		y = 2
+		prerequisite = {focus = FRA_Agriculture}
+		cost = 5
+		available_if_capitulated = yes
+		relative_position_id = FRA_Economic_Focus
+		ai_will_do = {
+				factor = 1
+		}
+		search_filters = {Industry}
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = FRA_Agriculture3
+		text = "Purchase Tractors"
+		icon = GFX_goal_generic_production2
+		x = 1
+		y = 3
+		prerequisite = {focus = FRA_Agriculture2}
+		cost = 5
+		available_if_capitulated = yes
+		relative_position_id = FRA_Economic_Focus
 		ai_will_do = {
 				factor = 1
 		}
@@ -581,7 +814,7 @@ focus_tree = {
 			x = -1
 			y = 2
 			cost = 2
-			prerequisite = {focus = FRA_Darlan_Victory}
+			prerequisite = {focus = FRA_Interwar_Battleships}
 			available_if_capitulated = yes
 			relative_position_id = FRA_Darlan_Victory
 			ai_will_do = {
