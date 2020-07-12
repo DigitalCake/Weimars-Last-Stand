@@ -1219,7 +1219,7 @@
 	}
 	
 	focus = {
-		id = military_construction 
+		id = military_construction
 		text = "Military Construction"
 		icon = GFX_goal_generic_construct_mil_factory
 		prerequisite = { focus = minimize_civilian_usage }
@@ -1312,7 +1312,7 @@
 	
 	focus = {
 		id = army_effort
-		text = ""
+		text = "Army Effort"
 		icon = GFX_goal_generic_allies_build_infantry
 		x = 23
 		y = 0

@@ -4,5 +4,12 @@
  infrastructure_effort_desc:0 "Continuing to build more roads and cities will aid us in ages to come."
  infrastructure_construction_desc:0 "Modern infrastructure will be needed in any nation's economic future."
  infrastructure_construction_2_desc:0 "Converting the rurals to urbans is a step to modernization."
-
+ fortification_process_desc:0 "With the threats of the world looming around us, we must ensure that our lands borders hold strong."
+ synthetics_effort_desc:0 "Oil, one of the most important resources, lacks in most parts of the world which paves the way for monopoly. We should strive for an independance of oil with synthetic plants. "
+ excavation_effort_desc:0 "Mass exploitation of our greatest resources is the key to partaking in the resource race."
+ steel_extraction_desc:0 "As infantry weapons expand in quality, it should be no secret that we should have the steel to fuel this weaponary rush."
+ tungsten_extraction_desc:0 "In the future, battles will be decided on the power of tanks, and the power of tanks will be decided on tungsten."
+ aluminium_extraction_desc:0 "If we lose the air battle, our ground units will suffer. Having aluminium will prevent such fate."
+ oil_synthetics_desc:0 "Our refineries should focus purely on the amount and quality of the oil produced."
+ rubber_synthetics_desc:0 "Along with oil, rubber proves to be "
  
