@@ -203,25 +203,15 @@ set_politics = {
 	elections_allowed = yes
 }
 set_popularities = {
-	democratic = 60
-	fascism = 20
-	communism = 20
+	democratic = 70
+	fascism = 15
+	communism = 5
+	neutrality = 10
 }
-
-create_faction = Axis
-add_to_faction = GER
-
 
 add_ideas = {
-	sour_loser
-	general_staff
-	limited_exports
-	limited_conscription
-	partial_economic_mobilisation
-}
-add_ideas = GER_mefo_bills_1
 
-activate_mission = GER_mefo_bills_mission
+}
 
 create_country_leader = {
 	name = "Adolf Hitler"

@@ -185,6 +185,9 @@ ideologies = {
 				can_be_randomly_selected = no # won't be assigned to randomly generated country leaders
 			}
 			
+			monarchist = {
+			}
+			
 			moderatism = {
 			}
 			

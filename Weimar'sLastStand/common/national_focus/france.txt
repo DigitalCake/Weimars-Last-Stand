@@ -369,25 +369,6 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = FRA_Industrialization2
-		text = "Flexible Production"
-		icon = GFX_goal_generic_production2
-		x = -1
-		y = 2
-		prerequisite = {focus = FRA_Industrialization}
-		cost = 5
-		available_if_capitulated = yes
-		relative_position_id = FRA_Economic_Focus
-		ai_will_do = {
-				factor = 1
-		}
-		search_filters = {Industry}
-		completion_reward = {
-			
-		}
-	}
-	
-	focus = {
 		id = FRA_Industrialization3
 		text = "Import Foreign Machines"
 		icon = GFX_goal_generic_production2
@@ -482,6 +463,120 @@ focus_tree = {
 			
 		}
 	}
+	
+	focus = {
+		id = FRA_Civilian
+		text = "Focus On Civilian Production"
+		icon = GFX_goal_generic_production2
+		x = 5
+		y = 1
+		prerequisite = {focus = FRA_French_Economy}
+		cost = 5
+		available_if_capitulated = yes
+		relative_position_id = FRA_French_Economy
+		ai_will_do = {
+				factor = 1
+		}
+		search_filters = {Industry}
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = FRA_Civilian2
+		text = "Increase Wine Exports"
+		icon = GFX_goal_generic_production2
+		x = 5
+		y = 2
+		prerequisite = {focus = FRA_Civilian}
+		cost = 5
+		available_if_capitulated = yes
+		relative_position_id = FRA_French_Economy
+		ai_will_do = {
+				factor = 1
+		}
+		search_filters = {Industry}
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = FRA_Civilian3
+		text = "A Happy Populace"
+		icon = GFX_goal_generic_production2
+		x = 5
+		y = 3
+		prerequisite = {focus = FRA_Civilian2}
+		cost = 5
+		available_if_capitulated = yes
+		relative_position_id = FRA_French_Economy
+		ai_will_do = {
+				factor = 1
+		}
+		search_filters = {Industry}
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = FRA_Military
+		text = "Focus On Military Production"
+		icon = GFX_goal_generic_production2
+		x = 7
+		y = 1
+		prerequisite = {focus = FRA_French_Economy}
+		cost = 5
+		available_if_capitulated = yes
+		relative_position_id = FRA_French_Economy
+		ai_will_do = {
+				factor = 1
+		}
+		search_filters = {Industry}
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = FRA_Military2
+		text = "Increased Production"
+		icon = GFX_goal_generic_production2
+		x = 7
+		y = 2
+		prerequisite = {focus = FRA_Military}
+		cost = 5
+		available_if_capitulated = yes
+		relative_position_id = FRA_French_Economy
+		ai_will_do = {
+				factor = 1
+		}
+		search_filters = {Industry}
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = FRA_Military3
+		text = "A Factory In Every City"
+		icon = GFX_goal_generic_production2
+		x = 7
+		y = 3
+		prerequisite = {focus = FRA_Military2}
+		cost = 5
+		available_if_capitulated = yes
+		relative_position_id = FRA_French_Economy
+		ai_will_do = {
+				factor = 1
+		}
+		search_filters = {Industry}
+		completion_reward = {
+			
+		}
+	}
 #  #  ##  #   # #   #      ## ###  ##  ### ###  ##  #  # 
 ## # #  # #   #  # #      #   #   #  #  #   #  #  # ## # 
 # ## ####  # #    #        #  ##  #     #   #  #  # # ## 
@@ -512,8 +607,6 @@ focus_tree = {
 			
 			}
 			
-			canel_if_invalid = yes
-			continue_if_invalid = no
 			available_if_capitulated = no
 			
 			search_filters = {Navy}
@@ -1054,7 +1147,7 @@ focus_tree = {
 
 			}
 	}
-		focus = {
+	focus = {
 			id = FRA_New_Bombers
 			text = "Develop New Bombers"
 			icon = GFX_focus_fra_new_bomber
@@ -1065,7 +1158,7 @@ focus_tree = {
 			available_if_capitulated = yes
 			relative_position_id = FRA_Air_Election
 			ai_will_do = {
-					factor = 1
+				factor = 1
 			}
 			search_filters = {Airforce}
 			completion_reward = {
@@ -1077,7 +1170,7 @@ focus_tree = {
 			}
 			}
 	}
-			focus = {
+	focus = {
 			id = FRA_Escort_Fighters
 			text = " Heavy Escort Fighters"
 			icon = GFX_focus_fra_heavy_escort
@@ -1088,7 +1181,7 @@ focus_tree = {
 			available_if_capitulated = yes
 			relative_position_id = FRA_Barès_Victory
 			ai_will_do = {
-					factor = 1
+				factor = 1
 			}
 			search_filters = {Airforce}
 			completion_reward = {
@@ -1100,7 +1193,7 @@ focus_tree = {
 			}
 			}
 	}
-		focus = {
+	focus = {
 			id = FRA_Advanced_Air_Radar
 			text = "Advanced Air Radar"
 			icon = GFX_focus_fra_air_radar
@@ -1111,7 +1204,7 @@ focus_tree = {
 			available_if_capitulated = yes
 			relative_position_id = FRA_Air_Election
 			ai_will_do = {
-					factor = 1
+				factor = 1
 			}
 			search_filters = {Airforce}
 			completion_reward = {
@@ -1123,7 +1216,7 @@ focus_tree = {
 			}
 			}
 	}
-			focus = {
+	focus = {
 			id = FRA_Block_Out_The_Sun
 			text = "Block Out The Sun"
 			icon = GFX_focus_fra_block_sun
@@ -1134,7 +1227,7 @@ focus_tree = {
 			available_if_capitulated = yes
 			relative_position_id = FRA_Air_Election
 			ai_will_do = {
-					factor = 1
+				factor = 1
 			}
 			search_filters = {Airforce}
 			completion_reward = {
@@ -1146,7 +1239,7 @@ focus_tree = {
 			}
 			}
 	}
-			focus = {
+	focus = {
 			id = FRA_Mass_Destruction
 			text = "Mass Destruction"
 			icon = GFX_focus_fra_mass_destruction
@@ -1157,7 +1250,7 @@ focus_tree = {
 			available_if_capitulated = yes
 			relative_position_id = FRA_Air_Election
 			ai_will_do = {
-					factor = 1
+				factor = 1
 			}
 			search_filters = {Airforce}
 			completion_reward = {
@@ -1175,7 +1268,7 @@ focus_tree = {
 			}
 			}
 	}
-		focus = {
+	focus = {
 			id = FRA_Denain_Victory
 			text = "Denain's Command"
 			icon = GFX_focus_fra_denain
@@ -1187,14 +1280,14 @@ focus_tree = {
 			available_if_capitulated = yes
 			relative_position_id = FRA_Air_Election
 			ai_will_do = {
-					factor = 1
+				factor = 1
 			}
 			search_filters = {Airforce}
 			completion_reward = {
 
 			}
 	}
-			focus = {
+	focus = {
 			id = FRA_Nationalize_Aircraft
 			text = "Nationalize Air Industry"
 			icon = GFX_focus_fra_nationalize_airforce
@@ -1205,7 +1298,7 @@ focus_tree = {
 			available_if_capitulated = yes
 			relative_position_id = FRA_Denain_Victory
 			ai_will_do = {
-					factor = 1
+				factor = 1
 			}
 			search_filters = {Airforce}
 			completion_reward = {
@@ -1217,7 +1310,7 @@ focus_tree = {
 			}
 			}
 	}
-			focus = {
+	focus = {
 			id = FRA_Increase_Production
 			text = "A Thousand Planes"
 			icon = GFX_focus_fra_thousand_planes
@@ -1228,7 +1321,7 @@ focus_tree = {
 			available_if_capitulated = yes
 			relative_position_id = FRA_Denain_Victory
 			ai_will_do = {
-					factor = 1
+				factor = 1
 			}
 			search_filters = {Airforce}
 			completion_reward = {
@@ -1240,7 +1333,7 @@ focus_tree = {
 			}
 			}
 	}
-			focus = {
+	focus = {
 			id = FRA_Ground_Support_Integration
 			text = "Ground Support"
 			icon = GFX_focus_fra_cas
@@ -1251,7 +1344,7 @@ focus_tree = {
 			available_if_capitulated = yes
 			relative_position_id = FRA_Denain_Victory
 			ai_will_do = {
-					factor = 1
+				factor = 1
 			}
 			search_filters = {Airforce}
 			completion_reward = {
@@ -1263,7 +1356,7 @@ focus_tree = {
 			}
 			}
 	}
-			focus = {
+	focus = {
 			id = FRA_Revolutionary_Fighters
 			text = "Revolutionary Fighters"
 			icon = GFX_focus_fra_air_ace
@@ -1274,7 +1367,7 @@ focus_tree = {
 			available_if_capitulated = yes
 			relative_position_id = FRA_Denain_Victory
 			ai_will_do = {
-					factor = 1
+				factor = 1
 			}
 			search_filters = {Airforce}
 			completion_reward = {
@@ -1286,7 +1379,7 @@ focus_tree = {
 			}
 			}
 	}
-			focus = {
+	focus = {
 			id = FRA_Anti-Air
 			text = "Develop Anti-Air"
 			icon = GFX_focus_fra_aa
@@ -1297,7 +1390,7 @@ focus_tree = {
 			available_if_capitulated = yes
 			relative_position_id = FRA_Denain_Victory
 			ai_will_do = {
-					factor = 1
+				factor = 1
 			}
 			search_filters = {Airforce}
 			completion_reward = {
@@ -1328,7 +1421,7 @@ focus_tree = {
 			cost = 5
 			
 			ai_will_do = {
-					factor = 1
+				factor = 1
 			}
 			
 			available = {
@@ -1339,7 +1432,7 @@ focus_tree = {
 			
 			}
 			
-			canel_if_invalid = yes
+			cancel_if_invalid = yes
 			continue_if_invalid = no
 			available_if_capitulated = no
 			
@@ -1359,7 +1452,7 @@ focus_tree = {
 			available_if_capitulated = yes
 			relative_position_id = FRA_French_Military
 			ai_will_do = {
-					factor = 1
+				factor = 1
 			}
 			search_filters = {Army}
 			completion_reward = {
@@ -1377,7 +1470,7 @@ focus_tree = {
 			mutually_exclusive = {focus = FRA_Pétain_Victory}
 			relative_position_id = FRA_First_Supreme_Election
 			ai_will_do = {
-					factor 1
+				factor = 1
 			}
 			search_filters = {Army}
 			completion_reward = {
@@ -1385,7 +1478,7 @@ focus_tree = {
 					show_ideas_tooltip = charles_de_gaulle
 			}
 	}
-		focus = {
+	focus = {
 			id = FRA_Change_Doctrine
 			text = "Rapid Maneuvers"
 			icon =  GFX_focus_fra_french_rapid_manuevres
@@ -1395,14 +1488,14 @@ focus_tree = {
 			prerequisite = {focus = FRA_De_Gaulle_Victory}
 			relative_position_id = FRA_First_Supreme_Election
 			ai_will_do = {
-					factor 1
+				factor = 1
 			}
 			search_filters = {Army}
 			completion_reward = {
 			
 			}
 	}
-		focus = {
+	focus = {
 			id = FRA_Begin_Mechanization
 			text = "Begin Mechanization"
 			icon =  GFX_goal_generic_army_motorized
@@ -1412,7 +1505,7 @@ focus_tree = {
 			prerequisite = {focus = FRA_De_Gaulle_Victory}
 			relative_position_id = FRA_First_Supreme_Election
 			ai_will_do = {
-					factor 1
+				factor = 1
 			}
 			search_filters = {Army}
 			completion_reward = {
@@ -1424,7 +1517,7 @@ focus_tree = {
 			}
 			}
 	}
-			focus = {
+	focus = {
 			id = FRA_Modern_Tanks
 			text = "Modernize Tanks"
 			icon =  GFX_goal_generic_army_tanks
@@ -1434,7 +1527,7 @@ focus_tree = {
 			prerequisite = {focus = FRA_Begin_Mechanization}
 			relative_position_id = FRA_First_Supreme_Election
 			ai_will_do = {
-					factor 1
+				factor = 1
 			}
 			search_filters = {Army}
 			completion_reward = {
@@ -1446,7 +1539,7 @@ focus_tree = {
 			}
 			}
 	}
-			focus = {
+	focus = {
 			id = FRA_Train_Generals
 			text = "Retrain Generals"
 			icon =  GFX_focus_generic_military_mission
@@ -1456,14 +1549,14 @@ focus_tree = {
 			prerequisite = {focus = FRA_Change_Doctrine}
 			relative_position_id = FRA_First_Supreme_Election
 			ai_will_do = {
-					factor 1
+				factor = 1
 			}
 			search_filters = {Army}
 			completion_reward = {
 			
 			}
 	}
-			focus = {
+	focus = {
 			id = FRA_Dismantle_Maginot
 			text = "Dismantle The Maginot"
 			icon =  GFX_focus_generic_military_academy
@@ -1473,7 +1566,7 @@ focus_tree = {
 			prerequisite = {focus = FRA_Train_Generals}
 			relative_position_id = FRA_First_Supreme_Election
 			ai_will_do = {
-					factor 1
+				factor = 1
 			}
 			search_filters = {FOCUS_FILTER_MANPOWER}
 			completion_reward = {
@@ -1491,7 +1584,7 @@ focus_tree = {
 			    }
 			}
 	}
-		focus = {
+	focus = {
 			id = FRA_Modern_Artillery
 			text = "Modern Artillery"
 			icon =  GFX_goal_generic_army_artillery
@@ -1501,7 +1594,7 @@ focus_tree = {
 			prerequisite = {focus = FRA_Modern_Tanks}
 			relative_position_id = FRA_First_Supreme_Election
 			ai_will_do = {
-					factor 1
+				factor = 1
 			}
 			search_filters = {Army}
 			completion_reward = {
@@ -1513,7 +1606,7 @@ focus_tree = {
 			}
 			}
 	}
-		focus = {
+	focus = {
 			id = FRA_Pétain_Victory
 			text = "Pétain's Command"
 			icon =  GFX_focus_fra_petain_doctrine
@@ -1524,14 +1617,14 @@ focus_tree = {
 			mutually_exclusive = {focus = FRA_De_Gaulle_Victory}
 			relative_position_id = FRA_First_Supreme_Election
 			ai_will_do = {
-					factor 1
+				factor = 1
 			}
 			search_filters = {Army}
 			completion_reward = {
 			
 			}
 	}
-		focus = {
+	focus = {
 			id = FRA_Revist_Great_War
 			text = "Revise Great War Tactics"
 			icon =  GFX_focus_chi_army_reform
@@ -1541,14 +1634,14 @@ focus_tree = {
 			prerequisite = {focus = FRA_Pétain_Victory}
 			relative_position_id = FRA_First_Supreme_Election
 			ai_will_do = {
-					factor 1
+				factor = 1
 			}
 			search_filters = {Army}
 			completion_reward = {
 			
 			}
 	}
-			focus = {
+	focus = {
 			id = FRA_Expand_Maginot
 			text = "Expand The Maginot"
 			icon =  GFX_focus_fra_extend_maginot
@@ -1558,7 +1651,7 @@ focus_tree = {
 			prerequisite = {focus = FRA_Revist_Great_War}
 			relative_position_id = FRA_First_Supreme_Election
 			ai_will_do = {
-					factor 1
+				factor = 1
 			}
 			search_filters = {Army}
 			available = {
@@ -1570,7 +1663,7 @@ focus_tree = {
 			ROOT = { country_event = { id = france.2 } }
 			}
 	}
-			focus = {
+	focus = {
 			id = FRA_Dismantle_Reserves
 			text = "Dismantle The Reserve System"
 			icon =  GFX_focus_generic_manpower
@@ -1580,7 +1673,7 @@ focus_tree = {
 			prerequisite = {focus = FRA_Expand_Maginot}
 			relative_position_id = FRA_First_Supreme_Election
 			ai_will_do = {
-					factor 1
+				factor = 1
 			}
 			search_filters = {Army}
 			available = {
@@ -1590,7 +1683,7 @@ focus_tree = {
 			
 			}
 	}
-			focus = {
+	focus = {
 			id = FRA_Infantry_Tanks
 			text = "A Tank For The Infantry"
 			icon =  GFX_focus_generic_tank_for_army
@@ -1600,7 +1693,7 @@ focus_tree = {
 			prerequisite = {focus = FRA_Pétain_Victory}
 			relative_position_id = FRA_First_Supreme_Election
 			ai_will_do = {
-					factor 1
+				factor = 1
 			}
 			search_filters = {Army}
 			completion_reward = {
@@ -1623,7 +1716,7 @@ focus_tree = {
 			prerequisite = {focus = FRA_Infantry_Tanks}
 			relative_position_id = FRA_First_Supreme_Election
 			ai_will_do = {
-					factor 1
+				factor = 1
 			}
 			search_filters = {Army}
 			completion_reward = {
@@ -1636,7 +1729,7 @@ focus_tree = {
 				}
 			}
 	}
-		focus = {
+	focus = {
 			id = FRA_Increased_Cooperation
 			text = "Increased Cooperation"
 			icon =  GFX_focus_fra_french_modernize_something
@@ -1646,7 +1739,7 @@ focus_tree = {
 			prerequisite = {focus = FRA_Modernize_The_Cavalry}
 			relative_position_id = FRA_First_Supreme_Election
 			ai_will_do = {
-					factor 1
+				factor = 1
 			}
 			search_filters = {Army}
 			completion_reward = {
