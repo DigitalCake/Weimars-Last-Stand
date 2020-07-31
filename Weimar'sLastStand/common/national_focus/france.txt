@@ -20,8 +20,649 @@ focus_tree = {
 			tag = FRA
 		}
 	}
-	continuous_focus_position = { x = 50 y = 1600 }
+	continuous_focus_position = { x = 50 y = 2500 }
 	default = no
+###############POLITICAL###############
+	
+	focus = {
+		id = FRA_French_Politics
+		text = "French Politics"
+		icon = GFX_goal_generic_improve_relations
+		x = 8
+		y = 0
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+				factor = 1
+		}
+		search_filters = {Political}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = FRA_Vichy
+		text = "Vichy Conspiracy"
+		icon = GFX_goal_generic_improve_relations
+		x = 6
+		y = 1
+		prerequisite = {focus = FRA_French_Politics}
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+				factor = 1
+		}
+		search_filters = {Political}
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = FRA_Victory_Nat
+		text = "Victory in the Civil War"
+		icon = GFX_goal_generic_improve_relations
+		x = 6
+		y = 2
+		prerequisite = {focus = FRA_Vichy}
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+				factor = 1
+		}
+		search_filters = {Political}
+		completion_reward = {
+			
+		}
+	}
+
+###############MONARCHY###############
+
+	focus = {
+		id = FRA_Action_France
+		text = "Action Française Victorious"
+		icon = GFX_focus_rom_royal_dictatorship
+		x = -2
+		y = 3
+		prerequisite = {focus = FRA_Victory_Nat}
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+				factor = 1
+		}
+		search_filters = {Political}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = FRA_New_Const
+		text = "A New Constitution"
+		icon = GFX_goal_generic_neutrality_focus
+		x = -5
+		y = 4
+		prerequisite = {focus = FRA_Action_France}
+		mutually_exclusive = {focus = FRA_Nat_Cath}
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+				factor = 1
+		}
+		search_filters = {Political}
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = FRA_July_Mon
+		text = "Second July Monarchy"
+		icon = GFX_focus_focus_fra_orleans_restoration
+		x = -5
+		y = 5
+		prerequisite = {focus = FRA_New_Const}
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+				factor = 1
+		}
+		search_filters = {Political}
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = FRA_Work_Libs
+		text = "Working with Liberals"
+		icon = GFX_goal_generic_major_alliance
+		x = -5
+		y = 6
+		prerequisite = {focus = FRA_July_Mon}
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+				factor = 1
+		}
+		search_filters = {Political}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = FRA_Purge_Leagues
+		text = "Purge the Leagues"
+		icon = GFX_goal_generic_major_war
+		x = -5
+		y = 7
+		prerequisite = {focus = FRA_Work_Libs}
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+				factor = 1
+		}
+		search_filters = {Political}
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = FRA_Nat_Cath
+		text = "National Catholicism"
+		icon = GFX_focus_mex_restore_the_army_of_christ
+		x = 1
+		y = 4
+		prerequisite = {focus = FRA_Action_France}
+		mutually_exclusive = {focus = FRA_New_Const}
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+				factor = 1
+		}
+		search_filters = {Political}
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = FRA_End_Sec
+		text = "End Secularism"
+		icon = GFX_focus_por_concordat
+		x = 1
+		y = 5
+		prerequisite = {focus = FRA_Nat_Cath}
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+				factor = 1
+		}
+		search_filters = {Political}
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = FRA_Kill_De_Gualle
+		text = "Kill De Gualle"
+		icon = GFX_goal_generic_secret_weapon
+		x = 1
+		y = 6
+		prerequisite = {focus = FRA_End_Sec}
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+				factor = 1
+		}
+		search_filters = {Political}
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = FRA_Reach_Cath_World
+		text = "Reach Out to the Catholic World"
+		icon = GFX_goal_tripartite_pact
+		x = 1
+		y = 7
+		prerequisite = {focus = FRA_Kill_De_Gualle}
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+				factor = 1
+		}
+		search_filters = {Political}
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = FRA_King_Fasc
+		text = "A Fascist King"
+		icon = GFX_focus_rom_royal_dictatorship
+		x = 0
+		y = 8
+		prerequisite = {focus = FRA_Reach_Cath_World}
+		prerequisite = {focus = FRA_Vive_Roi}
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+				factor = 1
+		}
+		search_filters = {Political}
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = FRA_Death_Traitors
+		text = "Death to Traitors"
+		icon = GFX_goal_generic_attack_allies
+		x = 0
+		y = 9
+		prerequisite = {focus = FRA_King_Fasc focus = FRA_King_Fasc}
+		mutually_exclusive = {focus = FRA_Amnesty}
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+				factor = 1
+		}
+		search_filters = {Political}
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = FRA_Punish_Traitors
+		text = "Punish Pro Communist Regions"
+		icon = GFX_goal_generic_war_with_comintern
+		x = 0
+		y = 10
+		prerequisite = {focus = FRA_Death_Traitors}
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+				factor = 1
+		}
+		search_filters = {Political}
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = FRA_Fiscal_Austerity
+		text = "Fiscal Austerity"
+		icon = GFX_focus_fra_devalue_the_franc
+		x = 0
+		y = 11
+		prerequisite = {focus = FRA_Death_Traitors focus = FRA_Finance_Rebuilding}
+		mutually_exclusive = {focus = FRA_Aid_Needy}
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+				factor = 1
+		}
+		search_filters = {Political}
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = FRA_King_People
+		text = "A King for the People"
+		icon = GFX_goal_tfv_strengthen_commonwealth_ties
+		x = -4
+		y = 8
+		prerequisite = {focus = FRA_Purge_Leagues}
+		prerequisite = {focus = FRA_Vive_Roi}
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+				factor = 1
+		}
+		search_filters = {Political}
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = FRA_Amnesty
+		text = "Amnesty for the Former Enemy"
+		icon = GFX_goal_generic_intelligence_exchange
+		x = -4
+		y = 9
+		prerequisite = {focus = FRA_King_People focus = FRA_King_Fasc}
+		mutually_exclusive = {focus = FRA_Death_Traitors}
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+				factor = 1
+		}
+		search_filters = {Political}
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = FRA_Finance_Rebuilding
+		text = "Finance the Rebuilding of the Nation"
+		icon = GFX_goal_generic_construction
+		x = -4
+		y = 10
+		prerequisite = {focus = FRA_Amnesty}
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+				factor = 1
+		}
+		search_filters = {Political}
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = FRA_Aid_Needy
+		text = "Aid the Needy"
+		icon = GFX_focus_generic_concessions
+		x = -4
+		y = 11
+		prerequisite = {focus = FRA_Finance_Rebuilding focus = FRA_Punish_Traitors}
+		mutually_exclusive = {focus = FRA_Fiscal_Austerity}
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+				factor = 1
+		}
+		search_filters = {Political}
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = FRA_Recovery
+		text = "Full Recovery"
+		icon = GFX_focus_generic_industry_3
+		x = -2
+		y = 12
+		prerequisite = {focus = FRA_Aid_Needy focus = FRA_Fiscal_Austerity}
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+				factor = 1
+		}
+		search_filters = {Political}
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = FRA_Kingdom_United
+		text = "A Kingdom United, And Ready"
+		icon = GFX_focus_generic_home_defense
+		x = -2
+		y = 13
+		prerequisite = {focus = FRA_Recovery}
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+				factor = 1
+		}
+		search_filters = {Political}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = FRA_Prep_Coronation
+		text = "Prepare the Coronation"
+		icon = GFX_focus_generic_monarchy_2
+		x = -2
+		y = 5
+		prerequisite = {focus = FRA_Action_France}
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+				factor = 1
+		}
+		search_filters = {Political}
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = FRA_Vive_Roi
+		text = "Vive le Roi!"
+		icon = GFX_focus_generic_monarchy_1
+		x = -2
+		y = 7
+		prerequisite = {focus = FRA_Prep_Coronation}
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+				factor = 1
+		}
+		search_filters = {Political}
+		completion_reward = {
+			
+		}
+	}
+###############LEAGUES###############
+
+	focus = {
+		id = FRA_Leagues
+		text = "Leagues Ascendent"
+		icon = GFX_goal_generic_improve_relations
+		x = 3
+		y = 3
+		prerequisite = {focus = FRA_Victory_Nat}
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+				factor = 1
+		}
+		search_filters = {Political}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = FRA_Croix
+		text = "Croix de Feu"
+		icon = GFX_goal_generic_improve_relations
+		x = 3
+		y = 4
+		prerequisite = {focus = FRA_Leagues}
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+				factor = 1
+		}
+		search_filters = {Political}
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = FRA_Nat_Soc
+		text = "National Socialism"
+		icon = GFX_goal_generic_improve_relations
+		x = 3
+		y = 5
+		prerequisite = {focus = FRA_Croix}
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+				factor = 1
+		}
+		search_filters = {Political}
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = FRA_End_Culture
+		text = "End Cultural Degeneracy"
+		icon = GFX_goal_generic_improve_relations
+		x = 5
+		y = 5
+		prerequisite = {focus = FRA_Croix}
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+				factor = 1
+		}
+		search_filters = {Political}
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = FRA_Amend_Albion
+		text = "Make Amends with Albion"
+		icon = GFX_goal_generic_improve_relations
+		x = 3
+		y = 6
+		prerequisite = {focus = FRA_Nat_Soc}
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+				factor = 1
+		}
+		search_filters = {Political}
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = FRA_Syndicalise_Economy
+		text = "Syndicalise the Economy"
+		icon = GFX_goal_generic_improve_relations
+		x = 3
+		y = 7
+		prerequisite = {focus = FRA_Amend_Albion}
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+				factor = 1
+		}
+		search_filters = {Political}
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = FRA_Political_Unify
+		text = "Political Unification"
+		icon = GFX_goal_generic_improve_relations
+		x = 5
+		y = 8
+		prerequisite = {focus = FRA_Syndicalise_Economy}
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+				factor = 1
+		}
+		search_filters = {Political}
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = FRA_Integrate_Paramilitary
+		text = "Integrate the Paramilitaries"
+		icon = GFX_goal_generic_improve_relations
+		x = 3
+		y = 9
+		prerequisite = {focus = FRA_Political_Unify}
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+				factor = 1
+		}
+		search_filters = {Political}
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = FRA_Blueshirt_Generals
+		text = "Make Former Blueshirts Generals"
+		icon = GFX_goal_generic_improve_relations
+		x = 3
+		y = 10
+		prerequisite = {focus = FRA_Integrate_Paramilitary}
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+				factor = 1
+		}
+		search_filters = {Political}
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = FRA_Execute_Traitors
+		text = "Execute Traiorous Officials"
+		icon = GFX_goal_generic_improve_relations
+		x = 3
+		y = 11
+		prerequisite = {focus = FRA_Blueshirt_Generals}
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+				factor = 1
+		}
+		search_filters = {Political}
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = FRA_Triumph_Blueshirts
+		text = "Triumph for the Blueshirts"
+		icon = GFX_goal_generic_improve_relations
+		x = 7
+		y = 4
+		prerequisite = {focus = FRA_Leagues}
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+				factor = 1
+		}
+		search_filters = {Political}
+		completion_reward = {
+			
+		}
+	}	
 ########################################################
 
 	focus = {
@@ -45,7 +686,7 @@ focus_tree = {
 		id = FRA_Airports
 		text = "Develop Northern Airfields"
 		icon = GFX_goal_generic_production2
-		x = -7
+		x = -9
 		y = 1
 		prerequisite = {focus = FRA_French_Economy}
 		cost = 5
@@ -64,7 +705,7 @@ focus_tree = {
 		id = FRA_Airports2
 		text = "Develop Southern Airfields"
 		icon = GFX_goal_generic_production2
-		x = -7
+		x = -9
 		y = 2
 		prerequisite = {focus = FRA_Airports}
 		cost = 5
@@ -84,7 +725,7 @@ focus_tree = {
 		id = FRA_Airports3
 		text = "Anti-Air Defenses"
 		icon = GFX_focus_generic_air_defense
-		x = -7
+		x = -9
 		y = 3
 		prerequisite = {focus = FRA_Airports2}
 		cost = 5
@@ -104,7 +745,7 @@ focus_tree = {
 		id = FRA_Ports
 		text = "Construct Northern Ports"
 		icon = GFX_goal_generic_construct_naval_dockyard
-		x = -5
+		x = -7
 		y = 1
 		prerequisite = {focus = FRA_French_Economy}
 		cost = 5
@@ -123,7 +764,7 @@ focus_tree = {
 		id = FRA_Ports2
 		text = "Construct Southern Ports"
 		icon = GFX_goal_generic_construct_naval_dockyard
-		x = -5
+		x = -7
 		y = 2
 		prerequisite = {focus = FRA_Ports}
 		cost = 5
@@ -142,7 +783,7 @@ focus_tree = {
 		id = FRA_Ports3
 		text = "Protect Our Ports"
 		icon = GFX_focus_generic_coastal_fort
-		x = -5
+		x = -7
 		y = 3
 		prerequisite = {focus = FRA_Ports2}
 		cost = 5
@@ -160,7 +801,7 @@ focus_tree = {
 		id = FRA_Economic_Minister
 		text = "Appoint Economic Minister"
 		icon = GFX_goal_generic_production2
-		x = -2
+		x = -4
 		y = 1
 		prerequisite = {focus = FRA_French_Economy}
 		cost = 5
@@ -309,12 +950,144 @@ focus_tree = {
 			
 		}
 	}
+	
+	focus = {
+		id = FRA_road
+		text = "First Road Expansion"
+		icon = GFX_goal_generic_production2
+		x = -1
+		y = 1
+		prerequisite = {focus = FRA_French_Economy}
+		cost = 5
+		available_if_capitulated = yes
+		relative_position_id = FRA_French_Economy
+		ai_will_do = {
+				factor = 1
+		}
+		search_filters = {Industry}
+		completion_reward = {
+			
+		}
+	}
 
+	focus = {
+		id = FRA_road2
+		text = "Initial Highway Systems"
+		icon = GFX_goal_generic_production2
+		x = -1
+		y = 2
+		prerequisite = {focus = FRA_road}
+		cost = 5
+		available_if_capitulated = yes
+		relative_position_id = FRA_French_Economy
+		ai_will_do = {
+				factor = 1
+		}
+		search_filters = {Industry}
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = FRA_road3
+		text = "Second Road Expansion"
+		icon = GFX_goal_generic_production2
+		x = -1
+		y = 3
+		prerequisite = {focus = FRA_road2}
+		cost = 5
+		available_if_capitulated = yes
+		relative_position_id = FRA_French_Economy
+		ai_will_do = {
+				factor = 1
+		}
+		search_filters = {Industry}
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = FRA_rail
+		text = "Mining Trains"
+		icon = GFX_goal_generic_production2
+		x = 1
+		y = 1
+		prerequisite = {focus = FRA_French_Economy}
+		cost = 5
+		available_if_capitulated = yes
+		relative_position_id = FRA_French_Economy
+		ai_will_do = {
+				factor = 1
+		}
+		search_filters = {Industry}
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = FRA_rail2
+		text = "New Train Yards"
+		icon = GFX_goal_generic_production2
+		x = 1
+		y = 2
+		prerequisite = {focus = FRA_rail}
+		cost = 5
+		available_if_capitulated = yes
+		relative_position_id = FRA_French_Economy
+		ai_will_do = {
+				factor = 1
+		}
+		search_filters = {Industry}
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = FRA_rail2
+		text = "New Train Yards"
+		icon = GFX_goal_generic_production2
+		x = 1
+		y = 2
+		prerequisite = {focus = FRA_rail}
+		cost = 5
+		available_if_capitulated = yes
+		relative_position_id = FRA_French_Economy
+		ai_will_do = {
+				factor = 1
+		}
+		search_filters = {Industry}
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = FRA_rail3
+		text = "Electric Trains"
+		icon = GFX_goal_generic_production2
+		x = 1
+		y = 3
+		prerequisite = {focus = FRA_rail2}
+		cost = 5
+		available_if_capitulated = yes
+		relative_position_id = FRA_French_Economy
+		ai_will_do = {
+				factor = 1
+		}
+		search_filters = {Industry}
+		completion_reward = {
+			
+		}
+	}
 	focus = {
 		id = FRA_Economic_Focus
 		text = "Economic Focus"
 		icon = GFX_goal_generic_production2
-		x = 2
+		x = 4
 		y = 1
 		prerequisite = {focus = FRA_French_Economy}
 		cost = 5
@@ -468,7 +1241,7 @@ focus_tree = {
 		id = FRA_Civilian
 		text = "Focus On Civilian Production"
 		icon = GFX_goal_generic_production2
-		x = 5
+		x = 7
 		y = 1
 		prerequisite = {focus = FRA_French_Economy}
 		cost = 5
@@ -487,7 +1260,7 @@ focus_tree = {
 		id = FRA_Civilian2
 		text = "Increase Wine Exports"
 		icon = GFX_goal_generic_production2
-		x = 5
+		x = 7
 		y = 2
 		prerequisite = {focus = FRA_Civilian}
 		cost = 5
@@ -506,7 +1279,7 @@ focus_tree = {
 		id = FRA_Civilian3
 		text = "A Happy Populace"
 		icon = GFX_goal_generic_production2
-		x = 5
+		x = 7
 		y = 3
 		prerequisite = {focus = FRA_Civilian2}
 		cost = 5
@@ -525,7 +1298,7 @@ focus_tree = {
 		id = FRA_Military
 		text = "Focus On Military Production"
 		icon = GFX_goal_generic_production2
-		x = 7
+		x = 9
 		y = 1
 		prerequisite = {focus = FRA_French_Economy}
 		cost = 5
@@ -544,7 +1317,7 @@ focus_tree = {
 		id = FRA_Military2
 		text = "Increased Production"
 		icon = GFX_goal_generic_production2
-		x = 7
+		x = 9
 		y = 2
 		prerequisite = {focus = FRA_Military}
 		cost = 5
@@ -563,7 +1336,7 @@ focus_tree = {
 		id = FRA_Military3
 		text = "A Factory In Every City"
 		icon = GFX_goal_generic_production2
-		x = 7
+		x = 9
 		y = 3
 		prerequisite = {focus = FRA_Military2}
 		cost = 5
