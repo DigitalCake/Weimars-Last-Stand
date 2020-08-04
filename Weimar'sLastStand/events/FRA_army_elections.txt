@@ -13,10 +13,6 @@ country_event = {
 	trigger = {
 	}
 
-	mean_time_to_happen = {
-		days = 1
-	}
-
 	option = {
 		name = "De Gualle!"
 		ai_chance = {

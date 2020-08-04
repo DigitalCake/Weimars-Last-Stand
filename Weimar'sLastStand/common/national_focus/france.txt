@@ -1898,7 +1898,7 @@ focus_tree = {
 			}
 			search_filters = {Airforce}
 			completion_reward = {
-
+				country_event = {id = france.weimarslaststand.2}
 			}
 	}
 	focus = {
