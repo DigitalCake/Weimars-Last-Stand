@@ -1,0 +1,54 @@
+
+add_namespace = france.weimarslaststand
+
+country_event = {
+	id = france.weimarslaststand.3
+	title = "Our Command"
+	desc = france.weimarslaststand.3.d
+	picture = GFX_0 	#Temporary
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	trigger = {
+	}
+
+	option = {
+		name = "Durand-Viel!"
+		ai_chance = {
+			factor = 33
+		}
+		effect_tooltip = {
+			complete_national_focus = FRA_Durand_Victory
+		}
+		hidden_effect = {
+			complete_national_focus = FRA_Durand_Victory
+		}
+	}
+
+	option = {
+		name = "Darlan!"
+		ai_chance = {
+			factor = 33
+		}
+		effect_tooltip = {
+			complete_national_focus = FRA_Darlan_Victory
+		}
+		hidden_effect = {
+			complete_national_focus = FRA_Darlan_Victory
+		}
+	}
+
+	option = {
+		name = "Auphan!"
+		ai_chance = {
+			factor = 34
+		}
+		effect_tooltip = {
+			complete_national_focus = FRA_Auphan_Victory
+		}
+		hidden_effect = {
+			complete_national_focus = FRA_Auphan_Victory
+		}
+	}
+}
