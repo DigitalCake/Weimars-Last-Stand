@@ -42,6 +42,6 @@ news_event = {
 	}
 
 	immediate = {
-		news_event = { id = weimarslaststand_news.2 days = 284 } # toaster event happens 285 days later
+		news_event = { id = weimarslaststand_news.2 days = 10 } # toaster event happens 285 days later
 	}
 }
