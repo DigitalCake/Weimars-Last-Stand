@@ -1,0 +1,41 @@
+
+add_namespace = france.weimarslaststand
+
+country_event = {
+	id = france.weimarslaststand.2
+	title = "Our Command"
+	desc = france.weimarslaststand.2.d
+	picture = GFX_0 	#Temporary
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	trigger = {
+	}
+
+	option = {
+		name = "Barès!"
+		ai_chance = {
+			factor = 50
+		}
+		effect_tooltip = {
+			complete_national_focus = FRA_Barès_Victory
+		}
+		hidden_effect = {
+			complete_national_focus = FRA_Barès_Victory
+		}
+	}
+
+	option = {
+		name = "Denain!"
+		ai_chance = {
+			factor = 50
+		}
+		effect_tooltip = {
+			complete_national_focus = FRA_Denain_Victory
+		}
+		hidden_effect = {
+			complete_national_focus = FRA_Denain_Victory
+		}
+	}
+}
