@@ -13,9 +13,12 @@ news_event = {
 
 	major = yes
 	is_triggered_only = yes
+	
 
 	immediate = {
-		news_event = { id = weimarslaststand_news.2 days = 365 } # schedule the next event for a year later
+		hidden_effect = {
+			news_event = { id = weimarslaststand_news.2 days = 365 } # schedule the next event for a year later
+		}
 	}
 	
 	option = {
@@ -35,10 +38,6 @@ news_event = {
 	
 	trigger = {
 		date > 1933.1.1
-	}
-
-	mean_time_to_happen = {
-		days = 1
 	}
 
 	immediate = {
