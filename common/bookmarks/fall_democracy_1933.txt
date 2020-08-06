@@ -1,0 +1,207 @@
+bookmarks = {
+	bookmark = {
+		name = "The Fall Of Democracy"
+		desc = "FALL_DEMOCRACY_BOOKMARK_LOC"
+		date = 1933.1.1.12
+		picture = "GFX_fall_democracy_bookmark"
+		default_country = "FRA"
+	
+		FRA = {
+			history = FRANCE_FALL_DEMOCRACY_DESC_LOC
+			ideology = democratic
+			ideas={
+			
+			}
+			focuses = {
+
+			}
+		}
+		USA = {
+			history = USA_FALL_DEMOCRACY_DESC_LOC
+			ideology = democratic
+			ideas = {
+
+			}
+			focuses = {
+
+			}
+		}
+		ENG = {
+			history = ENGLAND_FALL_DEMOCRACY_DESC_LOC
+			ideology = democratic
+			ideas = {
+
+			}
+			focuses = {
+
+			}
+			
+		}
+		GER = {
+			history = GERMANY_FALL_DEMOCRACY_DESC_LOC
+			ideology = democratic
+			ideas = {
+
+			}
+			focuses = {
+
+			}
+		}
+		ITA = {
+			history = ITALY_FALL_DEMOCRACY_DESC_LOC
+			ideology = fascism
+			ideas={
+
+			}
+			focuses = {
+
+			}			
+		}
+		JAP = {
+			history = JAPAN_FALL_DEMOCRACY_DESC_LOC
+			ideology = democratic
+			ideas={
+
+			}	
+			focuses = {
+
+			}		
+		}
+		SOV = {
+			history = SOVIET_UNION_FALL_DEMOCRACY_DESC_LOC
+			ideology = communism
+			ideas = {
+
+			}
+			focuses = {
+
+			}
+		}
+
+		"---"={
+			history = "OTHER_FALL_DEMOCRACY_DESC_LOC"
+		}
+
+		# minors #
+		"CAN"={
+			minor = yes
+			history = "CANADA_FALL_DEMOCRACY_DESC_LOC"
+			ideology = democratic
+			ideas = {
+				CAN_great_depression_1
+				CAN_conscription_crisis
+			}
+			focuses = {
+				CAN_skewer_the_eagle
+				CAN_north_american_alliance
+				CAN_join_comintern
+			}
+		}
+		"AST"={
+			minor = yes
+			history = "AUSTRALIA_FALL_DEMOCRACY_DESC_LOC"
+			ideology = democratic
+			ideas = {
+				AST_great_depression_1
+			}
+			focuses = {
+				AST_never_another_gallipoli
+				AST_support_indonesian_uprising
+				AST_delegation_to_china
+			}
+		}
+		"SAF"={
+			minor = yes
+			history = "SOUTH_AFRICA_FALL_DEMOCRACY_DESC_LOC"
+			ideology = democratic
+			ideas = {
+				SAF_ossewabrandwag
+				SAF_history_of_segregation
+			}
+			focuses = {
+				SAF_secure_interests_in_africa
+				SAF_support_the_german_coup
+				SAF_anti_colonialist_crusade
+			}
+		}
+		"RAJ"={
+			minor = yes
+			history = "RAJ_FALL_DEMOCRACY_DESC_LOC"
+			ideology = neutrality
+			ideas = {
+				RAJ_agrarian_society
+				RAJ_princely_states
+			}
+			focuses = {
+				RAJ_all_india_forward_bloc
+				RAJ_indian_gurkhas
+				RAJ_the_smiling_buddha
+			}
+		}
+		"HUN"={
+			minor = yes
+			history = "HUNGARY_FALL_DEMOCRACY_DESC_LOC"
+			ideology = neutrality
+			ideas = {
+				HUN_treaty_of_triannon_3
+				HUN_interventionism
+				HUN_strengthen_fascists
+			}
+			focuses = {
+				HUN_elect_a_king
+				HUN_secret_rearmament
+				HUN_renounce_the_treaty_of_trianon
+			}
+		}
+
+		"ROM"={
+			minor = yes
+			history = "ROMANIA_FALL_DEMOCRACY_DESC_LOC"
+			ideology = neutrality
+			ideas = {
+				ROM_king_carol_ii_hedonist
+				ROM_preserve_greater_romania
+				ROM_iron_guard
+			}
+			focuses = {
+				ROM_balkans_dominance
+				ROM_institute_royal_dictatorship
+				ROM_preserve_greater_romania
+			}
+		}
+		"CHI"={
+			minor = yes
+			history = "CHINA_FALL_DEMOCRACY_DESC_LOC"
+			ideology = neutrality
+			ideas = {
+				CHI_army_corruption_2
+				CHI_hyper_inflation_1
+				CHI_nine_power_treaty
+			}
+			focuses = {
+				CHI_renegotiate_the_unequal_treaties
+				CHI_invite_the_flying_tigers
+				CHI_war_of_resistance
+			}
+		}
+		"PRC"={
+			minor = yes
+			history = "PRC_FALL_DEMOCRACY_DESC_LOC"
+			ideology = communism
+			ideas = {
+				PRC_the_long_march_1
+				PRC_low_popular_support_1
+				PRC_power_struggles
+			}
+			focuses = {
+				PRC_infiltration
+				PRC_maoism
+				PRC_anti_japanese_expedition
+			}
+		}
+		effect = {
+			randomize_weather = 12345 # <- Obligatory in every bookmark !
+			#123 = { rain_light = yes }
+		}
+	}
+}
