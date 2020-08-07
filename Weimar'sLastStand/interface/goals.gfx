@@ -2198,4 +2198,24 @@ spriteTypes = {
 		name = "GFX_focus_fra_air_elect"
 		texturefile = "gfx/interface/goals/focus_fra_air_elect.dds"
 	}
+	
+	SpriteType = {
+		name = "GFX_focus_generic_diplomacy_weimar_germany"
+		texturefile = "gfx/interface/goals/focus_generic_diplomacy_weimar_germany.dds"
+	} 
+	
+	SpriteType = {
+		name = "GFX_focus_generic_diplomacy_state_japan"
+		texturefile = "gfx/interface/goals/focus_generic_diplomacy_state_japan.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_focus_generic_strike_weimar_germany"
+		texturefile = "gfx/interface/goals/focus_generic_strike_weimar_germany.dds"
+	} 
+	
+	SpriteType = {
+		name = "GFX_focus_SOV_assasination_of_trotsky2"
+		texturefile = "gfx/interface/goals/focus_SOV_assasination_of_trotsky2.dds"
+	} 
 }
