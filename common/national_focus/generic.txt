@@ -12,7 +12,6 @@
 
 	focus = {
 		id = industrial_effort
-		text = "Industrial Effort"
 		icon = GFX_goal_generic_production
 		x = 5
 		y = 0
@@ -32,7 +31,6 @@
 	
 	focus = {
 		id = continue_industrialising
-		text = "Continue Industrialising"
 		icon = GFX_goal_generic_construction
 		prerequisite = { focus = industrial_effort }
 		x = -4
@@ -54,7 +52,6 @@
 	
 	focus = {
 		id = infrastructure_effort
-		text = "Infrastructure Effort"
 		icon = GFX_goal_generic_construct_civilian
 		prerequisite = { focus = continue_industrialising }
 		prerequisite = { focus = reestablish_factories }
@@ -72,7 +69,6 @@
 	
 	focus = {
 		id = infrastructure_construction
-		text = "Infrastructure Construction"
 		icon = GFX_goal_generic_construct_infrastructure
 		prerequisite = { focus = continue_industrialising } 
 		prerequisite = { focus = reestablish_factories } 
@@ -196,7 +192,6 @@
 	
 	focus = {
 		id = infrastructure_construction_2
-		text = "Infrastructure Construction II"
 		icon = GFX_goal_generic_construct_infrastructure
 		prerequisite = { focus = infrastructure_construction } 
 		x = 0
@@ -319,7 +314,6 @@
 	
 	focus = {
 		id = fortification_process
-		text = "Fortification Process"
 		icon = GFX_goal_generic_construct_military
 		prerequisite = { focus = infrastructure_construction } 
 		x = -2
@@ -336,7 +330,6 @@
 	
 	focus = {
 		id = synthetics_effort
-		text = "Synthetics Effort"
 		icon = GFX_goal_generic_construct_civilian
 		prerequisite = { focus = infrastructure_construction_2 } 
 		x = 0
@@ -358,7 +351,6 @@
 	
 	focus = {
 		id = excavation_effort
-		text = "Excavation Effort"
 		icon = GFX_goal_generic_construction2
 		prerequisite = { focus = infrastructure_construction_2 } 
 		x = -4
@@ -380,7 +372,6 @@
 	
 	focus = {
 		id = steel_extraction
-		text = "Steel Extraction"
 		icon = GFX_focus_generic_steel
 		prerequisite = { focus = excavation_effort } 
 		mutually_exclusive = { focus = tungsten_extraction }
@@ -416,7 +407,6 @@
 	
 	focus = {
 		id = tungsten_extraction
-		text = "Tungsten Extraction"
 		icon = GFX_focus_generic_tungsten
 		prerequisite = { focus = excavation_effort } 
 		mutually_exclusive = { focus = steel_extraction }
@@ -452,7 +442,6 @@
 	
 	focus = {
 		id = aluminium_extraction
-		text = "Aluminium Extraction"
 		icon = GFX_focus_generic_aluminum
 		prerequisite = { focus = excavation_effort } 
 		mutually_exclusive = { focus = steel_extraction }
@@ -488,7 +477,6 @@
 	
 	focus = {
 		id = oil_synthetics
-		text = "Oil Synthetics"
 		icon = GFX_goal_generic_oil_refinery
 		prerequisite = { focus = synthetics_effort }
 		mutually_exclusive = { focus = rubber_synthetics }
@@ -510,7 +498,6 @@
 	
 	focus = {
 		id = rubber_synthetics
-		text = "Rubber Synthetics"
 		icon = GFX_focus_generic_rubber
 		prerequisite = { focus = synthetics_effort } 
 		mutually_exclusive = { focus = oil_synthetics }
@@ -532,7 +519,6 @@
 	
 	focus = {
 		id = chromium_extraction
-		text = "Chromium Extraction"
 		icon = GFX_goal_gen_extract_chromium
 		prerequisite = { focus = steel_extraction focus = tungsten_extraction focus = aluminium_extraction } 
 		x = 2
@@ -566,7 +552,6 @@
 	
 	focus = {
 		id = synthetics_construction
-		text = "Synthetics Construction"
 		icon = GFX_goal_generic_construct_civilian
 		prerequisite = { focus = oil_synthetics focus = rubber_synthetics } 
 		x = 1
@@ -605,7 +590,6 @@
 	
 	focus = {
 		id = electronics_effort
-		text = "Electronics Effort"
 		icon = GFX_goal_continuous_research
 		prerequisite = { focus = industrial_effort }
 		x = 0
@@ -627,7 +611,6 @@
 	
 	focus = {
 		id = greater_minds
-		text = "Greater Minds"
 		icon = GFX_goal_tfv_generic_tech_sharing
 		prerequisite = { focus = electronics_effort }
 		prerequisite = { focus = reestablish_factories }
@@ -645,7 +628,6 @@
 	
 	focus = {
 		id = radar_technology
-		text = "Radar Technology"
 		icon = GFX_goal_generic_radar
 		prerequisite = { focus = greater_minds }
 		x = -2
@@ -667,7 +649,6 @@
 	
 	focus = {
 		id = ciphering_technology
-		text = "Ciphering Technology"
 		icon = GFX_goal_poland_goal
 		prerequisite = { focus = greater_minds }
 		x = 0
@@ -689,7 +670,6 @@
 	
 	focus = {
 		id = radar_construction
-		text = "Radar Construction"
 		icon = GFX_goal_generic_radar
 		prerequisite = { focus = radar_technology }
 		prerequisite = { focus = infrastructure_construction_2 }
@@ -707,7 +687,6 @@
 	
 	focus = {
 		id = extra_research_slot
-		text = "Extra Research Slot"
 		icon = GFX_focus_research2
 		prerequisite = { focus = ciphering_technology }
 		x = 0
@@ -724,7 +703,6 @@
 	
 	focus = {
 		id = nuclear_technology
-		text = "Nuclear Technology"
 		icon = GFX_focus_wonderweapons
 		prerequisite = { focus = ciphering_technology }
 		x = 2
@@ -747,7 +725,6 @@
 	
 	focus = {
 		id = improved_electronics
-		text = "Improved Electronics"
 		icon = GFX_goal_generic_occupy_start_war
 		prerequisite = { focus = extra_research_slot }
 		x = 0
@@ -769,7 +746,6 @@
 	
 	focus = {
 		id = rocketry
-		text = "Rocketry"
 		icon = GFX_focus_rocketry
 		prerequisite = { focus = nuclear_technology }
 		x = 0
@@ -792,7 +768,6 @@
 	
 	focus = {
 		id = extra_research_slot_2
-		text = "Extra Research Slot II"
 		icon = GFX_focus_research2
 		prerequisite = { focus = improved_electronics }
 		prerequisite = { focus = minimize_civilian_usage }
@@ -810,8 +785,7 @@
 	
 	focus = {
 		id = reestablish_factories
-		text = "Re-establish Factories"
-		icon = GFX_focus_generic_industry_2
+		icon = GFX_focus_generic_industry_3
 		prerequisite = { focus = industrial_effort }
 		x = 4
 		y = 1
@@ -887,7 +861,6 @@
 	
 	focus = {
 		id = civilian_effort
-		text = "Civilian Effort"
 		icon = GFX_goal_generic_construct_civ_factory
 		prerequisite = { focus = reestablish_factories }
 		mutually_exclusive = { focus = armaments_effort}
@@ -934,7 +907,6 @@
 	
 	focus = {
 		id = armaments_effort
-		text = "Armanents Effort"
 		icon = GFX_goal_generic_construct_mil_factory
 		prerequisite = { focus = reestablish_factories }
 		mutually_exclusive = { focus = civilian_effort}
@@ -981,7 +953,6 @@
 	
 	focus = {
 		id = civilian_effort_2
-		text = "Civilian Effort II"
 		icon = GFX_goal_generic_construct_civ_factory
 		prerequisite = { focus = civilian_effort focus = armaments_effort }
 		mutually_exclusive = { focus = armaments_effort_2}
@@ -1028,7 +999,6 @@
 	
 	focus = {
 		id = armaments_effort_2
-		text = "Armanents Effort II"
 		icon = GFX_goal_generic_construct_mil_factory
 		prerequisite = { focus = armaments_effort focus = civilian_effort }
 		mutually_exclusive = { focus = civilian_effort_2}
@@ -1075,7 +1045,6 @@
 	
 	focus = {
 		id = civilian_effort_3
-		text = "Civilian Effort III"
 		icon = GFX_goal_generic_construct_civ_factory
 		prerequisite = { focus = civilian_effort_2 focus = armaments_effort_2 }
 		mutually_exclusive = { focus = armaments_effort_3}
@@ -1122,7 +1091,6 @@
 	
 	focus = {
 		id = armaments_effort_3
-		text = "Armanents Effort III"
 		icon = GFX_goal_generic_construct_mil_factory
 		prerequisite = { focus = armaments_effort_2 focus = civilian_effort_2 }
 		mutually_exclusive = { focus = civilian_effort_3}
@@ -1169,7 +1137,6 @@
 	
 	focus = {
 		id = improve_civilian_work
-		text = "Improve Civilian Work"
 		icon = GFX_goal_generic_construct_civ_factory
 		prerequisite = { focus = armaments_effort_3 focus = civilian_effort_3 }
 		x = 0
@@ -1186,7 +1153,6 @@
 	
 	focus = {
 		id = minimize_civilian_usage
-		text = "Minimize Civilian Usage"
 		icon = GFX_goal_generic_consumer_goods
 		prerequisite = { focus = armaments_effort_3 focus = civilian_effort_3 }
 		x = 2
@@ -1203,7 +1169,6 @@
 	
 	focus = {
 		id = prepare_for_war
-		text = "Prepare For War"
 		icon = GFX_focus_generic_license_production
 		prerequisite = { focus = armaments_effort_3 focus = civilian_effort_3 }
 		x = 0
@@ -1219,8 +1184,7 @@
 	}
 	
 	focus = {
-		id = military_construction 
-		text = "Military Construction"
+		id = military_construction
 		icon = GFX_goal_generic_construct_mil_factory
 		prerequisite = { focus = minimize_civilian_usage }
 		mutually_exclusive = { focus = armament_improvment }
@@ -1238,7 +1202,6 @@
 	
 	focus = {
 		id = armament_improvment
-		text = "Armament Improvement"
 		icon = GFX_focus_secret_rearmament
 		prerequisite = { focus = prepare_for_war }
 		mutually_exclusive = { focus = armament_construction }
@@ -1256,7 +1219,6 @@
 	
 	focus = {
 		id = rifle_primary
-		text = "Rifle Primary"
 		icon = GFX_goal_generic_production2
 		prerequisite = { focus = prepare_for_war }
 		prerequisite = { focus = arms_race }
@@ -1274,7 +1236,6 @@
 	
 	focus = {
 		id = enter_the_war_economy
-		text = "Enter The War Economy"
 		icon = GFX_goal_generic_small_arms
 		prerequisite = { focus = military_construction focus = armament_improvment }
 		mutually_exclusive = { focus = enter_total_mobilisation }
@@ -1292,7 +1253,6 @@
 	
 	focus = {
 		id = enter_total_mobilisation
-		text = "Enter Total Mobilisation"
 		icon = GFX_goal_generic_army_tanks
 		prerequisite = { focus = military_construction focus = armament_improvment }
 		mutually_exclusive = { focus = enter_the_war_economy }
@@ -1312,7 +1272,6 @@
 	
 	focus = {
 		id = army_effort
-		text = ""
 		icon = GFX_goal_generic_allies_build_infantry
 		x = 23
 		y = 0
@@ -1334,7 +1293,6 @@
 	
 	focus = {
 		id = infantry_effort
-		text = "Infantry Effort"
 		icon = GFX_goal_generic_small_arms
 		prerequisite = { focus = army_effort }
 		x = -6
@@ -1356,7 +1314,6 @@
 	
 	focus = {
 		id = doctrine_effort
-		text = "Doctrine Effort"
 		icon = GFX_goal_generic_cavalry
 		prerequisite = { focus = infantry_effort focus = armor_effort }
 		x = 3
@@ -1378,7 +1335,6 @@
 	
 	focus = {
 		id = defensive_weapons
-		text = "Defensive Weapons"
 		icon = GFX_goal_generic_military_sphere
 		prerequisite = { focus = infantry_effort }
 		mutually_exclusive = { focus = offensive_weapons }
@@ -1404,7 +1360,6 @@
 	
 	focus = {
 		id = offensive_weapons
-		text = "Offensive Weapons"
 		icon = GFX_focus_hol_war_on_pacifism
 		prerequisite = { focus = infantry_effort }
 		mutually_exclusive = { focus = defensive_weapons }
@@ -1433,7 +1388,6 @@
 	
 	focus = {
 		id = doctrine_effort_2
-		text = "Doctrine Effort II"
 		icon = GFX_goal_generic_position_armies
 		prerequisite = { focus = doctrine_effort }
 		x = 0
@@ -1455,7 +1409,6 @@
 	
 	focus = {
 		id = support_effort
-		text = "Support Effort"
 		icon = GFX_goal_generic_army_artillery
 		prerequisite = { focus = defensive_weapons focus = offensive_weapons }
 		x = 0
@@ -1477,7 +1430,6 @@
 	
 	focus = {
 		id = artillery_effort
-		text = "Artillery Effort"
 		icon = GFX_goal_generic_army_artillery2
 		prerequisite = { focus = defensive_weapons focus = offensive_weapons }
 		x = 2
@@ -1499,7 +1451,6 @@
 	
 	focus = {
 		id = arms_race
-		text = "Arms Race"
 		icon = GFX_focus_generic_little_entente
 		prerequisite = { focus = support_effort }
 		prerequisite = { focus = artillery_effort }
@@ -1523,7 +1474,6 @@
 	
 	focus = {
 		id = armor_effort
-		text = "Armor Effort"
 		icon = GFX_goal_generic_army_tanks
 		prerequisite = { focus = army_effort }
 		x = 0
@@ -1545,7 +1495,6 @@
 	
 	focus = {
 		id = motorization_effort
-		text = "Motorization Effort"
 		icon = GFX_goal_generic_army_motorized
 		prerequisite = { focus = armor_effort }
 		x = -1
@@ -1567,7 +1516,6 @@
 	
 	focus = {
 		id = light_tanks
-		text = "Light Tanks"
 		icon = GFX_goal_continuous_armor_production
 		prerequisite = { focus = armor_effort }
 		x = 1
@@ -1592,7 +1540,6 @@
 	
 	focus = {
 		id = mechanization_effort
-		text = "Mechanization Effort"
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = motorization_effort }
 		x = 0
@@ -1613,8 +1560,7 @@
 	}
 	
 	focus = {
-		id = tanks_for_the_future
-		text = "Tanks For The Future"
+		id = tanks_a_lot
 		icon = GFX_focus_generic_tank_production
 		prerequisite = { focus = light_tanks }
 		x = 0
@@ -1636,10 +1582,9 @@
 	
 	focus = {
 		id = lightning_war
-		text = "Lightning War"
 		icon = GFX_focus_generic_license_production
 		prerequisite = { focus = mechanization_effort }
-		prerequisite = { focus = tanks_for_the_future }
+		prerequisite = { focus = tanks_a_lot }
 		x = 0
 		y = 1
 		relative_position_id = mechanization_effort
@@ -1654,10 +1599,9 @@
 	
 	focus = {
 		id = rolling_breakthrough
-		text = "Rolling Breakthrough"
 		icon = GFX_focus_generic_combined_arms
 		prerequisite = { focus = mechanization_effort }
-		prerequisite = { focus = tanks_for_the_future }
+		prerequisite = { focus = tanks_a_lot }
 		x = 2
 		y = 1
 		relative_position_id = mechanization_effort
@@ -1672,7 +1616,6 @@
 	
 	focus = {
 		id = special_forces
-		text = "Special Forces"
 		icon = GFX_goal_generic_special_forces
 		prerequisite = { focus = army_effort }
 		x = 5
@@ -1689,7 +1632,6 @@
 	
 	focus = {
 		id = water_soldiers
-		text = "Water Soldiers"
 		icon = GFX_goal_generic_amphibious_assault
 		prerequisite = { focus = special_forces }
 		mutually_exclusive = { focus = mountain_commandos }
@@ -1714,7 +1656,6 @@
 	
 	focus = {
 		id = mountain_commandos
-		text = "Mountain Commandos"
 		icon = GFX_focus_secret_rearmament
 		prerequisite = { focus = special_forces }
 		mutually_exclusive = { focus = water_soldiers }
@@ -1739,7 +1680,6 @@
 	
 	focus = {
 		id = sky_attack
-		text = "Sky Attack"
 		icon = GFX_focus_generic_paratrooper
 		prerequisite = { focus = special_forces }
 		mutually_exclusive = { focus = water_soldiers }
@@ -1764,7 +1704,6 @@
 	
 	focus = {
 		id = marine_landings
-		text = "Marine Landings"
 		icon = GFX_goal_generic_navy_doctrines_tactics
 		prerequisite = { focus = water_soldiers }
 		x = 0
@@ -1781,7 +1720,6 @@
 	
 	focus = {
 		id = terrain_adaptations
-		text = "Terrain Adaptations"
 		icon = GFX_goal_continuous_reduce_training_time
 		prerequisite = { focus = mountain_commandos }
 		x = 0
@@ -1798,7 +1736,6 @@
 	
 	focus = {
 		id = secure_the_skies
-		text = "Secure The Skies"
 		icon = GFX_focus_usa_escort_fighters
 		prerequisite = { focus = sky_attack }
 		x = 0
@@ -1815,7 +1752,6 @@
 	
 	focus = {
 		id = professional_battles
-		text = "Professional Battles"
 		icon = GFX_goal_generic_army_doctrines
 		prerequisite = { focus = marine_landings focus = terrain_adaptations focus = secure_the_skies }
 		x = 2
@@ -1827,6 +1763,2914 @@
 
 		completion_reward = {
 			add_ideas = professional_battles
+		}
+	}
+	
+	# SectionAir
+	
+	# SectionNavy
+	
+	# SectionPolitical
+	
+	focus = {
+		id = political_effort
+		icon = GFX_focus_generic_self_management
+		x = 60
+		y = 0
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = our_last_stand
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = political_effort }
+		x = -10
+		y = 1
+		relative_position_id = political_effort
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = strengthen_our_ideology
+		icon = GFX_focus_generic_the_giant_wakes
+		prerequisite = { focus = our_last_stand }
+		x = 0
+		y = 1
+		relative_position_id = our_last_stand
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = focus_internally
+		icon = GFX_goal_generic_national_unity
+		prerequisite = { focus = strengthen_our_ideology }
+		mutually_exclusive = { focus = external_opportunities }
+		x = -2
+		y = 1
+		relative_position_id = strengthen_our_ideology
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = external_opportunities
+		icon = GFX_goal_generic_major_alliance
+		prerequisite = { focus = strengthen_our_ideology }
+		mutually_exclusive = { focus = focus_internally }
+		x = 2
+		y = 1
+		relative_position_id = strengthen_our_ideology
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = government_reform
+		icon = GFX_focus_renounce_the_treaty_of_trianon
+		prerequisite = { focus = focus_internally }
+		x = -8
+		y = 1
+		relative_position_id = focus_internally
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = encourage_farming
+		icon = GFX_focus_generic_industry_1
+		prerequisite = { focus = focus_internally }
+		x = -4
+		y = 1
+		relative_position_id = focus_internally
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = balanced_cabinet
+		icon = GFX_focus_generic_treaty
+		prerequisite = { focus = government_reform }
+		x = 0
+		y = 1
+		relative_position_id = government_reform
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = cooperate_with_companies
+		icon = GFX_goal_generic_scientific_exchange
+		prerequisite = { focus = government_reform }
+		prerequisite = { focus = encourage_farming }
+		x = -2
+		y = 1
+		relative_position_id = encourage_farming
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = materialism
+		icon = GFX_goal_generic_trade
+		prerequisite = { focus = encourage_farming }
+		x = 0
+		y = 1
+		relative_position_id = encourage_farming
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = united_politics
+		icon = GFX_focus_hol_the_foundations_of_defense
+		prerequisite = { focus = balanced_cabinet }
+		x = 0
+		y = 1
+		relative_position_id = balanced_cabinet
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = world_market
+		icon = GFX_goal_generic_positive_trade_relations
+		prerequisite = { focus = external_opportunities }
+		x = 4
+		y = 1
+		relative_position_id = external_opportunities
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = superpower_business
+		icon = GFX_goal_tripartite_pact
+		prerequisite = { focus = external_opportunities }
+		x = 6
+		y = 1
+		relative_position_id = external_opportunities
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = outsource_work
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = world_market }
+		x = -2
+		y = 1
+		relative_position_id = world_market
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = deal_with_germany
+		icon = GFX_focus_generic_diplomacy_weimar_germany
+		prerequisite = { focus = world_market }
+		prerequisite = { focus = superpower_business }
+		mutually_exclusive = { focus = deal_with_japan }
+		x = -2
+		y = 1
+		relative_position_id = superpower_business
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = deal_with_japan
+		icon = GFX_focus_generic_diplomacy_state_japan
+		prerequisite = { focus = world_market }
+		prerequisite = { focus = superpower_business }
+		mutually_exclusive = { focus = deal_with_germany }
+		x = 0
+		y = 1
+		relative_position_id = superpower_business
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = democratic_morale
+		icon = GFX_goal_demand_sudetenland
+		prerequisite = { focus = superpower_business }
+		x = 2
+		y = 1
+		relative_position_id = superpower_business
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = offer_workers
+		icon = GFX_goal_generic_intelligence_exchange
+		prerequisite = { focus = deal_with_germany focus = deal_with_japan  }
+		x = -1
+		y = 1
+		relative_position_id = deal_with_japan
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = prepare_political_path
+		icon = GFX_goal_support_democracy
+		prerequisite = { focus = focus_internally focus = external_opportunities }
+		x = -2
+		y = 1
+		relative_position_id = external_opportunities
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = political_isolationism
+		icon = GFX_goal_generic_neutrality_focus
+		prerequisite = { focus = prepare_political_path }
+		mutually_exclusive = { focus = free_building_slots }
+		x = -2
+		y = 1
+		relative_position_id = prepare_political_path
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = free_the_world
+		icon = GFX_focus_ger_bulwark_against_bolshevism
+		prerequisite = { focus = prepare_political_path }
+		mutually_exclusive = { focus = political_isolationism }
+		x = 2
+		y = 1
+		relative_position_id = prepare_political_path
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = ward_off_extremists
+		icon = GFX_goal_continuous_def_against_influence
+		prerequisite = { focus = political_isolationism }
+		x = -6
+		y = 1
+		relative_position_id = political_isolationism
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = deterrence
+		icon = GFX_goal_generic_defence
+		prerequisite = { focus = political_isolationism }
+		x = 0
+		y = 1
+		relative_position_id = political_isolationism
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = against_the_allies
+		icon = GFX_focus_AST_never_gallipoli
+		prerequisite = { focus = ward_off_extremists }
+		x = -2
+		y = 1
+		relative_position_id = ward_off_extremists
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = the_trotsky_defence
+		icon = GFX_goal_anti_comintern_pact
+		prerequisite = { focus = ward_off_extremists }
+		x = 0
+		y = 1
+		relative_position_id = ward_off_extremists
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = stop_british_imports
+		icon = GFX_focus_RAJ_clamp_down_on_corruption
+		prerequisite = { focus = against_the_allies }
+		x = -2
+		y = 1
+		relative_position_id = against_the_allies
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = end_entente_glorification
+		icon = GFX_focus_ger_break_anglo_french_colonial_hegemony
+		prerequisite = { focus = stop_british_imports }
+		x = 0
+		y = 1
+		relative_position_id = stop_british_imports
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = no_room_for_nazis
+		icon = GFX_goal_tfv_saf_anti_colonialist_crusade
+		prerequisite = { focus = against_the_allies }
+		x = 0
+		y = 1
+		relative_position_id = against_the_allies
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = downplay_nationalism
+		icon = GFX_focus_usa_voter_registration_act
+		prerequisite = { focus = no_room_for_nazis }
+		x = 0
+		y = 1
+		relative_position_id = no_room_for_nazis
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = a_safe_democracy
+		icon = GFX_focus_generic_support_the_left_right
+		prerequisite = { focus = downplay_nationalism focus = demonise_trotsky }
+		x = 1
+		y = 1
+		relative_position_id = downplay_nationalism
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = ban_the_manifesto
+		icon = GFX_focus_eng_liberate_the_home_of_marx
+		prerequisite = { focus = the_trotsky_defence }
+		x = 0
+		y = 1
+		relative_position_id = the_trotsky_defence
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = demonise_trotsky
+		icon = GFX_focus_SOV_assasination_of_trotsky2
+		prerequisite = { focus = ban_the_manifesto }
+		x = 0
+		y = 1
+		relative_position_id = ban_the_manifesto
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = gun_controls
+		icon = GFX_focus_focus_fra_maquis
+		prerequisite = { focus = the_trotsky_defence }
+		x = 2
+		y = 1
+		relative_position_id = the_trotsky_defence
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = involve_military_patrols
+		icon = GFX_goal_continuous_suppression
+		prerequisite = { focus = gun_controls }
+		x = 0
+		y = 1
+		relative_position_id = gun_controls
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = hidden_industry
+		icon = GFX_goal_generic_fortify_city
+		prerequisite = { focus = deterrence }
+		x = -1
+		y = 1
+		relative_position_id = deterrence
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = protect_our_cities
+		icon = GFX_focus_generic_tank_production
+		prerequisite = { focus = hidden_industry }
+		x = 0
+		y = 1
+		relative_position_id = hidden_industry
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = defence_of_capital
+		icon = GFX_goal_generic_build_tank
+		prerequisite = { focus = protect_our_cities }
+		x = 0
+		y = 1
+		relative_position_id = protect_our_cities
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = why_we_fight
+		icon = GFX_goal_generic_military_sphere
+		prerequisite = { focus = defence_of_capital }
+		prerequisite = { focus = improved_tactics }
+		x = 1
+		y = 1
+		relative_position_id = defence_of_capital
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = national_mobilisation
+		icon = GFX_focus_generic_commonwealth_build_infantry
+		prerequisite = { focus = deterrence }
+		x = 1
+		y = 1
+		relative_position_id = deterrence
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = quick_veterans
+		icon = GFX_focus_generic_military_academy
+		prerequisite = { focus = national_mobilisation }
+		x = 0
+		y = 1
+		relative_position_id = national_mobilisation
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = improved_tactics
+		icon = GFX_focus_generic_military_mission
+		prerequisite = { focus = quick_veterans }
+		x = 0
+		y = 1
+		relative_position_id = quick_veterans
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = interventionism
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = free_the_world }
+		x = 0
+		y = 1
+		relative_position_id = free_the_world
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = foreign_activites
+		icon = GFX_focus_generic_strike_at_democracy1
+		prerequisite = { focus = interventionism }
+		x = 0
+		y = 1
+		relative_position_id = interventionism
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = seek_our_brothers
+		icon = GFX_goal_generic_improve_relations
+		prerequisite = { focus = interventionism }
+		x = 4
+		y = 1
+		relative_position_id = interventionism
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = democratic_sway
+		icon = GFX_focus_generic_strike_at_democracy2
+		prerequisite = { focus = foreign_activites }
+		x = -1
+		y = 1
+		relative_position_id = foreign_activites
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = prepare_collaboration_government
+		icon = GFX_goal_generic_dangerous_deal
+		prerequisite = { focus = democratic_sway }
+		mutually_exclusive = { focus = liberate_freedom }
+		x = 0
+		y = 1
+		relative_position_id = democratic_sway
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = revanchism_of_liberty
+		icon = GFX_goal_generic_attack_allies
+		prerequisite = { focus = prepare_collaboration_government focus = liberate_freedom }
+		x = 1
+		y = 1
+		relative_position_id = prepare_collaboration_government
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = lay_low
+		icon = GFX_goal_generic_territory_or_war
+		prerequisite = { focus = revanchism_of_liberty }
+		x = 0
+		y = 1
+		relative_position_id = revanchism_of_liberty
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = expeditionary_forces
+		icon = GFX_goal_generic_forceful_treaty
+		prerequisite = { focus = foreign_activites }
+		x = 1
+		y = 1
+		relative_position_id = foreign_activites
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = liberate_freedom
+		icon = GFX_goal_generic_military_deal
+		prerequisite = { focus = expeditionary_forces }
+		mutually_exclusive = { focus = prepare_collaboration_government }
+		x = 0
+		y = 1
+		relative_position_id = expeditionary_forces
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = each_others_back
+		icon = GFX_goal_generic_alliance
+		prerequisite = { focus = seek_our_brothers }
+		x = -1
+		y = 1
+		relative_position_id = seek_our_brothers
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = weaponary_flow
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = each_others_back }
+		x = 0
+		y = 1
+		relative_position_id = each_others_back
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = united_forever
+		icon = GFX_goal_anschluss
+		prerequisite = { focus = weaponary_flow }
+		mutually_exclusive = { focus = join_germany }
+		x = 0
+		y = 1
+		relative_position_id = weaponary_flow
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = the_final_war
+		icon = GFX_focus_ger_great_red_menace
+		prerequisite = { focus = united_forever focus = join_germany}
+		x = 1
+		y = 1
+		relative_position_id = united_forever
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = diplomacy_with_germany
+		icon = GFX_goal_molotov_ribbentrop_pact
+		prerequisite = { focus = seek_our_brothers }
+		x = 1
+		y = 1
+		relative_position_id = seek_our_brothers
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = military_attaches
+		icon = GFX_focus_chi_army_reform
+		prerequisite = { focus = diplomacy_with_germany }
+		x = 0
+		y = 1
+		relative_position_id = diplomacy_with_germany
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = join_germany
+		icon = GFX_focus_generic_diplomacy_weimar_germany
+		prerequisite = { focus = military_attaches }
+		mutually_exclusive = { focus = united_forever }
+		x = 0
+		y = 1
+		relative_position_id = military_attaches
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = the_extreme_sides 
+		icon = GFX_goal_generic_territory_or_war
+		prerequisite = { focus = political_effort }
+		x = 15
+		y = 1
+		relative_position_id = political_effort
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = new_red_order
+		icon = GFX_goal_support_communism
+		prerequisite = { focus = the_extreme_sides }
+		x = -5
+		y = 1
+		relative_position_id = the_extreme_sides
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = internationalism
+		icon = GFX_focus_generic_soviet_politics
+		prerequisite = { focus = new_red_order }
+		x = -5
+		y = 1
+		relative_position_id = new_red_order
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = indoctrination
+		icon = GFX_focus_generic_military_academy
+		prerequisite = { focus = new_red_order }
+		x = 6
+		y = 1
+		relative_position_id = new_red_order
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = align_with_the_military
+		icon = GFX_focus_generic_military_mission
+		prerequisite = { focus = internationalism }
+		mutually_exclusive = { focus = sway_the_public }
+		x = -1
+		y = 1
+		relative_position_id = internationalism
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = sway_the_public
+		icon = GFX_goal_generic_national_unity
+		prerequisite = { focus = internationalism }
+		mutually_exclusive = { focus = align_with_the_military }
+		x = 1
+		y = 1
+		relative_position_id = internationalism
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = forceful_change
+		icon = GFX_goal_generic_attack_allies
+		prerequisite = { focus = align_with_the_military }
+		x = 0
+		y = 1
+		relative_position_id = align_with_the_military
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = a_new_nation
+		icon = GFX_goal_generic_war_with_comintern
+		prerequisite = { focus = forceful_change }
+		x = 0
+		y = 1
+		relative_position_id = forceful_change
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = civilian_protests
+		icon = GFX_focus_generic_industry_3
+		prerequisite = { focus = sway_the_public }
+		x = 0
+		y = 1
+		relative_position_id = sway_the_public
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = call_for_a_referendum
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = civilian_protests }
+		x = 0
+		y = 1
+		relative_position_id = civilian_protests
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = the_internationale
+		icon = GFX_goal_support_fourth_int
+		prerequisite = { focus = indoctrination }
+		mutually_exclusive = { focus = the_new_soviet_union }
+		x = -7
+		y = 1
+		relative_position_id = indoctrination
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = the_new_soviet_union
+		icon = GFX_focus_generic_join_comintern
+		prerequisite = { focus = indoctrination }
+		mutually_exclusive = { focus = the_internationale }
+		x = 7
+		y = 1
+		relative_position_id = indoctrination
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = communist_diplomacy
+		icon = GFX_focus_chi_mission_to_the_soviet_union
+		prerequisite = { focus = the_internationale }
+		x = -1
+		y = 1
+		relative_position_id = the_internationale
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = make_an_impression
+		icon = GFX_goal_generic_more_territorial_claims
+		prerequisite = { focus = the_internationale }
+		x = 1
+		y = 1
+		relative_position_id = the_internationale
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = cooperate_with_the_bear
+		icon = GFX_focus_fra_loyalty_trotzky
+		prerequisite = { focus = communist_diplomacy }
+		prerequisite = { focus = make_an_impression }
+		x = 1
+		y = 1
+		relative_position_id = communist_diplomacy
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = bow_to_the_reds
+		icon = GFX_focus_CZE_german_puppet
+		prerequisite = { focus = cooperate_with_the_bear }
+		mutually_exclusive = { focus = equal_partners }
+		x = -3
+		y = 1
+		relative_position_id = cooperate_with_the_bear
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = equal_partners
+		icon = GFX_goal_generic_dangerous_deal
+		prerequisite = { focus = cooperate_with_the_bear }
+		mutually_exclusive = { focus = bow_to_the_reds }
+		x = 3
+		y = 1
+		relative_position_id = cooperate_with_the_bear
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = trotsky_worship
+		icon = GFX_focus_YUG_pan_slavic_congress
+		prerequisite = { focus = bow_to_the_reds }
+		x = -5
+		y = 1
+		relative_position_id = bow_to_the_reds
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = red_cult
+		icon = GFX_focus_prc_agrarian_socialism
+		prerequisite = { focus = trotsky_worship }
+		x = 0
+		y = 1
+		relative_position_id = trotsky_worship
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = glory_to_the_master
+		icon = GFX_focus_por_workers_of_iberia
+		prerequisite = { focus = red_cult }
+		prerequisite = { focus = industrial_flow }
+		x = 1
+		y = 1
+		relative_position_id = red_cult
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = another_ssr
+		icon = GFX_goal_generic_alliance
+		prerequisite = { focus = bow_to_the_reds }
+		x = -2
+		y = 1
+		relative_position_id = bow_to_the_reds
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = industrial_flow
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = another_ssr }
+		x = -1
+		y = 1
+		relative_position_id = another_ssr
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = technology_sharing
+		icon = GFX_goal_generic_scientific_exchange
+		prerequisite = { focus = another_ssr }
+		x = 1
+		y = 1
+		relative_position_id = another_ssr
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = education_group
+		icon = GFX_focus_generic_socialist_science
+		prerequisite = { focus = technology_sharing }
+		x = 0
+		y = 1
+		relative_position_id = technology_sharing
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = direct_factory_link
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = bow_to_the_reds }
+		x = 2
+		y = 1
+		relative_position_id = bow_to_the_reds
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = share_resources
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = direct_factory_link }
+		x = -1
+		y = 1
+		relative_position_id = direct_factory_link
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = learn_soviet_techniques
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		prerequisite = { focus = direct_factory_link }
+		x = 1
+		y = 1
+		relative_position_id = direct_factory_link
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = dominion_hood
+		icon = GFX_focus_generic_join_comintern
+		prerequisite = { focus = share_resources }
+		prerequisite = { focus = learn_soviet_techniques }
+		x = 1
+		y = 1
+		relative_position_id = share_resources
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = share_the_satellites
+		icon = GFX_goal_generic_soviet_construction
+		prerequisite = { focus = equal_partners }
+		x = 0
+		y = 1
+		relative_position_id = equal_partners
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = exploit_the_ukraine
+		icon = GFX_goal_continuous_non_factory_construct
+		prerequisite = { focus = share_the_satellites }
+		mutually_exclusive = { focus = exploit_transcaucasia }
+		x = -1
+		y = 1
+		relative_position_id = share_the_satellites
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = exploit_transcaucasia
+		icon = GFX_goal_generic_oil_refinery
+		prerequisite = { focus = share_the_satellites }
+		mutually_exclusive = { focus = exploit_the_ukraine }
+		x = 1
+		y = 1
+		relative_position_id = share_the_satellites
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = buckets_of_wheat
+		icon = GFX_focus_generic_concessions
+		prerequisite = { focus = exploit_the_ukraine }
+		x = -1
+		y = 1
+		relative_position_id = exploit_the_ukraine
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = positive_heroism
+		icon = GFX_goal_generic_attack_allies
+		prerequisite = { focus = exploit_the_ukraine focus = exploit_transcaucasia }
+		x = 1
+		y = 1
+		relative_position_id = exploit_the_ukraine
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = wells_of_oil
+		icon = GFX_focus_generic_license_production
+		prerequisite = { focus = exploit_transcaucasia }
+		x = 1
+		y = 1
+		relative_position_id = exploit_transcaucasia
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = badge_to_our_name
+		icon = GFX_goal_generic_consumer_goods
+		prerequisite = { focus = positive_heroism }
+		x = 0
+		y = 1
+		relative_position_id = positive_heroism
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = world_revolution
+		icon = GFX_focus_ger_great_red_menace
+		prerequisite = { focus = equal_partners }
+		x = 5
+		y = 1
+		relative_position_id = equal_partners
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = learn_oppressive_techniques
+		icon = GFX_goal_continuous_suppression
+		prerequisite = { focus = world_revolution }
+		x = -1
+		y = 1
+		relative_position_id = world_revolution
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = increase_influence
+		icon = GFX_goal_generic_forceful_treaty
+		prerequisite = { focus = world_revolution }
+		x = 1
+		y = 1
+		relative_position_id = world_revolution
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = ignite_the_revolution
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = learn_oppressive_techniques }
+		prerequisite = { focus = increase_influence }
+		x = 1
+		y = 1
+		relative_position_id = learn_oppressive_techniques
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = the_final_enemy
+		icon = GFX_focus_generic_strike_weimar_germany
+		prerequisite = { focus = ignite_the_revolution }
+		x = 0
+		y = 1
+		relative_position_id = ignite_the_revolution
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = hunt_trotskyists
+		icon = GFX_focus_SOV_assasination_of_trotsky2
+		prerequisite = { focus = the_new_soviet_union }
+		x = -2
+		y = 1
+		relative_position_id = the_new_soviet_union
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = pure_communism
+		icon = GFX_focus_prc_agrarian_socialism
+		prerequisite = { focus = the_new_soviet_union }
+		x = 2
+		y = 1
+		relative_position_id = the_new_soviet_union
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = search_warrant
+		icon = GFX_goal_generic_position_armies
+		prerequisite = { focus = hunt_trotskyists }
+		x = -2
+		y = 1
+		relative_position_id = hunt_trotskyists
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = purge_political_opponents
+		icon = GFX_focus_eng_crush_the_dream
+		prerequisite = { focus = search_warrant }
+		x = 0
+		y = 1
+		relative_position_id = search_warrant
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = a_challenger_approaches
+		icon = GFX_focus_generic_provoke_border_clashes
+		prerequisite = { focus = purge_political_opponents }
+		prerequisite = { focus = begin_mobilising }
+		x = 1
+		y = 1
+		relative_position_id = purge_political_opponents
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = strike_at_the_source
+		icon = GFX_focus_attack_soviet
+		prerequisite = { focus = a_challenger_approaches }
+		x = 0
+		y = 1
+		relative_position_id = a_challenger_approaches
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = the_enemy_of_my_enemy
+		icon = GFX_focus_generic_diplomacy_weimar_germany
+		prerequisite = { focus = hunt_trotskyists }
+		x = 0
+		y = 1
+		relative_position_id = hunt_trotskyists
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = begin_mobilising
+		icon = GFX_focus_generic_manpower
+		prerequisite = { focus = the_enemy_of_my_enemy }
+		x = 0
+		y = 1
+		relative_position_id = the_enemy_of_my_enemy
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = propaganda_posters
+		icon = GFX_focus_generic_military_academy
+		prerequisite = { focus = hunt_trotskyists focus = pure_communism }
+		x = 2
+		y = 1
+		relative_position_id = hunt_trotskyists
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = one_ideology
+		icon = GFX_focus_generic_strike_at_democracy2
+		prerequisite = { focus = propaganda_posters }
+		x = 0
+		y = 1
+		relative_position_id = propaganda_posters
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = military_boost
+		icon = GFX_focus_generic_combined_arms
+		prerequisite = { focus = one_ideology }
+		prerequisite = { focus = begin_mobilising }
+		x = 1
+		y = 1
+		relative_position_id = begin_mobilising
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = promote_self_reliance
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = pure_communism }
+		x = 2
+		y = 1
+		relative_position_id = pure_communism
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = lower_comfort
+		icon = GFX_focus_generic_industry_1
+		prerequisite = { focus = promote_self_reliance }
+		x = 0
+		y = 1
+		relative_position_id = promote_self_reliance
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = sharing_is_caring
+		icon = GFX_goal_tripartite_pact
+		prerequisite = { focus = pure_communism }
+		x = 0
+		y = 1
+		relative_position_id = pure_communism
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = united_arms
+		icon = GFX_goal_generic_production2
+		prerequisite = { focus = sharing_is_caring }
+		x = 0
+		y = 1
+		relative_position_id = sharing_is_caring
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = political_correctness
+		icon = GFX_goal_generic_propaganda
+		prerequisite = { focus = united_arms }
+		x = 0
+		y = 1
+		relative_position_id = united_arms
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = burn_books
+		icon = GFX_focus_renounce_the_treaty_of_trianon
+		prerequisite = { focus = political_correctness }
+		x = -2
+		y = 1
+		relative_position_id = political_correctness
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = follow_the_manifesto
+		icon = GFX_focus_spr_unify_the_london_bureau
+		prerequisite = { focus = burn_books }
+		x = 0
+		y = 1
+		relative_position_id = burn_books
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = ideological_fanaticism
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = follow_the_manifesto }
+		prerequisite = { focus = oppression_focus }
+		prerequisite = { focus = centered_cult }
+		x = 2
+		y = 1
+		relative_position_id = follow_the_manifesto
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = positive_justification
+		icon = GFX_goal_generic_major_war
+		prerequisite = { focus = political_correctness }
+		x = 0
+		y = 1
+		relative_position_id = political_correctness
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = oppression_focus
+		icon = GFX_goal_continuous_restrict_freedom
+		prerequisite = { focus = positive_justification }
+		x = 0
+		y = 1
+		relative_position_id = positive_justification
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = ban_religion
+		icon = GFX_focus_mex_triumph_over_the_cristeros
+		prerequisite = { focus = political_correctness }
+		x = 2
+		y = 1
+		relative_position_id = political_correctness
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = centered_cult
+		icon = GFX_goal_generic_cavalry
+		prerequisite = { focus = ban_religion }
+		x = 0
+		y = 1
+		relative_position_id = ban_religion
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = right_resistance
+		icon = GFX_goal_support_fascism
+		prerequisite = { focus = the_extreme_sides }
+		x = 35
+		y = 1
+		relative_position_id = the_extreme_sides
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = nationalism
+		icon = GFX_focus_ger_reichskommisariats
+		prerequisite = { focus = right_resistance }
+		x = 0
+		y = 1
+		relative_position_id = right_resistance
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = spread_superiority
+		icon = GFX_goal_generic_national_unity
+		prerequisite = { focus = nationalism }
+		x = -1
+		y = 1
+		relative_position_id = nationalism
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = propaganda_heroes
+		icon = GFX_goal_rhineland
+		prerequisite = { focus = spread_superiority }
+		x = -2
+		y = 1
+		relative_position_id = spread_superiority
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = raise_false_hope
+		icon = GFX_goal_generic_propaganda
+		prerequisite = { focus = spread_superiority }
+		x = 0
+		y = 1
+		relative_position_id = spread_superiority
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = our_spot_in_the_world
+		icon = GFX_goal_generic_forceful_treaty
+		prerequisite = { focus = raise_false_hope focus = setup_paramilitaries}
+		x = 1
+		y = 1
+		relative_position_id = raise_false_hope
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = military_youth
+		icon = GFX_goal_generic_more_territorial_claims
+		prerequisite = { focus = nationalism }
+		x = 1
+		y = 1
+		relative_position_id = nationalism
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = setup_paramilitaries
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = military_youth }
+		x = 0
+		y = 1
+		relative_position_id = military_youth
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = militarism
+		icon = GFX_goal_generic_military_deal
+		prerequisite = { focus = military_youth }
+		x = 2
+		y = 1
+		relative_position_id = military_youth
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = the_new_allies
+		icon = GFX_focus_eng_the_sun_never_sets
+		prerequisite = { focus = our_spot_in_the_world }
+		mutually_exclusive = { focus = better_alone focus = the_original_creator }
+		x = -12
+		y = 1
+		relative_position_id = our_spot_in_the_world
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = interest_in_britain
+		icon = GFX_focus_chi_british_cooperation
+		prerequisite = { focus = the_new_allies }
+		x = -2
+		y = 1
+		relative_position_id = the_new_allies
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = colonial_network
+		icon = GFX_goal_tfv_strengthen_commonwealth_ties
+		prerequisite = { focus = interest_in_britain }
+		x = -4
+		y = 1
+		relative_position_id = interest_in_britain
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = great_white_north
+		icon = GFX_goal_generic_improve_relations
+		prerequisite = { focus = colonial_network }
+		x = -2
+		y = 1
+		relative_position_id = colonial_network
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = land_down_under
+		icon = GFX_goal_generic_improve_relations
+		prerequisite = { focus = colonial_network }
+		x = 0
+		y = 1
+		relative_position_id = colonial_network
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = rainbow_nation
+		icon = GFX_goal_generic_improve_relations
+		prerequisite = { focus = colonial_network }
+		x = 2
+		y = 1
+		relative_position_id = colonial_network
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = help_the_raj
+		icon = GFX_focus_RAJ_seek_help_from_germany
+		prerequisite = { focus = great_white_north }
+		prerequisite = { focus = land_down_under }
+		prerequisite = { focus = rainbow_nation }
+		mutually_exclusive = { focus = suppress_the_raj }
+		x = 2
+		y = 1
+		relative_position_id = great_white_north
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = suppress_the_raj
+		icon = GFX_focus_RAJ_british_investors
+		prerequisite = { focus = great_white_north }
+		prerequisite = { focus = land_down_under }
+		prerequisite = { focus = rainbow_nation }
+		prerequisite = { focus = guard_occupied_lands }
+		mutually_exclusive = { focus = help_the_raj }
+		x = 4
+		y = 1
+		relative_position_id = great_white_north
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = the_renewed_commonwealth
+		icon = GFX_focus_generic_home_defense
+		prerequisite = { focus = help_the_raj focus = suppress_the_raj }
+		x = 1
+		y = 1
+		relative_position_id = help_the_raj
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = end_the_enemy
+		icon = GFX_focus_generic_strike_weimar_germany
+		prerequisite = { focus = the_renewed_commonwealth focus = this_war_of_ours }
+		x = 4
+		y = 1
+		relative_position_id = the_renewed_commonwealth
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = the_old_empire
+		icon = GFX_focus_rom_royal_dictatorship
+		prerequisite = { focus = interest_in_britain }
+		x = 0
+		y = 1
+		relative_position_id = interest_in_britain
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = guard_occupied_lands
+		icon = GFX_goal_continuous_suppression
+		prerequisite = { focus = the_old_empire }
+		x = 0
+		y = 1
+		relative_position_id = the_old_empire
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = resource_diplomacy
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = interest_in_britain focus = interest_in_france}
+		x = 2
+		y = 1
+		relative_position_id = interest_in_britain
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = assist_with_sanctions
+		icon = GFX_goal_generic_trade
+		prerequisite = { focus = the_old_empire }
+		prerequisite = { focus = resource_diplomacy }
+		x = 2
+		y = 1
+		relative_position_id = the_old_empire
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = interest_in_france
+		icon = GFX_focus_chi_reach_out_to_france
+		prerequisite = { focus = the_new_allies }
+		x = 2
+		y = 1
+		relative_position_id = the_new_allies
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = an_old_enemy
+		icon = GFX_focus_generic_strike_at_democracy1
+		prerequisite = { focus = interest_in_france }
+		x = 0
+		y = 1
+		relative_position_id = interest_in_france
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = help_their_politics
+		icon = GFX_focus_fra_le_deluge
+		prerequisite = { focus = interest_in_france }
+		x = 2
+		y = 1
+		relative_position_id = interest_in_france
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = provide_garrisons
+		icon = GFX_focus_generic_manpower
+		prerequisite = { focus = help_their_politics }
+		x = 0
+		y = 1
+		relative_position_id = help_their_politics
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = mobilise_men
+		icon = GFX_focus_generic_little_entente
+		prerequisite = { focus = an_old_enemy }
+		x = 0
+		y = 1
+		relative_position_id = an_old_enemy
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = anti_german_tactics
+		icon = GFX_goal_generic_position_armies
+		prerequisite = { focus = mobilise_men }
+		x = 0
+		y = 1
+		relative_position_id = mobilise_men
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = concentrated_factories
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = mobilise_men }
+		x = 2
+		y = 1
+		relative_position_id = mobilise_men
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = this_war_of_ours
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = anti_german_tactics }
+		prerequisite = { focus = concentrated_factories }
+		x = 1
+		y = 1
+		relative_position_id = anti_german_tactics
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = better_alone
+		icon = GFX_goal_generic_neutrality_focus
+		prerequisite = { focus = our_spot_in_the_world }
+		mutually_exclusive = { focus = the_new_allies focus = the_original_creator }
+		x = 0
+		y = 1
+		relative_position_id = our_spot_in_the_world
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = territorial_influence
+		icon = GFX_goal_generic_major_war
+		prerequisite = { focus = better_alone }
+		x = -2
+		y = 1
+		relative_position_id = better_alone
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = exploit_occupation
+		icon = GFX_goal_generic_forceful_treaty
+		prerequisite = { focus = territorial_influence }
+		x = -2
+		y = 1
+		relative_position_id = territorial_influence
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = our_territorial_rights
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = territorial_influence }
+		x = 0
+		y = 1
+		relative_position_id = territorial_influence
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = comply_with_resistance
+		icon = GFX_focus_generic_treaty
+		prerequisite = { focus = our_territorial_rights }
+		mutually_exclusive = { focus = deal_with_resistance }
+		x = -4
+		y = 1
+		relative_position_id = our_territorial_rights
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = deal_with_resistance
+		icon = GFX_goal_tfv_saf_anti_colonialist_crusade
+		prerequisite = { focus = our_territorial_rights }
+		mutually_exclusive = { focus = comply_with_resistance }
+		x = -2
+		y = 1
+		relative_position_id = our_territorial_rights
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = send_the_secret_police
+		icon = GFX_goal_generic_attack_allies
+		prerequisite = { focus = deal_with_resistance focus = comply_with_resistance }
+		x = 1
+		y = 1
+		relative_position_id = comply_with_resistance
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = convincing_claims
+		icon = GFX_goal_generic_military_deal
+		prerequisite = { focus = our_territorial_rights }
+		x = 0
+		y = 1
+		relative_position_id = our_territorial_rights
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = the_new_law
+		icon = GFX_goal_demand_sudetenland
+		prerequisite = { focus = send_the_secret_police }
+		prerequisite = { focus = convincing_claims }
+		x = 0
+		y = 2
+		relative_position_id = convincing_claims
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = resist_the_terror
+		icon = GFX_focus_ger_bulwark_against_bolshevism
+		prerequisite = { focus = better_alone }
+		x = 0
+		y = 1
+		relative_position_id = better_alone
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = ban_communism
+		icon = GFX_goal_anti_comintern_pact
+		prerequisite = { focus = resist_the_terror }
+		x = 0
+		y = 1
+		relative_position_id = resist_the_terror
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = national_preparation
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = resist_the_terror }
+		x = 2
+		y = 1
+		relative_position_id = resist_the_terror
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = tactical_reform
+		icon = GFX_goal_generic_cavalry
+		prerequisite = { focus = ban_communism }
+		prerequisite = { focus = national_preparation }
+		x = 0
+		y = 1
+		relative_position_id = ban_communism
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = factories_with_a_purpose
+		icon = GFX_goal_generic_production2
+		prerequisite = { focus = ban_communism }
+		prerequisite = { focus = national_preparation }
+		x = 2
+		y = 1
+		relative_position_id = ban_communism
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = ready_our_military
+		icon = GFX_focus_generic_military_mission
+		prerequisite = { focus = tactical_reform }
+		x = 2
+		y = 1
+		relative_position_id = tactical_reform
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = the_ideology_clashes
+		icon = GFX_goal_generic_war_with_comintern
+		prerequisite = { focus = tactical_reform }
+		x = 0
+		y = 2
+		relative_position_id = tactical_reform
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = the_original_creator
+		icon = GFX_focus_befriend_italy
+		prerequisite = { focus = our_spot_in_the_world }
+		mutually_exclusive = { focus = better_alone focus = the_new_allies }
+		x = 9
+		y = 1
+		relative_position_id = our_spot_in_the_world
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = the_pact_of_rome
+		icon = GFX_goal_molotov_ribbentrop_pact
+		prerequisite = { focus = the_original_creator }
+		x = -1
+		y = 1
+		relative_position_id = the_original_creator
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = give_workers_refuge
+		icon = GFX_focus_generic_industry_2
+		prerequisite = { focus = the_pact_of_rome }
+		x = -4
+		y = 1
+		relative_position_id = the_pact_of_rome
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = italian_cooperation
+		icon = GFX_goal_generic_major_alliance
+		prerequisite = { focus = the_pact_of_rome }
+		x = -2
+		y = 1
+		relative_position_id = the_pact_of_rome
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = against_all_evils
+		icon = GFX_goal_generic_military_sphere
+		prerequisite = { focus = the_pact_of_rome }
+		x = 0
+		y = 1
+		relative_position_id = the_pact_of_rome
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = linked_factories
+		icon = GFX_focus_generic_tank_production
+		prerequisite = { focus = give_workers_refuge }
+		prerequisite = { focus = italian_cooperation }
+		x = 1
+		y = 1
+		relative_position_id = give_workers_refuge
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = cooperative_training
+		icon = GFX_focus_generic_military_academy
+		prerequisite = { focus = italian_cooperation }
+		prerequisite = { focus = against_all_evils }
+		x = 1
+		y = 1
+		relative_position_id = italian_cooperation
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = supporting_propaganda
+		icon = GFX_goal_support_fascism
+		prerequisite = { focus = linked_factories }
+		prerequisite = { focus = cooperative_training }
+		x = 1
+		y = 1
+		relative_position_id = linked_factories
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = the_other_faction
+		icon = GFX_focus_attack_britain
+		prerequisite = { focus = against_all_evils }
+		x = 0
+		y = 2
+		relative_position_id = against_all_evils
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = our_plane_in_the_sky
+		icon = GFX_goal_generic_build_airforce
+		prerequisite = { focus = the_other_faction }
+		x = -4
+		y = 1
+		relative_position_id = the_other_faction
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = challenge_the_royal_navy
+		icon = GFX_goal_generic_construct_naval_dockyard
+		prerequisite = { focus = the_other_faction }
+		x = -2
+		y = 1
+		relative_position_id = the_other_faction
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = learn_their_tactics
+		icon = GFX_goal_generic_position_armies
+		prerequisite = { focus = the_other_faction }
+		x = 0
+		y = 1
+		relative_position_id = the_other_faction
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = two_nations_united
+		icon = GFX_goal_tripartite_pact
+		prerequisite = { focus = our_plane_in_the_sky }
+		prerequisite = { focus = challenge_the_royal_navy }
+		prerequisite = { focus = learn_their_tactics }
+		x = 2
+		y = 1
+		relative_position_id = our_plane_in_the_sky
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = only_one_coalition
+		icon = GFX_focus_AST_never_gallipoli
+		prerequisite = { focus = two_nations_united focus = we_reign_forever }
+		x = 3
+		y = 1
+		relative_position_id = two_nations_united
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = the_new_axis
+		icon = GFX_goal_anschluss
+		prerequisite = { focus = the_original_creator }
+		mutually_exclusive = { focus = the_pact_of_rome }
+		x = 1
+		y = 1
+		relative_position_id = the_original_creator
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = use_italian_terror_tactics
+		icon = GFX_focus_generic_strike_at_democracy2
+		prerequisite = { focus = the_new_axis }
+		x = 0
+		y = 1
+		relative_position_id = the_new_axis
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = the_italian_scare
+		icon = GFX_focus_usa_honor_the_confederacy
+		prerequisite = { focus = use_italian_terror_tactics }
+		x = 0
+		y = 1
+		relative_position_id = use_italian_terror_tactics
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = allied_garrisons
+		icon = GFX_focus_chi_army_reform
+		prerequisite = { focus = the_italian_scare }
+		x = 0
+		y = 1
+		relative_position_id = the_italian_scare
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = rally_our_men
+		icon = GFX_goal_generic_build_tank
+		prerequisite = { focus = allied_garrisons }
+		prerequisite = { focus = a_safe_ally }
+		x = 1
+		y = 1
+		relative_position_id = allied_garrisons
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = hire_italian_investors
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = the_new_axis }
+		x = 2
+		y = 1
+		relative_position_id = the_new_axis
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = our_allies_flattery
+		icon = GFX_focus_generic_concessions
+		prerequisite = { focus = hire_italian_investors }
+		x = 0
+		y = 1
+		relative_position_id = hire_italian_investors
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = a_safe_ally
+		icon = GFX_focus_ger_assassinate_mussolini
+		prerequisite = { focus = our_allies_flattery }
+		x = 0
+		y = 1
+		relative_position_id = our_allies_flattery
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = we_reign_forever
+		icon = GFX_goal_tfv_saf_support_ossebrandwag
+		prerequisite = { focus = rally_our_men }
+		x = 0
+		y = 1
+		relative_position_id = rally_our_men
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
 		}
 	}
 }
