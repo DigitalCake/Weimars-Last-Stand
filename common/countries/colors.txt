@@ -703,3 +703,18 @@ SHL = {
 	color = rgb { 51 51 255 }
 	color_ui = rgb { 51 51 255 }
 }
+
+USR = {
+	color = rgb { 157 16 30 }
+	color_ui = rgb { 157 16 30 }
+}
+
+BSR = {
+	color = rgb { 157 16 30 }
+	color_ui = rgb { 157 16 30 }
+}
+
+TSR = {
+	color = rgb { 157 16 30 }
+	color_ui = rgb { 157 16 30 }
+}
