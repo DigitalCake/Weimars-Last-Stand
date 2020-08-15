@@ -634,7 +634,7 @@ focus_tree = {
 	
 	focus = {
 		id = FRA_Execute_Traitors
-		text = "Execute Traiorous Officials"
+		text = "Execute Traitorous Officials"
 		icon = GFX_goal_generic_attack_allies
 		x = 3
 		y = 11
