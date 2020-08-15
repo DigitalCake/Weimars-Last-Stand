@@ -86,6 +86,7 @@ focus_tree = {
 		x = -2
 		y = 3
 		prerequisite = {focus = FRA_Victory_Nat}
+		mutually_exclusive = {focus = FRA_Leagues}
 		cost = 5
 		available_if_capitulated = yes
 		ai_will_do = {
@@ -176,7 +177,7 @@ focus_tree = {
 		icon = GFX_focus_mex_restore_the_army_of_christ
 		x = 1
 		y = 4
-		prerequisite = {focus = FRA_Action_France}
+		prerequisite = {focus = FRA_Action_France focus = FRA_Leagues}
 		mutually_exclusive = {focus = FRA_New_Const}
 		cost = 5
 		available_if_capitulated = yes
@@ -469,10 +470,11 @@ focus_tree = {
 	focus = {
 		id = FRA_Leagues
 		text = "Leagues Ascendent"
-		icon = GFX_goal_generic_improve_relations
+		icon = GFX_focus_generic_strike_at_democracy1
 		x = 3
 		y = 3
 		prerequisite = {focus = FRA_Victory_Nat}
+		mutually_exclusive = {focus = FRA_Action_France}
 		cost = 5
 		available_if_capitulated = yes
 		ai_will_do = {
@@ -487,10 +489,11 @@ focus_tree = {
 	focus = {
 		id = FRA_Croix
 		text = "Croix de Feu"
-		icon = GFX_goal_generic_improve_relations
+		icon = GFX_goal_tfv_saf_support_ossebrandwag
 		x = 3
 		y = 4
 		prerequisite = {focus = FRA_Leagues}
+		mutually_exclusive = {focus = FRA_Triumph_Blueshirts}
 		cost = 5
 		available_if_capitulated = yes
 		ai_will_do = {
@@ -505,7 +508,7 @@ focus_tree = {
 	focus = {
 		id = FRA_Nat_Soc
 		text = "National Socialism"
-		icon = GFX_goal_generic_improve_relations
+		icon = GFX_focus_ger_reichskommisariats
 		x = 3
 		y = 5
 		prerequisite = {focus = FRA_Croix}
@@ -523,10 +526,10 @@ focus_tree = {
 	focus = {
 		id = FRA_End_Culture
 		text = "End Cultural Degeneracy"
-		icon = GFX_goal_generic_improve_relations
+		icon = GFX_focus_chi_reach_out_to_france
 		x = 5
 		y = 5
-		prerequisite = {focus = FRA_Croix}
+		prerequisite = {focus = FRA_Croix focus = FRA_Triumph_Blueshirts}
 		cost = 5
 		available_if_capitulated = yes
 		ai_will_do = {
@@ -541,7 +544,7 @@ focus_tree = {
 	focus = {
 		id = FRA_Amend_Albion
 		text = "Make Amends with Albion"
-		icon = GFX_goal_generic_improve_relations
+		icon = GFX_focus_chi_british_cooperation
 		x = 3
 		y = 6
 		prerequisite = {focus = FRA_Nat_Soc}
@@ -559,7 +562,7 @@ focus_tree = {
 	focus = {
 		id = FRA_Syndicalise_Economy
 		text = "Syndicalise the Economy"
-		icon = GFX_goal_generic_improve_relations
+		icon = GFX_focus_generic_industry_2
 		x = 3
 		y = 7
 		prerequisite = {focus = FRA_Amend_Albion}
@@ -577,10 +580,10 @@ focus_tree = {
 	focus = {
 		id = FRA_Political_Unify
 		text = "Political Unification"
-		icon = GFX_goal_generic_improve_relations
+		icon = GFX_focus_generic_diplomatic_treaty
 		x = 5
 		y = 8
-		prerequisite = {focus = FRA_Syndicalise_Economy}
+		prerequisite = {focus = FRA_Syndicalise_Economy focus = FRA_Nat_Corp}
 		cost = 5
 		available_if_capitulated = yes
 		ai_will_do = {
@@ -595,10 +598,11 @@ focus_tree = {
 	focus = {
 		id = FRA_Integrate_Paramilitary
 		text = "Integrate the Paramilitaries"
-		icon = GFX_goal_generic_improve_relations
+		icon = GFX_focus_generic_manpower
 		x = 3
 		y = 9
 		prerequisite = {focus = FRA_Political_Unify}
+		mutually_exclusive = {focus = FRA_Side_Blueshirts}
 		cost = 5
 		available_if_capitulated = yes
 		ai_will_do = {
@@ -613,7 +617,7 @@ focus_tree = {
 	focus = {
 		id = FRA_Blueshirt_Generals
 		text = "Make Former Blueshirts Generals"
-		icon = GFX_goal_generic_improve_relations
+		icon = GFX_focus_generic_military_mission
 		x = 3
 		y = 10
 		prerequisite = {focus = FRA_Integrate_Paramilitary}
@@ -631,7 +635,7 @@ focus_tree = {
 	focus = {
 		id = FRA_Execute_Traitors
 		text = "Execute Traiorous Officials"
-		icon = GFX_goal_generic_improve_relations
+		icon = GFX_goal_generic_attack_allies
 		x = 3
 		y = 11
 		prerequisite = {focus = FRA_Blueshirt_Generals}
@@ -649,10 +653,11 @@ focus_tree = {
 	focus = {
 		id = FRA_Triumph_Blueshirts
 		text = "Triumph for the Blueshirts"
-		icon = GFX_goal_generic_improve_relations
+		icon = GFX_focus_secret_rearmament
 		x = 7
 		y = 4
 		prerequisite = {focus = FRA_Leagues}
+		mutually_exclusive = {focus = FRA_Croix}
 		cost = 5
 		available_if_capitulated = yes
 		ai_will_do = {
@@ -662,7 +667,153 @@ focus_tree = {
 		completion_reward = {
 			
 		}
-	}	
+	}
+	
+	focus = {
+		id = FRA_Placate_Monarchists
+		text = "Placate Monarchists"
+		icon = GFX_goal_tfv_strengthen_commonwealth_ties
+		x = 7
+		y = 5
+		prerequisite = {focus = FRA_Triumph_Blueshirts}
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+				factor = 1
+		}
+		search_filters = {Political}
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = FRA_Talk_Italy
+		text = "Talks with Italy"
+		icon = GFX_focus_befriend_italy
+		x = 7
+		y = 6
+		prerequisite = {focus = FRA_Placate_Monarchists}
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+				factor = 1
+		}
+		search_filters = {Political}
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = FRA_Nat_Corp
+		text = "National Corporatism"
+		icon = GFX_focus_hol_abandon_the_gold_standard
+		x = 7
+		y = 7
+		prerequisite = {focus = FRA_Talk_Italy}
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+				factor = 1
+		}
+		search_filters = {Political}
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = FRA_Side_Blueshirts
+		text = "Sideline the Blueshirts"
+		icon = GFX_goal_demand_sudetenland
+		x = 7
+		y = 9
+		prerequisite = {focus = FRA_Political_Unify}
+		mutually_exclusive = {focus = FRA_Integrate_Paramilitary}
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+				factor = 1
+		}
+		search_filters = {Political}
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = FRA_Military_Funds
+		text = "More Military Funds"
+		icon = GFX_focus_mex_privatisation
+		x = 7
+		y = 10
+		prerequisite = {focus = FRA_Side_Blueshirts}
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+				factor = 1
+		}
+		search_filters = {Political}
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = FRA_Pardon_Socialists
+		text = "Pardon Socialist Generals"
+		icon = GFX_goal_generic_dangerous_deal
+		x = 7
+		y = 11
+		prerequisite = {focus = FRA_Military_Funds}
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+				factor = 1
+		}
+		search_filters = {Political}
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = FRA_Sorel_Dream
+		text = "The Dream of Sorel"
+		icon = GFX_goal_molotov_ribbentrop_pact
+		x = 5
+		y = 12
+		prerequisite = {focus = FRA_Pardon_Socialists focus = FRA_Execute_Traitors}
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+				factor = 1
+		}
+		search_filters = {Political}
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = FRA_Fascist_State
+		text = "A Fascist State"
+		icon = GFX_goal_support_fascism
+		x = 5
+		y = 13
+		prerequisite = {focus = FRA_Sorel_Dream}
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+				factor = 1
+		}
+		search_filters = {Political}
+		completion_reward = {
+			
+		}
+	}
+	
 ########################################################
 
 	focus = {
@@ -1486,7 +1637,7 @@ focus_tree = {
 			}
 			search_filters = {Navy}
 			completion_reward = {
-				country_event = {id = france.weimarslaststand.3}
+			
 			}
 	}	
 	focus = {
@@ -1898,7 +2049,7 @@ focus_tree = {
 			}
 			search_filters = {Airforce}
 			completion_reward = {
-				country_event = {id = france.weimarslaststand.2}
+
 			}
 	}
 	focus = {
@@ -2229,7 +2380,7 @@ focus_tree = {
 			}
 			search_filters = {Army}
 			completion_reward = {
-				country_event = {id = france.weimarslaststand.1}
+			
 			}
 	}	
 	focus = {
