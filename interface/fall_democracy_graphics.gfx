@@ -1,6 +1,0 @@
-spriteTypes = {
-	spriteType = {
-		name = "GFX_fall_democracy_bookmark"
-		texturefile = "gfx/interface/fall_democracy_1933.dds"
-	}
-}

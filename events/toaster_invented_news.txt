@@ -30,7 +30,7 @@ news_event = {
 news_event = {
 	id = weimarslaststand_news.1
 	title = "Secret toaster launcher"
-	desc = "You weren't suppossed to see this.\nThis event is just here to fire the actual toaster event.\nEither HOI4 has some wacky modding tools or I'm just dumb, but it doesn't launch on the date unless I do this."
+	desc = "You weren't suppossed to see this."
 
 	fire_only_once = yes
 

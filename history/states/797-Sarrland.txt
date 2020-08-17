@@ -1,6 +1,7 @@
 state={
 	id=797
 	name="STATE_797"
+	state_category = large_city
 	history={
 		owner = FRA
 		buildings = {
@@ -16,5 +17,4 @@ state={
 	}
 	manpower=25000
 	buildings_max_level_factor=1.000
-	state_category=urban
 }
