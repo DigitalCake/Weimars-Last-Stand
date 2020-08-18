@@ -1,0 +1,17 @@
+state={
+	id=798
+	name="STATE_798"
+	history={
+		owner = ITA
+		victory_points = {
+			9904 40
+		}
+		add_core_of = ITA
+	}
+	provinces={
+		9904 
+	}
+	manpower=2000000
+	buildings_max_level_factor=1.000
+	state_category=metropolis
+}
