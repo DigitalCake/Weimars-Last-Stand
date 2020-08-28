@@ -31,6 +31,9 @@ focus_tree = {
 		x = 8
 		y = 0
 		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
 		available_if_capitulated = yes
 		ai_will_do = {
 				factor = 1
@@ -49,6 +52,9 @@ focus_tree = {
 		y = 1
 		prerequisite = {focus = FRA_French_Politics}
 		cost = 5
+				ai_will_do = {
+			factor = 1
+		}
 		available_if_capitulated = yes
 		ai_will_do = {
 				factor = 1
@@ -67,6 +73,9 @@ focus_tree = {
 		y = 2
 		prerequisite = {focus = FRA_Vichy}
 		cost = 5
+				ai_will_do = {
+			factor = 1
+		}
 		available_if_capitulated = yes
 		ai_will_do = {
 				factor = 1
@@ -86,7 +95,7 @@ focus_tree = {
 		x = -2
 		y = 3
 		prerequisite = {focus = FRA_Victory_Nat}
-		mutually_exclusive = {focus = FRA_Leagues}
+		mutually_exclusive = {focus = FRA_Leagues focus = FRA_Nat_Rev}
 		cost = 5
 		available_if_capitulated = yes
 		ai_will_do = {
@@ -474,7 +483,7 @@ focus_tree = {
 		x = 3
 		y = 3
 		prerequisite = {focus = FRA_Victory_Nat}
-		mutually_exclusive = {focus = FRA_Action_France}
+		mutually_exclusive = {focus = FRA_Action_France focus = FRA_Nat_Rev}
 		cost = 5
 		available_if_capitulated = yes
 		ai_will_do = {
@@ -814,13 +823,413 @@ focus_tree = {
 		}
 	}
 	
+###############National Revolution###############
+	focus = {
+		id = FRA_Nat_Rev
+		text = "National Revolution"
+		icon = GFX_focus_spr_the_anti_fascist_workers_revolution
+		x = 12
+		y = 3
+		prerequisite = {focus = FRA_Victory_Nat}
+		mutually_exclusive = {focus = FRA_Action_France focus = FRA_Leagues}
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+				factor = 1
+		}
+		search_filters = {Political}
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = FRA_Travail
+		text = "Travail"
+		icon = GFX_focus_spa_the_spanish_miracle
+		x = 9
+		y = 4
+		prerequisite = {focus = FRA_Nat_Rev}
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+				factor = 1
+		}
+		search_filters = {Political}
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = FRA_Famille
+		text = "Famille"
+		icon = GFX_focus_usa_guarantee_the_american_dream
+		x = 12
+		y = 4
+		prerequisite = {focus = FRA_Nat_Rev}
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+				factor = 1
+		}
+		search_filters = {Political}
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = FRA_Patrie
+		text = "Patrie"
+		icon = GFX_focus_chi_reach_out_to_france
+		x = 15
+		y = 4
+		prerequisite = {focus = FRA_Nat_Rev}
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+				factor = 1
+		}
+		search_filters = {Political}
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = FRA_Invest_Seine
+		text = "Invest In The Banks Of The Seine"
+		icon = GFX_focus_hol_prepare_the_inundation_lines
+		x = 9
+		y = 5
+		prerequisite = {focus = FRA_Travail}
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+				factor = 1
+		}
+		search_filters = {Political}
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = FRA_Higher_Births
+		text = "Encourage Higher Birthrates"
+		icon = GFX_goal_tripartite_pact
+		x = 12
+		y = 5
+		prerequisite = {focus = FRA_Famille}
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+				factor = 1
+		}
+		search_filters = {Political}
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = FRA_New_Nation
+		text = "A New Nation"
+		icon = GFX_focus_generic_support_the_left_right
+		x = 15
+		y = 5
+		prerequisite = {focus = FRA_Patrie}
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+				factor = 1
+		}
+		search_filters = {Political}
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = FRA_Work_Forts
+		text = "Begin Work on Fortifications"
+		icon = GFX_goal_generic_construction2
+		x = 9
+		y = 6
+		prerequisite = {focus = FRA_Invest_Seine}
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+				factor = 1
+		}
+		search_filters = {Political}
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = FRA_Rebuild_Homes
+		text = "Rebuild Destroyed Homes"
+		icon = GFX_goal_generic_construct_civilian
+		x = 12
+		y = 6
+		prerequisite = {focus = FRA_Higher_Births}
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+				factor = 1
+		}
+		search_filters = {Political}
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = FRA_Economic_Aus
+		text = "Economic Austerity"
+		icon = GFX_focus_usa_reestablish_the_gold_standard
+		x = 15
+		y = 6
+		prerequisite = {focus = FRA_New_Nation}
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+				factor = 1
+		}
+		search_filters = {Political}
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = FRA_Impose_Tariffs
+		text = "Impose Tariffs"
+		icon = GFX_goal_generic_positive_trade_relations
+		x = 9
+		y = 7
+		prerequisite = {focus = FRA_Work_Forts}
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+				factor = 1
+		}
+		search_filters = {Political}
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = FRA_Rid_Loanwords
+		text = "Get Rid of Loanwords"
+		icon = GFX_goal_generic_forceful_treaty
+		x = 12
+		y = 7
+		prerequisite = {focus = FRA_Rebuild_Homes}
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+				factor = 1
+		}
+		search_filters = {Political}
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = FRA_Smash_Partis
+		text = "Smash Communist Partisans"
+		icon = GFX_goal_anti_comintern_pact
+		x = 15
+		y = 7
+		prerequisite = {focus = FRA_Economic_Aus}
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+				factor = 1
+		}
+		search_filters = {Political}
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = FRA_Nat_Franc
+		text = "Nation Française"
+		icon = GFX_focus_fra_le_deluge
+		x = 12
+		y = 8
+		prerequisite = {focus = FRA_Impose_Tariffs}
+		prerequisite = {focus = FRA_Rid_Loanwords}
+		prerequisite = (focus = FRA_Smash_Partis}
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+				factor = 1
+		}
+		search_filters = {Political}
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = FRA_Crush_Diss
+		text = "Crush Dissidents"
+		icon = GFX_goal_generic_political_pressure
+		x = 10
+		y = 9
+		prerequisite = {focus = FRA_Nat_Franc}
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+				factor = 1
+		}
+		search_filters = {Political}
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = FRA_Reformed_Mil
+		text = "A Reformed Military"
+		icon = GFX_focus_generic_military_mission
+		x = 14
+		y = 9
+		prerequisite = {focus = FRA_Nat_Franc}
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+				factor = 1
+		}
+		search_filters = {Political}
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = FRA_Nat_Regen
+		text = "National Regeneration"
+		icon = GFX_focus_hol_the_foundations_of_defense
+		x = 10
+		y = 10
+		prerequisite = {focus = FRA_Crush_Diss}
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+				factor = 1
+		}
+		search_filters = {Political}
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = FRA_Military_Budget
+		text = "Greater Military Budget"
+		icon = GFX_goal_generic_territory_or_war
+		x = 14
+		y = 10
+		prerequisite = {focus = FRA_Reformed_Mil}
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+				factor = 1
+		}
+		search_filters = {Political}
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = FRA_Nous_Voi
+		text = "...nous voilà"
+		icon = GFX_goal_generic_radar
+		x = 10
+		y = 11
+		prerequisite = {focus = FRA_Nat_Regen}
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+				factor = 1
+		}
+		search_filters = {Political}
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = FRA_Cult_Marshal
+		text = "Cult of the Marshal"
+		icon = GFX_focus_fra_petain_doctrine
+		x = 14
+		y = 11
+		prerequisite = {focus = FRA_Military_Budget}
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+				factor = 1
+		}
+		search_filters = {Political}
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = FRA_En_Marche
+		text = "En Marche!"
+		icon = GFX_goal_generic_demand_territory
+		x = 12
+		y = 12
+		prerequisite = {focus = FRA_Cult_Marshal}
+		prerequisite = {focus = FRA_Nous_Voi}
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+				factor = 1
+		}
+		search_filters = {Political}
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = FRA_French_State
+		text = "A French State"
+		icon = GFX_focus_fra_french_union
+		x = 12
+		y = 13
+		prerequisite = {focus = FRA_En_Marche}
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+				factor = 1
+		}
+		search_filters = {Political}
+		completion_reward = {
+			
+		}
+	}
 ########################################################
 
 	focus = {
 		id = FRA_French_Economy
 		text = "French Economy"
 		icon = GFX_goal_generic_production2
-		x = 24
+		x = 40
 		y = 8
 		cost = 5
 		available_if_capitulated = yes
@@ -844,7 +1253,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		relative_position_id = FRA_French_Economy
 		ai_will_do = {
-				factor = 1
+			factor = 0.5
 		}
 		search_filters = {Industry}
 		completion_reward = {
@@ -863,7 +1272,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		relative_position_id = FRA_French_Economy
 		ai_will_do = {
-				factor = 1
+			factor = 0.5
 		}
 		search_filters = {Industry}
 		search_filters = {Airforce}
@@ -883,7 +1292,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		relative_position_id = FRA_French_Economy
 		ai_will_do = {
-				factor = 1
+			factor = 0.5
 		}
 		search_filters = {Industry}
 		search_filters = {Airforce}
@@ -903,7 +1312,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		relative_position_id = FRA_French_Economy
 		ai_will_do = {
-				factor = 1
+			factor = 0.5
 		}
 		search_filters = {Industry}
 		completion_reward = {
@@ -922,7 +1331,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		relative_position_id = FRA_French_Economy
 		ai_will_do = {
-				factor = 1
+			factor = 0.5
 		}
 		search_filters = {Industry}
 		completion_reward = {
@@ -941,7 +1350,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		relative_position_id = FRA_French_Economy
 		ai_will_do = {
-				factor = 1
+				factor = 0.5
 		}
 		search_filters = {Industry}
 		completion_reward = {
@@ -959,7 +1368,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		relative_position_id = FRA_French_Economy
 		ai_will_do = {
-				factor = 1
+				factor = 0.8
 		}
 		search_filters = {Industry}
 		completion_reward = {
@@ -979,7 +1388,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		relative_position_id = FRA_Economic_Minister
 		ai_will_do = {
-				factor = 1
+				factor = 0.8
 		}
 		search_filters = {Industry}
 		completion_reward = {
@@ -998,7 +1407,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		relative_position_id = FRA_Economic_Minister
 		ai_will_do = {
-				factor = 1
+				factor = 0.8
 		}
 		search_filters = {Industry}
 		completion_reward = {
@@ -1017,7 +1426,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		relative_position_id = FRA_Economic_Minister
 		ai_will_do = {
-				factor = 1
+				factor = 0.8
 		}
 		search_filters = {Industry}
 		completion_reward = {
@@ -1037,7 +1446,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		relative_position_id = FRA_Economic_Minister
 		ai_will_do = {
-				factor = 1
+				factor = 0.8
 		}
 		search_filters = {Industry}
 		completion_reward = {
@@ -1056,7 +1465,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		relative_position_id = FRA_Economic_Minister
 		ai_will_do = {
-				factor = 1
+				factor = 0.8
 		}
 		search_filters = {Industry}
 		completion_reward = {
@@ -1075,7 +1484,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		relative_position_id = FRA_Economic_Minister
 		ai_will_do = {
-				factor = 1
+				factor = 0.8
 		}
 		search_filters = {Industry}
 		completion_reward = {
@@ -1094,7 +1503,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		relative_position_id = FRA_Economic_Minister
 		ai_will_do = {
-				factor = 1
+				factor = 0.8
 		}
 		search_filters = {Industry}
 		completion_reward = {
@@ -1113,11 +1522,36 @@ focus_tree = {
 		available_if_capitulated = yes
 		relative_position_id = FRA_French_Economy
 		ai_will_do = {
-				factor = 1
+				factor = 0.5
 		}
 		search_filters = {Industry}
 		completion_reward = {
-			
+			random_owned_state = {
+				limit = { 
+					is_core_of = ROOT 
+					infrastructure < 9
+					not = { has_state_flag = FRA_autoroutes_target }
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				set_state_flag = FRA_autoroutes_target
+			}
+			random_owned_state = {
+				limit = { 
+					is_core_of = ROOT 
+					infrastructure < 9
+					not = { has_state_flag = FRA_autoroutes_target }
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				set_state_flag = FRA_autoroutes_target
+			}
 		}
 	}
 
@@ -1132,11 +1566,36 @@ focus_tree = {
 		available_if_capitulated = yes
 		relative_position_id = FRA_French_Economy
 		ai_will_do = {
-				factor = 1
+				factor = 0.5
 		}
 		search_filters = {Industry}
 		completion_reward = {
-			
+			random_owned_state = {
+				limit = { 
+					is_core_of = ROOT 
+					infrastructure < 9
+					not = { has_state_flag = FRA_autoroutes_target }
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = FRA_autoroutes_target
+			}
+			random_owned_state = {
+				limit = { 
+					is_core_of = ROOT 
+					infrastructure < 9
+					not = { has_state_flag = FRA_autoroutes_target }
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = FRA_autoroutes_target
+			}
 		}
 	}
 	
@@ -1151,11 +1610,49 @@ focus_tree = {
 		available_if_capitulated = yes
 		relative_position_id = FRA_French_Economy
 		ai_will_do = {
-				factor = 1
+				factor = 0.5
 		}
 		search_filters = {Industry}
 		completion_reward = {
-			
+			random_owned_state = {
+				limit = { 
+					is_core_of = ROOT 
+					infrastructure < 9
+					not = { has_state_flag = FRA_autoroutes_target }
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = FRA_autoroutes_target
+			}
+			random_owned_state = {
+				limit = { 
+					is_core_of = ROOT 
+					infrastructure < 9
+					not = { has_state_flag = FRA_autoroutes_target }
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = FRA_autoroutes_target
+			}
+			random_owned_state = {
+				limit = { 
+					is_core_of = ROOT 
+					infrastructure < 9
+					not = { has_state_flag = FRA_autoroutes_target }
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = FRA_autoroutes_target
+			}
 		}
 	}
 	
@@ -1170,11 +1667,21 @@ focus_tree = {
 		available_if_capitulated = yes
 		relative_position_id = FRA_French_Economy
 		ai_will_do = {
-				factor = 1
+				factor = 0.5
 		}
 		search_filters = {Industry}
 		completion_reward = {
-			
+			random_owned_state = {
+				limit = { 
+					is_core_of = ROOT 
+					infrastructure < 9
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
 		}
 	}
 	
@@ -1189,33 +1696,24 @@ focus_tree = {
 		available_if_capitulated = yes
 		relative_position_id = FRA_French_Economy
 		ai_will_do = {
-				factor = 1
+				factor = 0.5
 		}
 		search_filters = {Industry}
 		completion_reward = {
-			
+			random_owned_state = {
+				limit = { 
+					is_core_of = ROOT 
+					infrastructure < 9
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
 		}
 	}
-	
-	focus = {
-		id = FRA_rail2
-		text = "New Train Yards"
-		icon = GFX_goal_generic_production2
-		x = 1
-		y = 2
-		prerequisite = {focus = FRA_rail}
-		cost = 5
-		available_if_capitulated = yes
-		relative_position_id = FRA_French_Economy
-		ai_will_do = {
-				factor = 1
-		}
-		search_filters = {Industry}
-		completion_reward = {
-			
-		}
-	}
-	
+
 	focus = {
 		id = FRA_rail3
 		text = "Electric Trains"
@@ -1227,13 +1725,24 @@ focus_tree = {
 		available_if_capitulated = yes
 		relative_position_id = FRA_French_Economy
 		ai_will_do = {
-				factor = 1
+				factor = 0.5
 		}
 		search_filters = {Industry}
 		completion_reward = {
-			
+				random_owned_state = {
+				limit = { 
+					is_core_of = ROOT 
+					infrastructure < 9
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
 		}
 	}
+	
 	focus = {
 		id = FRA_Economic_Focus
 		text = "Economic Focus"
@@ -1245,7 +1754,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		relative_position_id = FRA_French_Economy
 		ai_will_do = {
-				factor = 1
+				factor = 0.5
 		}
 		search_filters = {Industry}
 		completion_reward = {
@@ -1265,7 +1774,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		relative_position_id = FRA_Economic_Focus
 		ai_will_do = {
-				factor = 1
+				factor = 0.5
 		}
 		search_filters = {Industry}
 		completion_reward = {
@@ -1284,7 +1793,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		relative_position_id = FRA_Economic_Focus
 		ai_will_do = {
-				factor = 1
+				factor = 0.5
 		}
 		search_filters = {Industry}
 		completion_reward = {
@@ -1303,7 +1812,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		relative_position_id = FRA_Economic_Focus
 		ai_will_do = {
-				factor = 1
+				factor = 0.5
 		}
 		search_filters = {Industry}
 		completion_reward = {
@@ -1322,7 +1831,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		relative_position_id = FRA_Economic_Focus
 		ai_will_do = {
-				factor = 1
+				factor = 0.5
 		}
 		search_filters = {Industry}
 		completion_reward = {
@@ -1342,7 +1851,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		relative_position_id = FRA_Economic_Focus
 		ai_will_do = {
-				factor = 1
+				factor = 0.5
 		}
 		search_filters = {Industry}
 		completion_reward = {
@@ -1361,7 +1870,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		relative_position_id = FRA_Economic_Focus
 		ai_will_do = {
-				factor = 1
+				factor = 0.5
 		}
 		search_filters = {Industry}
 		completion_reward = {
@@ -1380,7 +1889,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		relative_position_id = FRA_Economic_Focus
 		ai_will_do = {
-				factor = 1
+				factor = 0.5
 		}
 		search_filters = {Industry}
 		completion_reward = {
@@ -1399,7 +1908,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		relative_position_id = FRA_French_Economy
 		ai_will_do = {
-				factor = 1
+				factor = 0.5
 		}
 		search_filters = {Industry}
 		completion_reward = {
@@ -1418,7 +1927,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		relative_position_id = FRA_French_Economy
 		ai_will_do = {
-				factor = 1
+				factor = 0.5
 		}
 		search_filters = {Industry}
 		completion_reward = {
@@ -1437,7 +1946,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		relative_position_id = FRA_French_Economy
 		ai_will_do = {
-				factor = 1
+				factor = 0.5
 		}
 		search_filters = {Industry}
 		completion_reward = {
@@ -1456,7 +1965,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		relative_position_id = FRA_French_Economy
 		ai_will_do = {
-				factor = 1
+				factor = 0.5
 		}
 		search_filters = {Industry}
 		completion_reward = {
@@ -1475,7 +1984,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		relative_position_id = FRA_French_Economy
 		ai_will_do = {
-				factor = 1
+				factor = 0.5
 		}
 		search_filters = {Industry}
 		completion_reward = {
@@ -1494,7 +2003,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		relative_position_id = FRA_French_Economy
 		ai_will_do = {
-				factor = 1
+				factor = 0.5
 		}
 		search_filters = {Industry}
 		completion_reward = {
@@ -2053,7 +2562,7 @@ focus_tree = {
 			}
 	}
 	focus = {
-			id = FRA_Barès_Victory
+			id = FRA_Bares_Victory
 			text = "Barès Command"
 			icon = GFX_focus_fra_bares
 			x = -2
@@ -2078,7 +2587,7 @@ focus_tree = {
 			x = -4
 			y = 2
 			cost = 5
-			prerequisite = {focus = FRA_Barès_Victory}
+			prerequisite = {focus = FRA_Bares_Victory}
 			available_if_capitulated = yes
 			relative_position_id = FRA_Air_Election
 			ai_will_do = {
@@ -2103,7 +2612,7 @@ focus_tree = {
 			cost = 5
 			prerequisite = {focus = FRA_New_Bombers}
 			available_if_capitulated = yes
-			relative_position_id = FRA_Barès_Victory
+			relative_position_id = FRA_Bares_Victory
 			ai_will_do = {
 				factor = 1
 			}
@@ -2124,7 +2633,7 @@ focus_tree = {
 			x = -2
 			y = 2
 			cost = 5
-			prerequisite = {focus = FRA_Barès_Victory}
+			prerequisite = {focus = FRA_Bares_Victory}
 			available_if_capitulated = yes
 			relative_position_id = FRA_Air_Election
 			ai_will_do = {
@@ -2200,7 +2709,7 @@ focus_tree = {
 			y = 1
 			cost = 5
 			prerequisite = {focus = FRA_Air_Election}
-			mutually_exclusive = {focus FRA_Barès_Victory}
+			mutually_exclusive = {focus FRA_Bares_Victory}
 			available_if_capitulated = yes
 			relative_position_id = FRA_Air_Election
 			ai_will_do = {
