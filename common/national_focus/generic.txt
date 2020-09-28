@@ -1,4 +1,4 @@
-﻿focus_tree = {
+focus_tree = {
 	id = generic_focus
 	
 	country = {
@@ -1768,14 +1768,545 @@
 	
 	# SectionAir
 	
+	focus = {
+		id = aviation_effort
+		icon = GFX_goal_generic_build_airforce
+		x = 38
+		y = 0
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = fighter_effort
+		icon = GFX_goal_generic_air_fighter2
+		prerequisite = { focus = aviation_effort }
+		x = -5
+		y = 1
+		relative_position_id = aviation_effort
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = heavy_fighters
+		icon = GFX_focus_jap_zero
+		prerequisite = { focus = fighter_effort }
+		x = 0
+		y = 1
+		relative_position_id = fighter_effort
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = carrier_fighters
+		icon = GFX_goal_generic_navy_carrier
+		prerequisite = { focus = heavy_fighters }
+		x = 0
+		y = 1
+		relative_position_id = heavy_fighters
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = appointed_weather_experts
+		icon = GFX_goal_continuous_boost_freedom
+		prerequisite = { focus = aviation_effort }
+		x = -3
+		y = 1
+		relative_position_id = aviation_effort
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = bomber_effort
+		icon = GFX_goal_generic_air_bomber
+		prerequisite = { focus = aviation_effort }
+		x = 0
+		y = 1
+		relative_position_id = aviation_effort
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = close_air_support
+		icon = GFX_goal_generic_CAS
+		prerequisite = { focus = fighter_effort }
+		prerequisite = { focus = bomber_effort }
+		x = 2
+		y = 1
+		relative_position_id = fighter_effort
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = structure_bombing
+		icon = GFX_goal_generic_occupy_start_war
+		prerequisite = { focus = bomber_effort }
+		mutually_exclusive = { focus = all_purpose_bombing }
+		x = -1
+		y = 1
+		relative_position_id = bomber_effort
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = all_purpose_bombing
+		icon = GFX_goal_generic_position_armies
+		prerequisite = { focus = bomber_effort }
+		mutually_exclusive = { focus = structure_bombing }
+		x = 1
+		y = 1
+		relative_position_id = bomber_effort
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = naval_bombers
+		icon = GFX_goal_generic_air_naval_bomber
+		prerequisite = { focus = structure_bombing focus = all_purpose_bombing }
+		x = 1
+		y = 1
+		relative_position_id = structure_bombing
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = air_production_experience
+		icon = GFX_goal_generic_air_fighter2
+		prerequisite = { focus = carrier_fighters }
+		prerequisite = { focus = close_air_support }
+		prerequisite = { focus = naval_bombers }
+		x = 0
+		y = 2
+		relative_position_id = close_air_support
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = construct_air_fields
+		icon = GFX_goal_generic_build_tank
+		prerequisite = { focus = aviation_effort }
+		x = 2
+		y = 1
+		relative_position_id = aviation_effort
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = air_doctrine
+		icon = GFX_goal_generic_cavalry
+		prerequisite = { focus = aviation_effort }
+		x = 4
+		y = 1
+		relative_position_id = aviation_effort
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = proper_air_schools
+		icon = GFX_goal_generic_intelligence_exchange
+		prerequisite = { focus = air_doctrine }
+		mutually_exclusive = { focus = careful_training }
+		x = -1
+		y = 1
+		relative_position_id = air_doctrine
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = careful_training
+		icon = GFX_goal_generic_air_production
+		prerequisite = { focus = air_doctrine }
+		mutually_exclusive = { focus = proper_air_schools }
+		x = 1
+		y = 1
+		relative_position_id = air_doctrine
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = air_doctrine2
+		icon = GFX_goal_generic_air_doctrine
+		prerequisite = { focus = proper_air_schools focus = careful_training }
+		x = 1
+		y = 1
+		relative_position_id = proper_air_schools
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
 	# SectionNavy
+	
+	focus = {
+		id = naval_effort
+		icon = GFX_goal_generic_occupy_states_coastal
+		x = 50
+		y = 0
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = dockyard_effort
+		icon = GFX_goal_generic_construct_naval_dockyard
+		prerequisite = { focus = naval_effort }
+		x = -3
+		y = 1
+		relative_position_id = naval_effort
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = mass_convoys
+		icon = GFX_goal_generic_position_armies
+		prerequisite = { focus = naval_effort }
+		x = -1
+		y = 1
+		relative_position_id = naval_effort
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = port_effort
+		icon = GFX_goal_generic_construct_civilian
+		prerequisite = { focus = dockyard_effort }
+		x = -1
+		y = 1
+		relative_position_id = dockyard_effort
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = dockyard_effort2
+		icon = GFX_goal_generic_build_tank
+		prerequisite = { focus = dockyard_effort }
+		prerequisite = { focus = mass_convoys }
+		x = -1
+		y = 1
+		relative_position_id = mass_convoys
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = dockyard_expansionism
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = port_effort }
+		prerequisite = { focus = dockyard_effort2 }
+		x = -1
+		y = 1
+		relative_position_id = dockyard_effort2
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = navy_doctrine
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		prerequisite = { focus = naval_effort }
+		x = 2
+		y = 1
+		relative_position_id = naval_effort
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = flexible_navy
+		icon = GFX_goal_generic_navy_anti_submarine
+		prerequisite = { focus = navy_doctrine }
+		mutually_exclusive = { focus = large_navy }
+		x = -2
+		y = 1
+		relative_position_id = navy_doctrine
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = large_navy
+		icon = GFX_goal_generic_air_naval_bomber
+		prerequisite = { focus = navy_doctrine }
+		mutually_exclusive = { focus = flexible_navy }
+		x = 2
+		y = 1
+		relative_position_id = navy_doctrine
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = shore_landings
+		icon = GFX_goal_generic_amphibious_assault
+		prerequisite = { focus = flexible_navy focus = large_navy}
+		x = 2
+		y = 1
+		relative_position_id = flexible_navy
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = submarine_effort
+		icon = GFX_goal_generic_navy_submarine
+		prerequisite = { focus = flexible_navy }
+		x = -1
+		y = 2
+		relative_position_id = flexible_navy
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = destroyer_effort
+		icon = GFX_focus_generic_destroyer
+		prerequisite = { focus = flexible_navy }
+		x = 1
+		y = 2
+		relative_position_id = flexible_navy
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = the_wolf_packs
+		icon = GFX_goal_generic_wolf_pack
+		prerequisite = { focus = submarine_effort }
+		x = 0
+		y = 1
+		relative_position_id = submarine_effort
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = mass_destruction
+		icon = GFX_goal_generic_occupy_start_war
+		prerequisite = { focus = destroyer_effort }
+		x = 0
+		y = 1
+		relative_position_id = destroyer_effort
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = cruiser_effort
+		icon = GFX_focus_generic_cruiser2
+		prerequisite = { focus = large_navy }
+		x = -1
+		y = 2
+		relative_position_id = large_navy
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = battleship_effort
+		icon = GFX_focus_generic_navy_battleship2
+		prerequisite = { focus = large_navy }
+		x = 1
+		y = 2
+		relative_position_id = large_navy
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = screening_effort
+		icon = GFX_goal_generic_navy_cruiser
+		prerequisite = { focus = cruiser_effort }
+		x = 0
+		y = 1
+		relative_position_id = cruiser_effort
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = battle_lines
+		icon = GFX_goal_generic_navy_battleship
+		prerequisite = { focus = battleship_effort }
+		x = 0
+		y = 1
+		relative_position_id = battleship_effort
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = a_grand_navy
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		prerequisite = { focus = the_wolf_packs focus = mass_destruction focus = screening_effort focus = battle_lines }
+		x = 1
+		y = 1
+		relative_position_id = mass_destruction
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
 	
 	# SectionPolitical
 	
 	focus = {
 		id = political_effort
 		icon = GFX_focus_generic_self_management
-		x = 60
+		x = 78
 		y = 0
 		cost = 10
 		
