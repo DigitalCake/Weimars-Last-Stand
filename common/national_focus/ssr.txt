@@ -1,0 +1,580 @@
+﻿focus_tree = {
+	id = ssr_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			OR = {
+				tag = USR
+				tag = BSR
+				tag = TSR
+				tag = RSR
+			}
+		}
+	}
+	
+	default = no
+
+	# SectionPolitical
+
+	focus = {
+		id = SSR_loyalty
+		icon = GFX_goal_generic_production
+		mutually_exclusive = { focus = SSR_end_russian_tyranny }
+		x = 0
+		y = 0
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_assemblys_direction
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = SSR_loyalty }
+		x = 0
+		y = 1
+		relative_position_id = SSR_loyalty
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_domestic_communism
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = SSR_assemblys_direction }
+		mutually_exclusive = { focus = SSR_soviet_assembly }
+		x = -2
+		y = 1
+		relative_position_id = SSR_assemblys_direction
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_soviet_assembly
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = SSR_assemblys_direction }
+		mutually_exclusive = { focus = SSR_domestic_communism }
+		x = 2
+		y = 1
+		relative_position_id = SSR_assemblys_direction
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_socialist_education
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = SSR_domestic_communism focus = SSR_soviet_assembly }
+		x = 2
+		y = 1
+		relative_position_id = SSR_domestic_communism
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_no_longer_in_the_shadows
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = SSR_domestic_communism }
+		x = 0
+		y = 2
+		relative_position_id = SSR_domestic_communism
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_agricultural_revolution
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = SSR_no_longer_in_the_shadows }
+		x = 0
+		y = 1
+		relative_position_id = SSR_no_longer_in_the_shadows
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_congress_of_trade_unions
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = SSR_no_longer_in_the_shadows }
+		x = -2
+		y = 1
+		relative_position_id = SSR_no_longer_in_the_shadows
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_side_by_side
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = SSR_congress_of_trade_unions }
+		x = 0
+		y = 1
+		relative_position_id = SSR_congress_of_trade_unions
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_total_secularization
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = SSR_socialist_education }
+		x = 0
+		y = 1
+		relative_position_id = SSR_socialist_education
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_world_revolution
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = SSR_total_secularization }
+		x = 0
+		y = 1
+		relative_position_id = SSR_total_secularization
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_guided_by_trotsky
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = SSR_soviet_assembly }
+		x = 0
+		y = 2
+		relative_position_id = SSR_soviet_assembly
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_moscow_research_pact
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = SSR_guided_by_trotsky }
+		x = 0
+		y = 1
+		relative_position_id = SSR_guided_by_trotsky
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_support_the_union
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = SSR_guided_by_trotsky }
+		x = 2
+		y = 1
+		relative_position_id = SSR_guided_by_trotsky
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_supply_the_red_army
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = SSR_support_the_union }
+		x = 0
+		y = 1
+		relative_position_id = SSR_support_the_union
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_end_russian_tyranny
+		icon = GFX_goal_generic_production
+		mutually_exclusive = { focus = SSR_loyalty }
+		x = 10
+		y = 0
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_republican_reforms
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = SSR_end_russian_tyranny }
+		mutually_exclusive = { focus = SSR_generals_coup }
+		x = -2
+		y = 1
+		relative_position_id = SSR_end_russian_tyranny
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_generals_coup
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = SSR_end_russian_tyranny }
+		mutually_exclusive = { focus = SSR_republican_reforms }
+		x = 2
+		y = 1
+		relative_position_id = SSR_end_russian_tyranny
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_privatization
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = SSR_republican_reforms }
+		x = -3
+		y = 1
+		relative_position_id = SSR_republican_reforms
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_invite_outside_investors
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = SSR_privatization }
+		x = 0
+		y = 1
+		relative_position_id = SSR_privatization
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_remove_communism
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = SSR_republican_reforms }
+		x = -1
+		y = 1
+		relative_position_id = SSR_republican_reforms
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_new_constitution
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = SSR_republican_reforms focus = SSR_generals_coup }
+		x = 2
+		y = 1
+		relative_position_id = SSR_republican_reforms
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_purge_the_opposition
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = SSR_generals_coup }
+		x = 1
+		y = 1
+		relative_position_id = SSR_generals_coup
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_border_wars
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = SSR_generals_coup }
+		x = 3
+		y = 1
+		relative_position_id = SSR_generals_coup
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_integrate_new_territorys
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = SSR_border_wars }
+		x = 0
+		y = 1
+		relative_position_id = SSR_border_wars
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_national_army
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = SSR_new_constitution }
+		x = -3
+		y = 1
+		relative_position_id = SSR_new_constitution
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_new_officers
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = SSR_national_army }
+		x = 0
+		y = 1
+		relative_position_id = SSR_national_army
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_fall_of_the_soviet_bear
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = SSR_new_officers }
+		x = 0
+		y = 1
+		relative_position_id = SSR_new_officers
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_bolshevik_bulwark
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = SSR_new_constitution }
+		x = 0
+		y = 1
+		relative_position_id = SSR_new_constitution
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_german_guarantees
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = SSR_bolshevik_bulwark }
+		mutually_exclusive = { focus = SSR_better_alone }
+		x = -1
+		y = 1
+		relative_position_id = SSR_bolshevik_bulwark
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_better_alone
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = SSR_bolshevik_bulwark }
+		mutually_exclusive = { focus = SSR_german_guarantees }
+		x = 1
+		y = 1
+		relative_position_id = SSR_bolshevik_bulwark
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_side_by_side
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = SSR_congress_of_trade_unions }
+		x = 0
+		y = 1
+		relative_position_id = SSR_congress_of_trade_unions
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_together_for_victory
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = SSR_german_guarantees focus = SSR_better_alone }
+		x = 0
+		y = 1
+		relative_position_id = SSR_german_guarantees
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_prepare_for_invasion
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = SSR_german_guarantees focus = SSR_better_alone }
+		x = 0
+		y = 1
+		relative_position_id = SSR_better_alone
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_total_war
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = SSR_better_alone focus = SSR_german_guarantees}
+		x = 1
+		y = 2
+		relative_position_id = SSR_german_guarantees
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_landowner_concessions
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = SSR_new_constitution }
+		x = 3
+		y = 1
+		relative_position_id = SSR_new_constitution
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_religious_question
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = SSR_landowner_concessions }
+		x = 0
+		y = 1
+		relative_position_id = SSR_landowner_concessions
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+}
