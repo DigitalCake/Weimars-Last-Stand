@@ -16,6 +16,8 @@
 	}
 	
 	default = no
+	
+	continuous_focus_position = { x = 50 y = 2000 }
 
 	# SectionPolitical
 
@@ -53,7 +55,7 @@
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = SSR_assemblys_direction }
 		mutually_exclusive = { focus = SSR_soviet_assembly }
-		x = -2
+		x = -3
 		y = 1
 		relative_position_id = SSR_assemblys_direction
 		cost = 10
@@ -69,7 +71,7 @@
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = SSR_assemblys_direction }
 		mutually_exclusive = { focus = SSR_domestic_communism }
-		x = 2
+		x = 3
 		y = 1
 		relative_position_id = SSR_assemblys_direction
 		cost = 10
@@ -84,7 +86,7 @@
 		id = SSR_socialist_education
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = SSR_domestic_communism focus = SSR_soviet_assembly }
-		x = 2
+		x = 3
 		y = 1
 		relative_position_id = SSR_domestic_communism
 		cost = 10
@@ -100,7 +102,7 @@
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = SSR_domestic_communism }
 		x = 0
-		y = 2
+		y = 1
 		relative_position_id = SSR_domestic_communism
 		cost = 10
 		
@@ -190,7 +192,7 @@
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = SSR_soviet_assembly }
 		x = 0
-		y = 2
+		y = 1
 		relative_position_id = SSR_soviet_assembly
 		cost = 10
 		
@@ -201,7 +203,7 @@
 	}
 	
 	focus = {
-		id = SSR_moscow_research_pact
+		id = SSR_aid_from_our_master
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = SSR_guided_by_trotsky }
 		x = 0
@@ -216,10 +218,86 @@
 	}
 	
 	focus = {
+		id = SSR_russian_farmers
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = SSR_aid_from_our_master }
+		x = -1
+		y = 1
+		relative_position_id = SSR_aid_from_our_master
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_industrial_link
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = SSR_russian_farmers }
+		x = 0
+		y = 1
+		relative_position_id = SSR_russian_farmers
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_moscow_research_pact
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = SSR_aid_from_our_master }
+		x = 1
+		y = 1
+		relative_position_id = SSR_aid_from_our_master
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_factory_technology
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = SSR_moscow_research_pact }
+		x = 0
+		y = 1
+		relative_position_id = SSR_moscow_research_pact
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_capital_to_capital_work
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = SSR_industrial_link }
+		prerequisite = { focus = SSR_factory_technology }
+		x = 1
+		y = 1
+		relative_position_id = SSR_industrial_link
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
 		id = SSR_support_the_union
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = SSR_guided_by_trotsky }
-		x = 2
+		x = 3
 		y = 1
 		relative_position_id = SSR_guided_by_trotsky
 		cost = 10
@@ -246,10 +324,56 @@
 	}
 	
 	focus = {
+		id = SSR_send_workers
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = SSR_supply_the_red_army }
+		x = 0
+		y = 1
+		relative_position_id = SSR_supply_the_red_army
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_armed_together
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = SSR_send_workers }
+		prerequisite = { focus = SSR_factory_technology }
+		x = -1
+		y = 1
+		relative_position_id = SSR_send_workers
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_soviet_harmony
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = SSR_capital_to_capital_work focus = SSR_armed_together}
+		x = 1
+		y = 1
+		relative_position_id = SSR_capital_to_capital_work
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
 		id = SSR_end_russian_tyranny
 		icon = GFX_goal_generic_production
 		mutually_exclusive = { focus = SSR_loyalty }
-		x = 10
+		x = 20
 		y = 0
 		cost = 10
 		
