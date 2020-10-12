@@ -1,0 +1,52 @@
+capital = 404
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+}
+
+set_convoys = 25
+
+1933.1.1 = {
+	
+	set_technology = {
+		tech_support = 1
+		support_weapons = 1
+		gw_artillery = 1
+
+		#doctrines
+		grand_battle_plan = 1
+
+		#electronics
+		electronic_mechanical_engineering = 1
+		radio = 1
+
+		#industry
+		basic_machine_tools = 1
+	}
+}
+
+
+set_politics = {
+	ruling_party = communism
+	last_election = "1932.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	democratic = 12
+	fascism = 10
+	communism = 58
+	neutrality = 20
+}
+
+create_country_leader = {
+	name = "COMRADE PLACEHOLDER"
+	desc = ""
+	picture = "gfx/leaders/SAU/Portrait_Arabia_Generic_1.dds"
+	ideology = Trotskyism
+	traits = {
+		#
+	}
+}
