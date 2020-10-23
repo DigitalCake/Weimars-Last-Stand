@@ -1,4 +1,4 @@
-﻿focus_tree = {
+focus_tree = {
 	id = ssr_focus
 	
 	country = {
@@ -10,7 +10,7 @@
 				tag = USR
 				tag = BSR
 				tag = TSR
-				tag = RSR
+				tag = CSR
 			}
 		}
 	}
@@ -23,7 +23,7 @@
 
 	focus = {
 		id = SSR_loyalty
-		icon = GFX_goal_generic_production
+		icon = GFX_focus_ger_great_red_menace
 		mutually_exclusive = { focus = SSR_end_russian_tyranny }
 		x = 0
 		y = 0
@@ -37,7 +37,7 @@
 	
 	focus = {
 		id = SSR_assemblys_direction
-		icon = GFX_goal_generic_production
+		icon = GFX_focus_generic_military_academy
 		prerequisite = { focus = SSR_loyalty }
 		x = 0
 		y = 1
@@ -52,58 +52,12 @@
 	
 	focus = {
 		id = SSR_domestic_communism
-		icon = GFX_goal_generic_production
+		icon = GFX_focus_generic_join_comintern
 		prerequisite = { focus = SSR_assemblys_direction }
 		mutually_exclusive = { focus = SSR_soviet_assembly }
-		x = -3
+		x = -5
 		y = 1
 		relative_position_id = SSR_assemblys_direction
-		cost = 10
-		
-		available_if_capitulated = yes
-
-		completion_reward = {
-		}
-	}
-	
-	focus = {
-		id = SSR_soviet_assembly
-		icon = GFX_goal_generic_production
-		prerequisite = { focus = SSR_assemblys_direction }
-		mutually_exclusive = { focus = SSR_domestic_communism }
-		x = 3
-		y = 1
-		relative_position_id = SSR_assemblys_direction
-		cost = 10
-		
-		available_if_capitulated = yes
-
-		completion_reward = {
-		}
-	}
-	
-	focus = {
-		id = SSR_socialist_education
-		icon = GFX_goal_generic_production
-		prerequisite = { focus = SSR_domestic_communism focus = SSR_soviet_assembly }
-		x = 3
-		y = 1
-		relative_position_id = SSR_domestic_communism
-		cost = 10
-		
-		available_if_capitulated = yes
-
-		completion_reward = {
-		}
-	}
-	
-	focus = {
-		id = SSR_no_longer_in_the_shadows
-		icon = GFX_goal_generic_production
-		prerequisite = { focus = SSR_domestic_communism }
-		x = 0
-		y = 1
-		relative_position_id = SSR_domestic_communism
 		cost = 10
 		
 		available_if_capitulated = yes
@@ -114,7 +68,205 @@
 	
 	focus = {
 		id = SSR_agricultural_revolution
-		icon = GFX_goal_generic_production
+		icon = GFX_focus_prc_agrarian_socialism
+		prerequisite = { focus = SSR_domestic_communism focus = SSR_soviet_assembly }
+		x = 5
+		y = 1
+		relative_position_id = SSR_domestic_communism
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_decision_of_the_farmers
+		icon = GFX_goal_generic_neutrality_focus
+		prerequisite = { focus = SSR_agricultural_revolution }
+		x = 0
+		y = 1
+		relative_position_id = SSR_agricultural_revolution
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_accept_soviet_immigrants
+		icon = GFX_focus_por_workers_of_iberia
+		prerequisite = { focus = SSR_decision_of_the_farmers }
+		mutually_exclusive = { focus = SSR_deny_soviet_immigrants }
+		x = -1
+		y = 1
+		relative_position_id = SSR_decision_of_the_farmers
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_deny_soviet_immigrants
+		icon = GFX_goal_generic_war_with_comintern
+		prerequisite = { focus = SSR_decision_of_the_farmers }
+		mutually_exclusive = { focus = SSR_accept_soviet_immigrants }
+		x = 1
+		y = 1
+		relative_position_id = SSR_decision_of_the_farmers
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_conscription_effort
+		icon = GFX_focus_generic_little_entente
+		prerequisite = { focus = SSR_domestic_communism }
+		x = -4
+		y = 1
+		relative_position_id = SSR_domestic_communism
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_arrange_the_government
+		icon = GFX_goal_generic_improve_relations
+		prerequisite = { focus = SSR_domestic_communism }
+		x = -2
+		y = 1
+		relative_position_id = SSR_domestic_communism
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_training_programs
+		icon = GFX_goal_generic_position_armies
+		prerequisite = { focus = SSR_conscription_effort }
+		x = -2
+		y = 1
+		relative_position_id = SSR_conscription_effort
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_aligned_officers
+		icon = GFX_focus_generic_military_mission
+		prerequisite = { focus = SSR_conscription_effort }
+		x = 0
+		y = 1
+		relative_position_id = SSR_conscription_effort
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_the_military_first
+		icon = GFX_goal_generic_forceful_treaty
+		prerequisite = { focus = SSR_aligned_officers }
+		x = 0
+		y = 1
+		relative_position_id = SSR_aligned_officers
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_clamp_down_corruption
+		icon = GFX_goal_generic_military_deal
+		prerequisite = { focus = SSR_arrange_the_government }
+		x = 0
+		y = 1
+		relative_position_id = SSR_arrange_the_government
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_the_cabinet_first
+		icon = GFX_focus_generic_self_management
+		prerequisite = { focus = SSR_clamp_down_corruption }
+		x = 0
+		y = 1
+		relative_position_id = SSR_clamp_down_corruption
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_soviet_assembly
+		icon = GFX_focus_chi_mission_to_the_soviet_union
+		prerequisite = { focus = SSR_assemblys_direction }
+		mutually_exclusive = { focus = SSR_domestic_communism }
+		x = 5
+		y = 1
+		relative_position_id = SSR_assemblys_direction
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_no_longer_in_the_shadows
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = SSR_domestic_communism }
+		x = 0
+		y = 2
+		relative_position_id = SSR_domestic_communism
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_congress_of_trade_unions
+		icon = GFX_focus_eng_concessions_to_the_trade_unions
 		prerequisite = { focus = SSR_no_longer_in_the_shadows }
 		x = 0
 		y = 1
@@ -128,12 +280,12 @@
 	}
 	
 	focus = {
-		id = SSR_congress_of_trade_unions
-		icon = GFX_goal_generic_production
-		prerequisite = { focus = SSR_no_longer_in_the_shadows }
-		x = -2
+		id = SSR_industrial_union
+		icon = GFX_focus_generic_industry_3
+		prerequisite = { focus = SSR_congress_of_trade_unions }
+		x = -8
 		y = 1
-		relative_position_id = SSR_no_longer_in_the_shadows
+		relative_position_id = SSR_congress_of_trade_unions
 		cost = 10
 		
 		available_if_capitulated = yes
@@ -143,8 +295,222 @@
 	}
 	
 	focus = {
-		id = SSR_side_by_side
+		id = SSR_cooperation_with_the_SSRs
+		icon = GFX_goal_generic_national_unity
+		prerequisite = { focus = SSR_industrial_union }
+		x = -2
+		y = 1
+		relative_position_id = SSR_industrial_union
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_accept_refugees
+		icon = GFX_focus_generic_concessions
+		prerequisite = { focus = SSR_cooperation_with_the_SSRs }
+		x = -2
+		y = 1
+		relative_position_id = SSR_cooperation_with_the_SSRs
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_host_officer_lessons
+		icon = GFX_focus_generic_military_academy
+		prerequisite = { focus = SSR_accept_refugees }
+		x = 0
+		y = 1
+		relative_position_id = SSR_accept_refugees
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_economy_startups
+		icon = GFX_goal_generic_construct_civilian
+		prerequisite = { focus = SSR_cooperation_with_the_SSRs }
+		x = 0
+		y = 1
+		relative_position_id = SSR_cooperation_with_the_SSRs
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_industrial_sharing_program
 		icon = GFX_goal_generic_production
+		prerequisite = { focus = SSR_economy_startups }
+		x = 0
+		y = 1
+		relative_position_id = SSR_economy_startups
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_harmonic_republics
+		icon = GFX_focus_generic_soviet_politics
+		prerequisite = { focus = SSR_host_officer_lessons focus = SSR_industrial_sharing_program }
+		mutually_exclusive = { focus = SSR_live_and_let_live }
+		x = 1
+		y = 1
+		relative_position_id = SSR_host_officer_lessons
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_more_soviet_funding
+		icon = GFX_goal_generic_soviet_construction
+		prerequisite = { focus = SSR_industrial_union }
+		x = 0
+		y = 1
+		relative_position_id = SSR_industrial_union
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_pave_our_roads
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = SSR_more_soviet_funding }
+		x = 0
+		y = 1
+		relative_position_id = SSR_more_soviet_funding
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_keep_more_resources
+		icon = GFX_focus_generic_steel
+		prerequisite = { focus = SSR_pave_our_roads }
+		x = 0
+		y = 1
+		relative_position_id = SSR_pave_our_roads
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_live_and_let_live
+		icon = GFX_goal_generic_alliance
+		prerequisite = { focus = SSR_keep_more_resources focus = SSR_a_state_to_ourselves}
+		mutually_exclusive = { focus = SSR_harmonic_republics }
+		x = 1
+		y = 1
+		relative_position_id = SSR_keep_more_resources
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_a_change_in_oppression
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = SSR_industrial_union }
+		x = 2
+		y = 1
+		relative_position_id = SSR_industrial_union
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_less_harshness
+		icon = GFX_goal_generic_dangerous_deal
+		prerequisite = { focus = SSR_a_change_in_oppression }
+		mutually_exclusive = { focus = SSR_abolish_military_occupation }
+		x = 0
+		y = 1
+		relative_position_id = SSR_a_change_in_oppression
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_abolish_military_occupation
+		icon = GFX_goal_generic_forceful_treaty
+		prerequisite = { focus = SSR_a_change_in_oppression }
+		mutually_exclusive = { focus = SSR_less_harshness }
+		x = 2
+		y = 1
+		relative_position_id = SSR_a_change_in_oppression
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_a_state_to_ourselves
+		icon = GFX_goal_generic_fortify_city
+		prerequisite = { focus = SSR_less_harshness focus = SSR_abolish_military_occupation }
+		x = 1
+		y = 1
+		relative_position_id = SSR_less_harshness
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_higher_SSR_status
+		icon = GFX_goal_generic_military_deal
 		prerequisite = { focus = SSR_congress_of_trade_unions }
 		x = 0
 		y = 1
@@ -158,12 +524,12 @@
 	}
 	
 	focus = {
-		id = SSR_total_secularization
-		icon = GFX_goal_generic_production
-		prerequisite = { focus = SSR_socialist_education }
+		id = SSR_plan_for_the_future
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		prerequisite = { focus = SSR_higher_SSR_status }
 		x = 0
 		y = 1
-		relative_position_id = SSR_socialist_education
+		relative_position_id = SSR_higher_SSR_status
 		cost = 10
 		
 		available_if_capitulated = yes
@@ -173,12 +539,427 @@
 	}
 	
 	focus = {
-		id = SSR_world_revolution
-		icon = GFX_goal_generic_production
-		prerequisite = { focus = SSR_total_secularization }
+		id = SSR_a_new_fate
+		icon = GFX_goal_generic_construction
+		prerequisite = { focus = SSR_plan_for_the_future }
+		x = -2
+		y = 1
+		relative_position_id = SSR_plan_for_the_future
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_aid_in_the_plan
+		icon = GFX_goal_generic_positive_trade_relations
+		prerequisite = { focus = SSR_plan_for_the_future }
+		mutually_exclusive = { focus = SSR_request_soviet_factories }
 		x = 0
 		y = 1
-		relative_position_id = SSR_total_secularization
+		relative_position_id = SSR_plan_for_the_future
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_request_soviet_factories
+		icon = GFX_goal_generic_trade
+		prerequisite = { focus = SSR_plan_for_the_future }
+		mutually_exclusive = { focus = SSR_aid_in_the_plan }
+		x = 2
+		y = 1
+		relative_position_id = SSR_plan_for_the_future
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_economical_adaptation
+		icon = GFX_goal_generic_consumer_goods
+		prerequisite = { focus = SSR_aid_in_the_plan focus = SSR_request_soviet_factories }
+		x = -2
+		y = 1
+		relative_position_id = SSR_aid_in_the_plan
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_feed_the_bear
+		icon = GFX_goal_generic_positive_trade_relations
+		prerequisite = { focus = SSR_aid_in_the_plan focus = SSR_request_soviet_factories }
+		mutually_exclusive = { focus = SSR_equal_military_balance }
+		x = 0
+		y = 1
+		relative_position_id = SSR_aid_in_the_plan
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_equal_military_balance
+		icon = GFX_goal_generic_trade
+		prerequisite = { focus = SSR_aid_in_the_plan focus = SSR_request_soviet_factories }
+		mutually_exclusive = { focus = SSR_feed_the_bear }
+		x = 2
+		y = 1
+		relative_position_id = SSR_aid_in_the_plan
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_link_production_lines
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = SSR_feed_the_bear focus = SSR_equal_military_balance }
+		x = -2
+		y = 1
+		relative_position_id = SSR_feed_the_bear
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_soviet_propaganda_effort
+		icon = GFX_goal_generic_positive_trade_relations
+		prerequisite = { focus = SSR_feed_the_bear focus = SSR_equal_military_balance }
+		mutually_exclusive = { focus = SSR_speeches_from_trotsky }
+		x = 0
+		y = 1
+		relative_position_id = SSR_feed_the_bear
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_speeches_from_trotsky
+		icon = GFX_goal_generic_trade
+		prerequisite = { focus = SSR_feed_the_bear focus = SSR_equal_military_balance }
+		mutually_exclusive = { focus = SSR_soviet_propaganda_effort }
+		x = 2
+		y = 1
+		relative_position_id = SSR_feed_the_bear
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_leader_and_trotsky_statues
+		icon = GFX_goal_support_fourth_int
+		prerequisite = { focus = SSR_soviet_propaganda_effort focus = SSR_speeches_from_trotsky }
+		x = -2
+		y = 1
+		relative_position_id = SSR_soviet_propaganda_effort
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_side_by_side
+		icon = GFX_goal_support_communism
+		prerequisite = { focus = SSR_soviet_propaganda_effort focus = SSR_speeches_from_trotsky }
+		x = 1
+		y = 1
+		relative_position_id = SSR_soviet_propaganda_effort
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_the_SSR_compromise
+		icon = GFX_focus_generic_join_comintern
+		prerequisite = { focus = SSR_higher_SSR_status }
+		x = 5
+		y = 1
+		relative_position_id = SSR_higher_SSR_status
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_funnel_factory_work
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = SSR_the_SSR_compromise }
+		x = 0
+		y = 2
+		relative_position_id = SSR_the_SSR_compromise
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_slice_of_equipment
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = SSR_funnel_factory_work }
+		x = 0
+		y = 1
+		relative_position_id = SSR_funnel_factory_work
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_new_home_for_veterans
+		icon = GFX_focus_chi_army_reform
+		prerequisite = { focus = SSR_slice_of_equipment }
+		mutually_exclusive = { focus = SSR_take_in_new_recruits }
+		x = -1
+		y = 1
+		relative_position_id = SSR_slice_of_equipment
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_take_in_new_recruits
+		icon = GFX_goal_rhineland
+		prerequisite = { focus = SSR_slice_of_equipment }
+		mutually_exclusive = { focus = SSR_new_home_for_veterans }
+		x = 1
+		y = 1
+		relative_position_id = SSR_slice_of_equipment
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_split_the_resources
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = SSR_the_SSR_compromise }
+		x = 2
+		y = 2
+		relative_position_id = SSR_the_SSR_compromise
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_force_statements_out
+		icon = GFX_goal_generic_more_territorial_claims
+		prerequisite = { focus = SSR_split_the_resources }
+		x = 0
+		y = 1
+		relative_position_id = SSR_split_the_resources
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_assert_greater_control
+		icon = GFX_focus_generic_strike_at_democracy1
+		prerequisite = { focus = SSR_split_the_resources }
+		x = 2
+		y = 1
+		relative_position_id = SSR_split_the_resources
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_mass_oppression
+		icon = GFX_focus_generic_strike_at_democracy2
+		prerequisite = { focus = SSR_force_statements_out }
+		prerequisite = { focus = SSR_assert_greater_control }
+		x = 1
+		y = 1
+		relative_position_id = SSR_force_statements_out
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_control_an_SSR
+		icon = GFX_goal_generic_territory_or_war
+		prerequisite = { focus = SSR_new_home_for_veterans focus = SSR_take_in_new_recruits focus = SSR_mass_oppression }
+		x = -1
+		y = 1
+		relative_position_id = SSR_take_in_new_recruits
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_increase_food_produce
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = SSR_soviet_assembly }
+		x = 7
+		y = 1
+		relative_position_id = SSR_soviet_assembly
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_hold_speeches
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = SSR_soviet_assembly }
+		x = 9
+		y = 1
+		relative_position_id = SSR_soviet_assembly
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_factory_conversion
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = SSR_increase_food_produce }
+		x = -2
+		y = 1
+		relative_position_id = SSR_increase_food_produce
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_manage_proper_funding
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = SSR_increase_food_produce }
+		x = 0
+		y = 1
+		relative_position_id = SSR_increase_food_produce
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_united_under_one_flag
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = SSR_hold_speeches }
+		x = 0
+		y = 1
+		relative_position_id = SSR_hold_speeches
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_youth_program
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = SSR_hold_speeches }
+		x = 2
+		y = 1
+		relative_position_id = SSR_hold_speeches
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_a_manageable_nation
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = SSR_manage_proper_funding }
+		prerequisite = { focus = SSR_united_under_one_flag }
+		x = 1
+		y = 1
+		relative_position_id = SSR_manage_proper_funding
 		cost = 10
 		
 		available_if_capitulated = yes
@@ -192,8 +973,99 @@
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = SSR_soviet_assembly }
 		x = 0
-		y = 1
+		y = 2
 		relative_position_id = SSR_soviet_assembly
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_support_the_world_revolution
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = SSR_guided_by_trotsky }
+		x = 0
+		y = 2
+		relative_position_id = SSR_guided_by_trotsky
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_prepare_equipment
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = SSR_support_the_world_revolution }
+		x = -2
+		y = 1
+		relative_position_id = SSR_support_the_world_revolution
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_discuss_with_collaboration_governments
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = SSR_prepare_equipment }
+		x = 0
+		y = 1
+		relative_position_id = SSR_prepare_equipment
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_propaganda_spies
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = SSR_support_the_world_revolution }
+		x = 0
+		y = 1
+		relative_position_id = SSR_support_the_world_revolution
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_find_communes
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = SSR_propaganda_spies }
+		x = 0
+		y = 1
+		relative_position_id = SSR_propaganda_spies
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_ready_trigger
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = SSR_discuss_with_collaboration_governments }
+		prerequisite = { focus = SSR_find_communes }
+		x = 1
+		y = 1
+		relative_position_id = SSR_discuss_with_collaboration_governments
 		cost = 10
 		
 		available_if_capitulated = yes
@@ -206,8 +1078,8 @@
 		id = SSR_aid_from_our_master
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = SSR_guided_by_trotsky }
-		x = 0
-		y = 1
+		x = 3
+		y = 2
 		relative_position_id = SSR_guided_by_trotsky
 		cost = 10
 		
@@ -297,8 +1169,8 @@
 		id = SSR_support_the_union
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = SSR_guided_by_trotsky }
-		x = 3
-		y = 1
+		x = 6
+		y = 2
 		relative_position_id = SSR_guided_by_trotsky
 		cost = 10
 		
@@ -370,10 +1242,57 @@
 	}
 	
 	focus = {
+		id = SSR_convince_other_SSRs
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = SSR_support_the_union }
+		x = 3
+		y = 1
+		relative_position_id = SSR_support_the_union
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_through_force
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = SSR_convince_other_SSRs }
+		mutually_exclusive = { focus = SSR_through_negotiations }
+		x = -1
+		y = 1
+		relative_position_id = SSR_convince_other_SSRs
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_through_negotiations
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = SSR_convince_other_SSRs }
+		mutually_exclusive = { focus = SSR_through_force }
+		x = 1
+		y = 1
+		relative_position_id = SSR_convince_other_SSRs
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
 		id = SSR_end_russian_tyranny
 		icon = GFX_goal_generic_production
 		mutually_exclusive = { focus = SSR_loyalty }
-		x = 20
+		x = 53
 		y = 0
 		cost = 10
 		
@@ -419,9 +1338,24 @@
 		id = SSR_privatization
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = SSR_republican_reforms }
-		x = -3
+		x = -13
 		y = 1
 		relative_position_id = SSR_republican_reforms
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_capitalistic_spending
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = SSR_privatization }
+		x = -2
+		y = 1
+		relative_position_id = SSR_privatization
 		cost = 10
 		
 		available_if_capitulated = yes
@@ -446,12 +1380,436 @@
 	}
 	
 	focus = {
+		id = SSR_invite_the_germans
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = SSR_invite_outside_investors }
+		x = -2
+		y = 1
+		relative_position_id = SSR_invite_outside_investors
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_invite_the_japanese
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = SSR_invite_outside_investors }
+		x = 0
+		y = 1
+		relative_position_id = SSR_invite_outside_investors
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_military_training_plans
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = SSR_invite_the_germans }
+		x = 1
+		y = 1
+		relative_position_id = SSR_invite_the_germans
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
 		id = SSR_remove_communism
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = SSR_republican_reforms }
-		x = -1
+		x = -11
 		y = 1
 		relative_position_id = SSR_republican_reforms
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_introduce_western_books
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = SSR_remove_communism }
+		x = 0
+		y = 1
+		relative_position_id = SSR_remove_communism
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_dispose_communist_relics
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = SSR_remove_communism }
+		x = 2
+		y = 1
+		relative_position_id = SSR_remove_communism
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_liberal_education
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = SSR_introduce_western_books }
+		prerequisite = { focus = SSR_dispose_communist_relics }
+		x = 1
+		y = 1
+		relative_position_id = SSR_introduce_western_books
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_keep_the_metal
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = SSR_dispose_communist_relics }
+		x = 1
+		y = 1
+		relative_position_id = SSR_dispose_communist_relics
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_new_minds_of_science
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = SSR_liberal_education }
+		x = 0
+		y = 1
+		relative_position_id = SSR_liberal_education
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_integrated_western_culture
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = SSR_military_training_plans }
+		prerequisite = { focus = SSR_new_minds_of_science }
+		x = 2
+		y = 1
+		relative_position_id = SSR_military_training_plans
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_the_democratic_liberation
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = SSR_republican_reforms }
+		x = -2
+		y = 1
+		relative_position_id = SSR_republican_reforms
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_purge_the_opposition
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = SSR_generals_coup }
+		x = 10
+		y = 1
+		relative_position_id = SSR_generals_coup
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_focus_against_democracy
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = SSR_purge_the_opposition }
+		x = -1
+		y = 1
+		relative_position_id = SSR_purge_the_opposition
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_radicalize_the_west
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = SSR_focus_against_democracy }
+		x = -1
+		y = 1
+		relative_position_id = SSR_focus_against_democracy
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_remember_hitler
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = SSR_radicalize_the_west }
+		x = 0
+		y = 1
+		relative_position_id = SSR_radicalize_the_west
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_ban_history_books
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = SSR_focus_against_democracy }
+		x = 1
+		y = 1
+		relative_position_id = SSR_focus_against_democracy
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_guilt_the_people
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = SSR_ban_history_books }
+		x = 0
+		y = 1
+		relative_position_id = SSR_ban_history_books
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_the_main_issue
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = SSR_purge_the_opposition }
+		x = 1
+		y = 1
+		relative_position_id = SSR_purge_the_opposition
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_absolute_no_communism
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = SSR_the_main_issue }
+		x = 1
+		y = 1
+		relative_position_id = SSR_the_main_issue
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_stalin_against_trotsky
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = SSR_the_main_issue }
+		x = 3
+		y = 1
+		relative_position_id = SSR_the_main_issue
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_remove_the_stain
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = SSR_absolute_no_communism focus = SSR_stalin_against_trotsky }
+		x = 0
+		y = 1
+		relative_position_id = SSR_absolute_no_communism
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_minds_to_mold
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = SSR_remember_hitler focus = SSR_guilt_the_people focus = SSR_remove_communism }
+		x = 0
+		y = 1
+		relative_position_id = SSR_guilt_the_people
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_landowner_concessions
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = SSR_generals_coup }
+		x = 13
+		y = 1
+		relative_position_id = SSR_generals_coup
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_increase_tax_rate
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = SSR_landowner_concessions }
+		x = 0
+		y = 1
+		relative_position_id = SSR_landowner_concessions
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_religious_question
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = SSR_landowner_concessions }
+		x = 4
+		y = 1
+		relative_position_id = SSR_landowner_concessions
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_let_them_have_churches
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = SSR_religious_question }
+		mutually_exclusive = { focus = SSR_ban_churches }
+		x = -1
+		y = 1
+		relative_position_id = SSR_religious_question
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_take_donations_as_tax
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = SSR_let_them_have_churches }
+		x = 0
+		y = 1
+		relative_position_id = SSR_let_them_have_churches
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_ban_churches
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = SSR_religious_question }
+		mutually_exclusive = { focus = SSR_let_them_have_churches }
+		x = 1
+		y = 1
+		relative_position_id = SSR_religious_question
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_arrest_holy_members
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = SSR_ban_churches }
+		x = 0
+		y = 1
+		relative_position_id = SSR_ban_churches
 		cost = 10
 		
 		available_if_capitulated = yes
@@ -476,57 +1834,165 @@
 	}
 	
 	focus = {
-		id = SSR_purge_the_opposition
-		icon = GFX_goal_generic_production
-		prerequisite = { focus = SSR_generals_coup }
-		x = 1
-		y = 1
-		relative_position_id = SSR_generals_coup
-		cost = 10
-		
-		available_if_capitulated = yes
-
-		completion_reward = {
-		}
-	}
-	
-	focus = {
-		id = SSR_border_wars
-		icon = GFX_goal_generic_production
-		prerequisite = { focus = SSR_generals_coup }
-		x = 3
-		y = 1
-		relative_position_id = SSR_generals_coup
-		cost = 10
-		
-		available_if_capitulated = yes
-
-		completion_reward = {
-		}
-	}
-	
-	focus = {
-		id = SSR_integrate_new_territorys
-		icon = GFX_goal_generic_production
-		prerequisite = { focus = SSR_border_wars }
-		x = 0
-		y = 1
-		relative_position_id = SSR_border_wars
-		cost = 10
-		
-		available_if_capitulated = yes
-
-		completion_reward = {
-		}
-	}
-	
-	focus = {
 		id = SSR_national_army
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = SSR_new_constitution }
-		x = -3
+		prerequisite = { focus = SSR_the_democratic_liberation }
+		x = -4
 		y = 1
 		relative_position_id = SSR_new_constitution
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_bring_forth_the_SSR_faction
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = SSR_national_army }
+		x = -2
+		y = 1
+		relative_position_id = SSR_national_army
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_economic_community
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = SSR_bring_forth_the_SSR_faction }
+		x = -4
+		y = 1
+		relative_position_id = SSR_bring_forth_the_SSR_faction
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_ensure_no_famines
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = SSR_economic_community }
+		x = 0
+		y = 1
+		relative_position_id = SSR_economic_community
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_democratic_influence
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = SSR_bring_forth_the_SSR_faction }
+		x = -2
+		y = 1
+		relative_position_id = SSR_bring_forth_the_SSR_faction
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_cure_their_communism
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = SSR_democratic_influence }
+		x = 0
+		y = 1
+		relative_position_id = SSR_democratic_influence
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_anti_soviet_propaganda
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = SSR_cure_their_communism }
+		mutually_exclusive = { focus = SSR_secret_police_intervention }
+		x = -1
+		y = 1
+		relative_position_id = SSR_cure_their_communism
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_secret_police_intervention
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = SSR_cure_their_communism }
+		mutually_exclusive = { focus = SSR_offer_posters }
+		x = 1
+		y = 1
+		relative_position_id = SSR_cure_their_communism
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_deeper_bonds
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = SSR_anti_soviet_propaganda focus = SSR_secret_police_intervention }
+		x = 1
+		y = 1
+		relative_position_id = SSR_anti_soviet_propaganda
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_transport_tunnels
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = SSR_bring_forth_the_SSR_faction }
+		x = 0
+		y = 1
+		relative_position_id = SSR_bring_forth_the_SSR_faction
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_prepare_a_stockpile
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = SSR_transport_tunnels }
+		x = 0
+		y = 1
+		relative_position_id = SSR_transport_tunnels
 		cost = 10
 		
 		available_if_capitulated = yes
@@ -551,12 +2017,58 @@
 	}
 	
 	focus = {
-		id = SSR_fall_of_the_soviet_bear
+		id = SSR_improve_high_command
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = SSR_new_officers }
 		x = 0
 		y = 1
 		relative_position_id = SSR_new_officers
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_retrive_interwar_veterans
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = SSR_improve_high_command }
+		x = 0
+		y = 1
+		relative_position_id = SSR_improve_high_command
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_armed_and_ready
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = SSR_prepare_a_stockpile }
+		prerequisite = { focus = SSR_retrive_interwar_veterans }
+		x = 1
+		y = 1
+		relative_position_id = SSR_prepare_a_stockpile
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_fall_of_the_soviet_bear
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = SSR_armed_and_ready }
+		x = 0
+		y = 1
+		relative_position_id = SSR_armed_and_ready
 		cost = 10
 		
 		available_if_capitulated = yes
@@ -585,7 +2097,7 @@
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = SSR_bolshevik_bulwark }
 		mutually_exclusive = { focus = SSR_better_alone }
-		x = -1
+		x = -2
 		y = 1
 		relative_position_id = SSR_bolshevik_bulwark
 		cost = 10
@@ -601,24 +2113,9 @@
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = SSR_bolshevik_bulwark }
 		mutually_exclusive = { focus = SSR_german_guarantees }
-		x = 1
+		x = 2
 		y = 1
 		relative_position_id = SSR_bolshevik_bulwark
-		cost = 10
-		
-		available_if_capitulated = yes
-
-		completion_reward = {
-		}
-	}
-	
-	focus = {
-		id = SSR_side_by_side
-		icon = GFX_goal_generic_production
-		prerequisite = { focus = SSR_congress_of_trade_unions }
-		x = 0
-		y = 1
-		relative_position_id = SSR_congress_of_trade_unions
 		cost = 10
 		
 		available_if_capitulated = yes
@@ -643,6 +2140,36 @@
 	}
 	
 	focus = {
+		id = SSR_fund_the_next_war
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = SSR_together_for_victory }
+		x = 0
+		y = 1
+		relative_position_id = SSR_together_for_victory
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_improve_economic_activity
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = SSR_total_war }
+		x = 0
+		y = 1
+		relative_position_id = SSR_total_war
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
 		id = SSR_prepare_for_invasion
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = SSR_german_guarantees focus = SSR_better_alone }
@@ -658,11 +2185,58 @@
 	}
 	
 	focus = {
+		id = SSR_national_defence_fund
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = SSR_prepare_for_invasion }
+		x = 0
+		y = 1
+		relative_position_id = SSR_prepare_for_invasion
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_ready_for_anything
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = SSR_fund_the_next_war }
+		prerequisite = { focus = SSR_improve_economic_activity }
+		x = 1
+		y = 1
+		relative_position_id = SSR_fund_the_next_war
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_protect_the_homeland
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = SSR_improve_economic_activity }
+		prerequisite = { focus = SSR_national_defence_fund }
+		x = 1
+		y = 1
+		relative_position_id = SSR_improve_economic_activity
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
 		id = SSR_total_war
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = SSR_better_alone focus = SSR_german_guarantees}
-		x = 1
-		y = 2
+		x = 2
+		y = 1
 		relative_position_id = SSR_german_guarantees
 		cost = 10
 		
@@ -673,10 +2247,26 @@
 	}
 	
 	focus = {
-		id = SSR_landowner_concessions
+		id = SSR_rise_of_fascism
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = SSR_generals_coup }
+		x = 2
+		y = 1
+		relative_position_id = SSR_generals_coup
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_increase_influence_over_russia
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = SSR_new_constitution }
-		x = 3
+		prerequisite = { focus = SSR_rise_of_fascism }
+		x = 4
 		y = 1
 		relative_position_id = SSR_new_constitution
 		cost = 10
@@ -688,12 +2278,528 @@
 	}
 	
 	focus = {
-		id = SSR_religious_question
+		id = SSR_border_wars
 		icon = GFX_goal_generic_production
-		prerequisite = { focus = SSR_landowner_concessions }
+		prerequisite = { focus = SSR_increase_influence_over_russia }
 		x = 0
 		y = 1
-		relative_position_id = SSR_landowner_concessions
+		relative_position_id = SSR_increase_influence_over_russia
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_escalate_the_wars
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = SSR_border_wars }
+		x = 0
+		y = 1
+		relative_position_id = SSR_border_wars
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_the_burning_star
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = SSR_escalate_the_wars }
+		x = 0
+		y = 1
+		relative_position_id = SSR_escalate_the_wars
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_war_bonds
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = SSR_the_burning_star }
+		x = 0
+		y = 1
+		relative_position_id = SSR_the_burning_star
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_mobilize_quickly
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = SSR_war_bonds }
+		x = 0
+		y = 1
+		relative_position_id = SSR_war_bonds
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_call_for_aid
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = SSR_the_burning_star }
+		prerequisite = { focus = SSR_support_each_other }
+		x = 2
+		y = 1
+		relative_position_id = SSR_the_burning_star
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_request_land_lease
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = SSR_call_for_aid }
+		x = 0
+		y = 1
+		relative_position_id = SSR_call_for_aid
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_align_with_the_SSRs
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = SSR_increase_influence_over_russia }
+		x = 2
+		y = 1
+		relative_position_id = SSR_increase_influence_over_russia
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_sway_their_minds
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = SSR_align_with_the_SSRs }
+		x = 0
+		y = 1
+		relative_position_id = SSR_align_with_the_SSRs
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_send_good_bidding
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = SSR_align_with_the_SSRs }
+		x = 2
+		y = 1
+		relative_position_id = SSR_align_with_the_SSRs
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_support_each_other
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = SSR_sway_their_minds }
+		x = 2
+		y = 1
+		relative_position_id = SSR_sway_their_minds
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_ideological_favours
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = SSR_support_each_other }
+		x = 0
+		y = 1
+		relative_position_id = SSR_support_each_other
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_fascism_united
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = SSR_ideological_favours }
+		x = 0
+		y = 1
+		relative_position_id = SSR_ideological_favours
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_one_SSR
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = SSR_mobilize_quickly }
+		prerequisite = { focus = SSR_request_land_lease }
+		prerequisite = { focus = SSR_fascism_united }
+		x = 0
+		y = 1
+		relative_position_id = SSR_request_land_lease
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_new_industry_investment
+		icon = GFX_goal_generic_production 
+		x = 23
+		y = 2
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_local_investment
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = SSR_new_industry_investment }
+		x = -1
+		y = 1
+		relative_position_id = SSR_new_industry_investment
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_industry_construction
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = SSR_local_investment }
+		x = 0
+		y = 1
+		relative_position_id = SSR_local_investment
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_synthetic_fuel_development
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = SSR_industry_construction }
+		x = -2
+		y = 1
+		relative_position_id = SSR_industry_construction
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_improve_industry
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = SSR_industry_construction }
+		x = 0
+		y = 1
+		relative_position_id = SSR_industry_construction
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_new_economic_policy
+		icon = GFX_goal_generic_production
+		x = 25
+		y = 2
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_new_universities
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = SSR_new_industry_investment }
+		prerequisite = { focus = SSR_new_economic_policy }
+		x = 1
+		y = 1
+		relative_position_id = SSR_new_industry_investment
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_industrial_mobilization
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = SSR_local_investment }
+		prerequisite = { focus = SSR_new_universities }
+		x = 0
+		y = 1
+		relative_position_id = SSR_new_universities
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_war_ordinance
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = SSR_industrial_mobilization }
+		x = 0
+		y = 1
+		relative_position_id = SSR_industrial_mobilization
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_war_industrial_evolution
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = SSR_improve_industry }
+		prerequisite = { focus = SSR_war_ordinance }
+		prerequisite = { focus = SSR_synthetic_fuel_development }
+		x = -1
+		y = 1
+		relative_position_id = SSR_war_ordinance
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_lessons_from_the_great_war
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = SSR_new_economic_policy }
+		x = 1
+		y = 1
+		relative_position_id = SSR_new_economic_policy
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_modernize_infantry
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = SSR_lessons_from_the_great_war }
+		x = 0
+		y = 1
+		relative_position_id = SSR_lessons_from_the_great_war
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_equipment_upgrades
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = SSR_modernize_infantry }
+		mutually_exclusive = { focus = SSR_heavy_weapons }
+		x = 0
+		y = 1
+		relative_position_id = SSR_modernize_infantry
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_new_army_theories
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = SSR_lessons_from_the_great_war }
+		x = 2
+		y = 1
+		relative_position_id = SSR_lessons_from_the_great_war
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_heavy_weapons
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = SSR_new_army_theories }
+		mutually_exclusive = { focus = SSR_equipment_upgrades }
+		x = 0
+		y = 1
+		relative_position_id = SSR_new_army_theories
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_army_air_corps
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = SSR_lessons_from_the_great_war }
+		x = 4
+		y = 1
+		relative_position_id = SSR_lessons_from_the_great_war
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_air_defence
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = SSR_army_air_corps }
+		x = 0
+		y = 1
+		relative_position_id = SSR_army_air_corps
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_naval_construction
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = SSR_lessons_from_the_great_war }
+		x = 6
+		y = 1
+		relative_position_id = SSR_lessons_from_the_great_war
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_naval_construction_II
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = SSR_naval_construction }
+		x = 0
+		y = 1
+		relative_position_id = SSR_naval_construction
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_the_war_to_end_all_wars
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = SSR_equipment_upgrades focus = SSR_heavy_weapons focus = SSR_air_defence }
+		x = 0
+		y = 1
+		relative_position_id = SSR_heavy_weapons
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_breaking_the_deadlock
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = SSR_war_industrial_evolution }
+		prerequisite = { focus = SSR_the_war_to_end_all_wars }
+		x = -3
+		y = 1
+		relative_position_id = SSR_the_war_to_end_all_wars
 		cost = 10
 		
 		available_if_capitulated = yes
