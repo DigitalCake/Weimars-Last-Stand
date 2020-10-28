@@ -1,4 +1,4 @@
-version="0.017"
+version="0.019"
 tags={
 	"Alternative History"
 	"Map"
@@ -11,4 +11,4 @@ replace_path ="common/bookmarks"
 #replace_path ="on_actions"
 #replace_path ="common/ideologies"
 name="Weimar's Last Stand"
-supported_version="1.9.3"
+supported_version="1.10.1"
