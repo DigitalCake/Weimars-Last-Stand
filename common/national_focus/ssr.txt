@@ -681,7 +681,7 @@ focus_tree = {
 	
 	focus = {
 		id = SSR_leader_and_trotsky_statues
-		icon = GFX_goal_support_fourth_int
+		icon = GFX_focus_generic_diplomatic_treaty
 		prerequisite = { focus = SSR_soviet_propaganda_effort focus = SSR_speeches_from_trotsky }
 		x = -2
 		y = 1
@@ -864,7 +864,7 @@ focus_tree = {
 	
 	focus = {
 		id = SSR_increase_food_produce
-		icon = GFX_goal_generic_production
+		icon = GFX_goal_generic_construction2
 		prerequisite = { focus = SSR_soviet_assembly }
 		x = 7
 		y = 1
@@ -879,7 +879,7 @@ focus_tree = {
 	
 	focus = {
 		id = SSR_hold_speeches
-		icon = GFX_goal_generic_production
+		icon = GFX_focus_generic_support_the_left_right
 		prerequisite = { focus = SSR_soviet_assembly }
 		x = 9
 		y = 1
@@ -894,7 +894,7 @@ focus_tree = {
 	
 	focus = {
 		id = SSR_factory_conversion
-		icon = GFX_goal_generic_production
+		icon = GFX_focus_generic_tank_production
 		prerequisite = { focus = SSR_increase_food_produce }
 		x = -2
 		y = 1
@@ -909,7 +909,7 @@ focus_tree = {
 	
 	focus = {
 		id = SSR_manage_proper_funding
-		icon = GFX_goal_generic_production
+		icon = GFX_focus_usa_reestablish_the_gold_standard
 		prerequisite = { focus = SSR_increase_food_produce }
 		x = 0
 		y = 1
@@ -924,7 +924,7 @@ focus_tree = {
 	
 	focus = {
 		id = SSR_united_under_one_flag
-		icon = GFX_goal_generic_production
+		icon = GFX_goal_generic_alliance
 		prerequisite = { focus = SSR_hold_speeches }
 		x = 0
 		y = 1
@@ -939,7 +939,7 @@ focus_tree = {
 	
 	focus = {
 		id = SSR_youth_program
-		icon = GFX_goal_generic_production
+		icon = GFX_focus_YUG_pan_slavic_congress
 		prerequisite = { focus = SSR_hold_speeches }
 		x = 2
 		y = 1
@@ -954,7 +954,7 @@ focus_tree = {
 	
 	focus = {
 		id = SSR_a_manageable_nation
-		icon = GFX_goal_generic_production
+		icon = GFX_goal_generic_build_tank
 		prerequisite = { focus = SSR_manage_proper_funding }
 		prerequisite = { focus = SSR_united_under_one_flag }
 		x = 1
@@ -970,7 +970,7 @@ focus_tree = {
 	
 	focus = {
 		id = SSR_guided_by_trotsky
-		icon = GFX_goal_generic_production
+		icon = GFX_focus_fra_loyalty_trotzky
 		prerequisite = { focus = SSR_soviet_assembly }
 		x = 0
 		y = 2
@@ -985,7 +985,7 @@ focus_tree = {
 	
 	focus = {
 		id = SSR_support_the_world_revolution
-		icon = GFX_goal_generic_production
+		icon = GFX_goal_support_fourth_int
 		prerequisite = { focus = SSR_guided_by_trotsky }
 		x = 0
 		y = 2
@@ -1000,7 +1000,7 @@ focus_tree = {
 	
 	focus = {
 		id = SSR_prepare_equipment
-		icon = GFX_goal_generic_production
+		icon = GFX_focus_focus_fra_maquis
 		prerequisite = { focus = SSR_support_the_world_revolution }
 		x = -2
 		y = 1
@@ -1015,7 +1015,7 @@ focus_tree = {
 	
 	focus = {
 		id = SSR_discuss_with_collaboration_governments
-		icon = GFX_goal_generic_production
+		icon = GFX_goal_generic_intelligence_exchange
 		prerequisite = { focus = SSR_prepare_equipment }
 		x = 0
 		y = 1
@@ -1030,7 +1030,7 @@ focus_tree = {
 	
 	focus = {
 		id = SSR_propaganda_spies
-		icon = GFX_goal_generic_production
+		icon = GFX_goal_generic_propaganda
 		prerequisite = { focus = SSR_support_the_world_revolution }
 		x = 0
 		y = 1
@@ -1045,7 +1045,7 @@ focus_tree = {
 	
 	focus = {
 		id = SSR_find_communes
-		icon = GFX_goal_generic_production
+		icon = GFX_goal_support_communism
 		prerequisite = { focus = SSR_propaganda_spies }
 		x = 0
 		y = 1
@@ -1060,7 +1060,7 @@ focus_tree = {
 	
 	focus = {
 		id = SSR_ready_trigger
-		icon = GFX_goal_generic_production
+		icon = GFX_goal_generic_attack_allies
 		prerequisite = { focus = SSR_discuss_with_collaboration_governments }
 		prerequisite = { focus = SSR_find_communes }
 		x = 1
@@ -1076,7 +1076,7 @@ focus_tree = {
 	
 	focus = {
 		id = SSR_aid_from_our_master
-		icon = GFX_goal_generic_production
+		icon = GFX_focus_generic_manpower
 		prerequisite = { focus = SSR_guided_by_trotsky }
 		x = 3
 		y = 2
@@ -1091,7 +1091,7 @@ focus_tree = {
 	
 	focus = {
 		id = SSR_russian_farmers
-		icon = GFX_goal_generic_production
+		icon = GFX_goal_generic_soviet_construction
 		prerequisite = { focus = SSR_aid_from_our_master }
 		x = -1
 		y = 1
@@ -1106,7 +1106,7 @@ focus_tree = {
 	
 	focus = {
 		id = SSR_industrial_link
-		icon = GFX_goal_generic_production
+		icon = GFX_focus_generic_industry_2
 		prerequisite = { focus = SSR_russian_farmers }
 		x = 0
 		y = 1
@@ -1136,7 +1136,7 @@ focus_tree = {
 	
 	focus = {
 		id = SSR_factory_technology
-		icon = GFX_goal_generic_production
+		icon = GFX_focus_generic_socialist_science
 		prerequisite = { focus = SSR_moscow_research_pact }
 		x = 0
 		y = 1
@@ -1151,7 +1151,7 @@ focus_tree = {
 	
 	focus = {
 		id = SSR_capital_to_capital_work
-		icon = GFX_goal_generic_production
+		icon = GFX_goal_generic_production2
 		prerequisite = { focus = SSR_industrial_link }
 		prerequisite = { focus = SSR_factory_technology }
 		x = 1
@@ -1167,7 +1167,7 @@ focus_tree = {
 	
 	focus = {
 		id = SSR_support_the_union
-		icon = GFX_goal_generic_production
+		icon = GFX_goal_tripartite_pact
 		prerequisite = { focus = SSR_guided_by_trotsky }
 		x = 6
 		y = 2
@@ -1182,7 +1182,7 @@ focus_tree = {
 	
 	focus = {
 		id = SSR_supply_the_red_army
-		icon = GFX_goal_generic_production
+		icon = GFX_focus_generic_combined_arms
 		prerequisite = { focus = SSR_support_the_union }
 		x = 0
 		y = 1
@@ -1197,7 +1197,7 @@ focus_tree = {
 	
 	focus = {
 		id = SSR_send_workers
-		icon = GFX_goal_generic_production
+		icon = GFX_focus_generic_industry_1
 		prerequisite = { focus = SSR_supply_the_red_army }
 		x = 0
 		y = 1
@@ -1212,7 +1212,7 @@ focus_tree = {
 	
 	focus = {
 		id = SSR_armed_together
-		icon = GFX_goal_generic_production
+		icon = GFX_goal_generic_military_sphere
 		prerequisite = { focus = SSR_send_workers }
 		prerequisite = { focus = SSR_factory_technology }
 		x = -1
@@ -1228,7 +1228,7 @@ focus_tree = {
 	
 	focus = {
 		id = SSR_soviet_harmony
-		icon = GFX_goal_generic_production
+		icon = GFX_goal_generic_war_with_comintern
 		prerequisite = { focus = SSR_capital_to_capital_work focus = SSR_armed_together}
 		x = 1
 		y = 1
@@ -1243,7 +1243,7 @@ focus_tree = {
 	
 	focus = {
 		id = SSR_convince_other_SSRs
-		icon = GFX_goal_generic_production
+		icon = GFX_goal_generic_dangerous_deal
 		prerequisite = { focus = SSR_support_the_union }
 		x = 3
 		y = 1
@@ -1258,7 +1258,7 @@ focus_tree = {
 	
 	focus = {
 		id = SSR_through_force
-		icon = GFX_goal_generic_production
+		icon = GFX_goal_continuous_suppression
 		prerequisite = { focus = SSR_convince_other_SSRs }
 		mutually_exclusive = { focus = SSR_through_negotiations }
 		x = -1
@@ -1274,7 +1274,7 @@ focus_tree = {
 	
 	focus = {
 		id = SSR_through_negotiations
-		icon = GFX_goal_generic_production
+		icon = GFX_goal_generic_forceful_treaty
 		prerequisite = { focus = SSR_convince_other_SSRs }
 		mutually_exclusive = { focus = SSR_through_force }
 		x = 1
@@ -1290,7 +1290,7 @@ focus_tree = {
 	
 	focus = {
 		id = SSR_end_russian_tyranny
-		icon = GFX_goal_generic_production
+		icon = GFX_focus_generic_strike_at_democracy2
 		mutually_exclusive = { focus = SSR_loyalty }
 		x = 53
 		y = 0
@@ -1304,7 +1304,7 @@ focus_tree = {
 	
 	focus = {
 		id = SSR_republican_reforms
-		icon = GFX_goal_generic_production
+		icon = GFX_focus_generic_the_giant_wakes
 		prerequisite = { focus = SSR_end_russian_tyranny }
 		mutually_exclusive = { focus = SSR_generals_coup }
 		x = -2
@@ -1320,7 +1320,7 @@ focus_tree = {
 	
 	focus = {
 		id = SSR_generals_coup
-		icon = GFX_goal_generic_production
+		icon = GFX_focus_generic_strike_at_democracy1
 		prerequisite = { focus = SSR_end_russian_tyranny }
 		mutually_exclusive = { focus = SSR_republican_reforms }
 		x = 2
@@ -1336,7 +1336,7 @@ focus_tree = {
 	
 	focus = {
 		id = SSR_privatization
-		icon = GFX_goal_generic_production
+		icon = GFX_focus_generic_industry_1
 		prerequisite = { focus = SSR_republican_reforms }
 		x = -13
 		y = 1
@@ -1351,7 +1351,7 @@ focus_tree = {
 	
 	focus = {
 		id = SSR_capitalistic_spending
-		icon = GFX_goal_generic_production
+		icon = GFX_focus_mex_privatisation
 		prerequisite = { focus = SSR_privatization }
 		x = -2
 		y = 1
@@ -1366,7 +1366,7 @@ focus_tree = {
 	
 	focus = {
 		id = SSR_invite_outside_investors
-		icon = GFX_goal_generic_production
+		icon = GFX_focus_generic_treaty
 		prerequisite = { focus = SSR_privatization }
 		x = 0
 		y = 1
@@ -1381,7 +1381,7 @@ focus_tree = {
 	
 	focus = {
 		id = SSR_invite_the_germans
-		icon = GFX_goal_generic_production
+		icon = GFX_focus_generic_diplomacy_weimar_germany
 		prerequisite = { focus = SSR_invite_outside_investors }
 		x = -2
 		y = 1
@@ -1396,7 +1396,7 @@ focus_tree = {
 	
 	focus = {
 		id = SSR_invite_the_japanese
-		icon = GFX_goal_generic_production
+		icon = GFX_focus_generic_diplomacy_state_japan
 		prerequisite = { focus = SSR_invite_outside_investors }
 		x = 0
 		y = 1
@@ -1411,8 +1411,8 @@ focus_tree = {
 	
 	focus = {
 		id = SSR_military_training_plans
-		icon = GFX_goal_generic_production
-		prerequisite = { focus = SSR_invite_the_germans }
+		icon = GFX_focus_generic_military_academy
+		prerequisite = { focus = SSR_invite_the_germans focus = SSR_invite_the_japanese }
 		x = 1
 		y = 1
 		relative_position_id = SSR_invite_the_germans
@@ -1426,7 +1426,7 @@ focus_tree = {
 	
 	focus = {
 		id = SSR_remove_communism
-		icon = GFX_goal_generic_production
+		icon = GFX_goal_anti_comintern_pact
 		prerequisite = { focus = SSR_republican_reforms }
 		x = -11
 		y = 1
@@ -1441,7 +1441,7 @@ focus_tree = {
 	
 	focus = {
 		id = SSR_introduce_western_books
-		icon = GFX_goal_generic_production
+		icon = GFX_focus_hol_the_foundations_of_defense
 		prerequisite = { focus = SSR_remove_communism }
 		x = 0
 		y = 1
@@ -1456,7 +1456,7 @@ focus_tree = {
 	
 	focus = {
 		id = SSR_dispose_communist_relics
-		icon = GFX_goal_generic_production
+		icon = GFX_goal_generic_war_with_comintern
 		prerequisite = { focus = SSR_remove_communism }
 		x = 2
 		y = 1
@@ -1471,7 +1471,7 @@ focus_tree = {
 	
 	focus = {
 		id = SSR_liberal_education
-		icon = GFX_goal_generic_production
+		icon = GFX_goal_support_democracy
 		prerequisite = { focus = SSR_introduce_western_books }
 		prerequisite = { focus = SSR_dispose_communist_relics }
 		x = 1
@@ -1487,7 +1487,7 @@ focus_tree = {
 	
 	focus = {
 		id = SSR_keep_the_metal
-		icon = GFX_goal_generic_production
+		icon = GFX_focus_generic_steel
 		prerequisite = { focus = SSR_dispose_communist_relics }
 		x = 1
 		y = 1
@@ -1502,7 +1502,7 @@ focus_tree = {
 	
 	focus = {
 		id = SSR_new_minds_of_science
-		icon = GFX_goal_generic_production
+		icon = GFX_focus_research2
 		prerequisite = { focus = SSR_liberal_education }
 		x = 0
 		y = 1
@@ -1517,7 +1517,7 @@ focus_tree = {
 	
 	focus = {
 		id = SSR_integrated_western_culture
-		icon = GFX_goal_generic_production
+		icon = GFX_focus_eng_unite_the_anglosphere
 		prerequisite = { focus = SSR_military_training_plans }
 		prerequisite = { focus = SSR_new_minds_of_science }
 		x = 2
@@ -1533,7 +1533,7 @@ focus_tree = {
 	
 	focus = {
 		id = SSR_the_democratic_liberation
-		icon = GFX_goal_generic_production
+		icon = GFX_goal_generic_demand_territory
 		prerequisite = { focus = SSR_republican_reforms }
 		x = -2
 		y = 1
@@ -1548,7 +1548,7 @@ focus_tree = {
 	
 	focus = {
 		id = SSR_purge_the_opposition
-		icon = GFX_goal_generic_production
+		icon = GFX_goal_demand_sudetenland
 		prerequisite = { focus = SSR_generals_coup }
 		x = 10
 		y = 1
@@ -1563,7 +1563,7 @@ focus_tree = {
 	
 	focus = {
 		id = SSR_focus_against_democracy
-		icon = GFX_goal_generic_production
+		icon = GFX_goal_demand_sudetenland
 		prerequisite = { focus = SSR_purge_the_opposition }
 		x = -1
 		y = 1
@@ -1638,7 +1638,7 @@ focus_tree = {
 	
 	focus = {
 		id = SSR_the_main_issue
-		icon = GFX_goal_generic_production
+		icon = GFX_goal_generic_forceful_treaty
 		prerequisite = { focus = SSR_purge_the_opposition }
 		x = 1
 		y = 1
@@ -1653,7 +1653,7 @@ focus_tree = {
 	
 	focus = {
 		id = SSR_absolute_no_communism
-		icon = GFX_goal_generic_production
+		icon = GFX_goal_anti_comintern_pact
 		prerequisite = { focus = SSR_the_main_issue }
 		x = 1
 		y = 1
@@ -1668,7 +1668,7 @@ focus_tree = {
 	
 	focus = {
 		id = SSR_stalin_against_trotsky
-		icon = GFX_goal_generic_production
+		icon = GFX_focus_fra_loyalty_stalin
 		prerequisite = { focus = SSR_the_main_issue }
 		x = 3
 		y = 1
@@ -1699,7 +1699,7 @@ focus_tree = {
 	focus = {
 		id = SSR_minds_to_mold
 		icon = GFX_goal_generic_production
-		prerequisite = { focus = SSR_remember_hitler focus = SSR_guilt_the_people focus = SSR_remove_communism }
+		prerequisite = { focus = SSR_remember_hitler focus = SSR_guilt_the_people focus = SSR_remove_the_stain }
 		x = 0
 		y = 1
 		relative_position_id = SSR_guilt_the_people
@@ -2493,7 +2493,7 @@ focus_tree = {
 	focus = {
 		id = SSR_new_industry_investment
 		icon = GFX_goal_generic_production 
-		x = 23
+		x = 22
 		y = 2
 		cost = 10
 		
@@ -2566,7 +2566,7 @@ focus_tree = {
 	focus = {
 		id = SSR_new_economic_policy
 		icon = GFX_goal_generic_production
-		x = 25
+		x = 26
 		y = 2
 		cost = 10
 		
@@ -2656,12 +2656,44 @@ focus_tree = {
 	}
 	
 	focus = {
+		id = SSR_extra_research_slot
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = SSR_new_universities }
+		prerequisite = { focus = SSR_lessons_from_the_great_war }
+		x = 2
+		y = 1
+		relative_position_id = SSR_new_universities
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
 		id = SSR_modernize_infantry
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = SSR_lessons_from_the_great_war }
 		x = 0
 		y = 1
 		relative_position_id = SSR_lessons_from_the_great_war
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = SSR_armament_effort
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = SSR_industrial_mobilization }
+		prerequisite = { focus = SSR_modernize_infantry }
+		x = 2
+		y = 1
+		relative_position_id = SSR_industrial_mobilization
 		cost = 10
 		
 		available_if_capitulated = yes
