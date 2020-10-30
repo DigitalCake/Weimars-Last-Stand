@@ -718,3 +718,18 @@ TSR = {
 	color = rgb { 157 16 30 }
 	color_ui = rgb { 157 16 30 }
 }
+
+CSR = {
+	color = rgb { 157 16 30 }
+	color_ui = rgb { 157 16 30 }
+}
+
+RSR = {
+	color = rgb { 125 13 24 }
+	color_ui = rgb { 125  13  24 }
+}
+
+BTS = {
+	color = rgb { 157 16 30 }
+	color_ui = rgb { 157 16 30 }
+}
