@@ -1,0 +1,21 @@
+state={
+	id=810
+	name="STATE_810"
+	provinces={
+		799 3798 3861 6924 
+	}
+	history={
+		owner = POR
+		victory_points = {
+			3798 1 
+		}
+		buildings = {
+			industrial_complex = 2
+			air_base = 5
+		}
+		add_core_of = POR
+	}
+	manpower=95800
+	buildings_max_level_factor=1.000
+	state_category = large_town
+}
