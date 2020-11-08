@@ -113,6 +113,19 @@ if = {
 	give_guarantee = ALB
 }
 
+if = {
+	limit = {
+		has_dlc = "Together for Victory"
+	}
+	set_autonomy = {
+		target = MNT
+		autonomous_state = autonomy_reichskommissariat
+	}
+	else = {
+		puppet = MNT
+	}
+}
+
 1939.1.1 = {
 
 	add_political_power = 1198
