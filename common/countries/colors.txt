@@ -733,3 +733,13 @@ BTS = {
 	color = rgb { 157 16 30 }
 	color_ui = rgb { 157 16 30 }
 }
+
+SER = {
+	color = rgb { 72 73 126 }
+	color_ui = rgb { 72 73 126 }
+}
+
+MNT = {
+	color = rgb { 45  148  41 }
+	color_ui = rgb { 45  148  41 }
+}
