@@ -1,0 +1,28 @@
+
+state={
+	id=804
+	name="STATE_804"
+	resources={
+		aluminium=7.000
+	}
+
+	history={
+		owner = CRO
+		victory_points = {
+			9894 3 
+		}
+		buildings = {
+			infrastructure = 3
+
+		}
+		add_core_of = CRO
+
+	}
+
+	provinces={
+		953 6889 6942 9894 11845 
+	}
+	manpower=549200
+	buildings_max_level_factor=1.000
+	state_category=town
+}
