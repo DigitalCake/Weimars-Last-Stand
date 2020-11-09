@@ -1,0 +1,33 @@
+
+state={
+	id=211
+	name="STATE_211"
+
+	history={
+		owner = GRE
+		victory_points = {
+			9902 3 
+		}
+		victory_points = {
+			9888 1 
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			9902 = {
+				naval_base = 1
+
+			}
+
+		}
+		add_core_of = BUL
+
+	}
+
+	provinces={
+		9888 9902 
+	}
+	manpower=508394
+	buildings_max_level_factor=1.000
+	state_category=town
+}

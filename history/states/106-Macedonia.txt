@@ -8,7 +8,7 @@ state={
 	}
 
 	history={
-		owner = BUL
+		owner = GRE
 		buildings = {
 			infrastructure = 4
 			industrial_complex = 1
@@ -19,13 +19,14 @@ state={
 			3882 5 
 		}
 		add_core_of = MAC
+		add_claim_by = BUL
 
 	}
 
 	provinces={
-		907 974 3833 3865 3882 6886 11856 
+		974 3833 3865 6886 11856 
 	}
-	manpower=1074200
+	manpower=1034200
 	buildings_max_level_factor=1.000
 	state_category=rural
 }

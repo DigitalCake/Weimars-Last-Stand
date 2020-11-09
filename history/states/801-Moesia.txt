@@ -1,0 +1,33 @@
+
+state={
+	id=801
+	name="STATE_801"
+
+	history={
+		owner = BUL
+		victory_points = {
+			9612 3 
+		}
+		victory_points = {
+			6814 3 
+		}
+		victory_points = {
+			3796 3 
+		}
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 1
+			arms_factory = 1
+
+		}
+		add_core_of = BUL
+
+	}
+
+	provinces={
+		3796 3819 3952 6814 6842 6952 6982 9610 9612 
+	}
+	manpower=1618780
+	buildings_max_level_factor=1.000
+	state_category=rural
+}
