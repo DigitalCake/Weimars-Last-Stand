@@ -6,6 +6,12 @@ state={
 		victory_points = {
 			9904 40
 		}
+		buildings = {
+			infrastructure = 9
+			arms_factory = 1
+			industrial_complex = 3
+
+		}
 		add_core_of = ITA
 	}
 	provinces={
