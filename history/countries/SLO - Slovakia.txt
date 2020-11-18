@@ -2,20 +2,8 @@
 
 1933.1.1 = {
 	
-	#generic focuses
-	complete_national_focus = army_effort
-	complete_national_focus = equipment_effort
-	complete_national_focus = motorization_effort
-	complete_national_focus = aviation_effort
-	complete_national_focus = naval_effort
-	complete_national_focus = flexible_navy
-	complete_national_focus = industrial_effort
-	complete_national_focus = construction_effort
-	complete_national_focus = production_effort
-	
 	set_technology = {
 		gw_artillery = 1
-		gwtank = 1
 		infantry_weapons = 1
 		infantry_weapons1 = 1
 		support_weapons = 1
@@ -30,20 +18,20 @@
 
 set_politics = {
 	ruling_party = democratic
-	last_election = "1933.3.5"
+	last_election = "1932.8.24"
 	election_frequency = 48
 	elections_allowed = yes
 }
 set_popularities = {
-	democratic = 90
-	fascism = 5
+	democratic = 85
+	fascism = 10
 	communism = 5
 }
 
 create_country_leader = {
-	name = "Jozef Tiso"
-	desc = "POLITICS_JOZEF_TISO_DESC"
-	picture = "Portrait_Slovakia_Jozef_Tiso.dds"
+	name = "Milan Hodža"
+	desc = "POLITICS_MILAN_HODZA_DESC"
+	picture = "Portrait_Europe_Generic_3.dds"
 	expire = "1965.1.1"
 	ideology = democratic_ideology
 	traits = {
