@@ -23,26 +23,6 @@ focus_tree = {
 	continuous_focus_position = { x = 50 y = 2500 }
 	default = no
 ###############POLITICAL###############
-	
-	focus = {
-		id = FRA_French_Politics
-		text = "French Politics"
-		icon = GFX_goal_generic_improve_relations
-		x = 8
-		y = 0
-		cost = 5
-		ai_will_do = {
-			factor = 1
-		}
-		available_if_capitulated = yes
-		ai_will_do = {
-				factor = 1
-		}
-		search_filters = {Political}
-		completion_reward = {
-			
-		}
-	}
 
 	focus = {
 		id = FRA_Vichy
@@ -50,7 +30,6 @@ focus_tree = {
 		icon = GFX_goal_generic_improve_relations
 		x = 6
 		y = 1
-		prerequisite = {focus = FRA_French_Politics}
 		cost = 5
 				ai_will_do = {
 			factor = 1
@@ -95,7 +74,7 @@ focus_tree = {
 		x = -2
 		y = 3
 		prerequisite = {focus = FRA_Victory_Nat}
-		mutually_exclusive = {focus = FRA_Leagues focus = FRA_Nat_Rev}
+		mutually_exclusive = {focus = FRA_Leagues focus = FRA_Nat_Rev focus = FRA_Right_Mod}
 		cost = 5
 		available_if_capitulated = yes
 		ai_will_do = {
@@ -483,7 +462,7 @@ focus_tree = {
 		x = 3
 		y = 3
 		prerequisite = {focus = FRA_Victory_Nat}
-		mutually_exclusive = {focus = FRA_Action_France focus = FRA_Nat_Rev}
+		mutually_exclusive = {focus = FRA_Action_France focus = FRA_Nat_Rev focus = FRA_Right_Mod}
 		cost = 5
 		available_if_capitulated = yes
 		ai_will_do = {
@@ -831,7 +810,7 @@ focus_tree = {
 		x = 12
 		y = 3
 		prerequisite = {focus = FRA_Victory_Nat}
-		mutually_exclusive = {focus = FRA_Action_France focus = FRA_Leagues}
+		mutually_exclusive = {focus = FRA_Action_France focus = FRA_Leagues focus = FRA_Right_Mod}
 		cost = 5
 		available_if_capitulated = yes
 		ai_will_do = {
@@ -1209,10 +1188,466 @@ focus_tree = {
 	focus = {
 		id = FRA_French_State
 		text = "A French State"
-		icon = GFX_focus_fra_french_union
+		icon = GFX_focus_generic_vichy_france_triumphant
 		x = 12
 		y = 13
 		prerequisite = {focus = FRA_En_Marche}
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+				factor = 1
+		}
+		search_filters = {Political}
+		completion_reward = {
+			
+		}
+	}
+	
+###############Right Moderates###############
+	focus = {
+		id = FRA_Right_Mod
+		text = "Reconcile with Moderates"
+		icon = GFX_goal_generic_neutrality_focus
+		x = 17
+		y = 3
+		prerequisite = {focus = FRA_Victory_Nat}
+		mutually_exclusive = {focus = FRA_Action_France focus = FRA_Leagues focus = FRA_Nat_Rev}
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+				factor = 1
+		}
+		search_filters = {Political}
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = FRA_Save_Enemy
+		text = "Save Former Enemies"
+		icon = GFX_goal_generic_dangerous_deal
+		x = 17
+		y = 4
+		prerequisite = {focus = FRA_Right_Mod}
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+				factor = 1
+		}
+		search_filters = {Political}
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = FRA_Install_Moderates
+		text = "Install Moderate Officals"
+		icon = GFX_focus_generic_self_management
+		x = 17
+		y = 5
+		prerequisite = {focus = FRA_Save_Enemy}
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+				factor = 1
+		}
+		search_filters = {Political}
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = FRA_Lib_Conv
+		text = "Liberal Conservatism"
+		icon = GFX_focus_spr_the_anti_fascist_workers_revolution
+		x = 17
+		y = 6
+		prerequisite = {focus = FRA_Install_Moderates}
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+				factor = 1
+		}
+		search_filters = {Political}
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = FRA_Hunt_Radicals
+		text = "Hunt Radical Socialists"
+		icon = GFX_goal_generic_war_with_comintern
+		x = 17
+		y = 7
+		prerequisite = {focus = FRA_Lib_Conv}
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+				factor = 1
+		}
+		search_filters = {Political}
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = FRA_Ass_Rocque
+		text = "Assassinate de La Rocque"
+		icon = GFX_goal_generic_secret_weapon
+		x = 20
+		y = 4
+		prerequisite = {focus = FRA_Right_Mod}
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+				factor = 1
+		}
+		search_filters = {Political}
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = FRA_Ass_Valois
+		text = "Assassinate Valois"
+		icon = GFX_focus_spr_the_anti_fascist_workers_revolution
+		x = 20
+		y = 5
+		prerequisite = {focus = FRA_Ass_Rocque}
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+				factor = 1
+		}
+		search_filters = {Political}
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = FRA_Outlaw_Croix
+		text = "Outlaw The Croix de Feu"
+		icon = GFX_focus_generic_anti_fascist_diplomacy
+		x = 20
+		y = 6
+		prerequisite = {focus = FRA_Ass_Valois}
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+				factor = 1
+		}
+		search_filters = {Political}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = FRA_Outlaw_Blueshirts
+		text = "Outlaw The Blueshirts"
+		icon = GFX_focus_focus_fra_fascist_threat
+		x = 20
+		y = 7
+		prerequisite = {focus = FRA_Outlaw_Croix}
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+				factor = 1
+		}
+		search_filters = {Political}
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = FRA_Revise_Const
+		text = "Revise the Constitution"
+		icon = GFX_focus_hol_the_foundations_of_defense
+		x = 23
+		y = 4
+		prerequisite = {focus = FRA_Right_Mod}
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+				factor = 1
+		}
+		search_filters = {Political}
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = FRA_Powerful_President
+		text = "Empower The President"
+		icon = GFX_goal_demand_sudetenland
+		x = 23
+		y = 5
+		prerequisite = {focus = FRA_Revise_Const}
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+				factor = 1
+		}
+		search_filters = {Political}
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = FRA_Restrict_Parliament
+		text = "Weaken The Parliament"
+		icon = GFX_focus_usa_voter_registration_act
+		x = 23
+		y = 6
+		prerequisite = {focus = FRA_Powerful_President}
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+				factor = 1
+		}
+		search_filters = {Political}
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = FRA_Crack_Extremeism
+		text = "Crack Down on Extremism"
+		icon = GFX_goal_generic_forceful_treaty
+		x = 23
+		y = 7
+		prerequisite = {focus = FRA_Restrict_Parliament}
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+				factor = 1
+		}
+		search_filters = {Political}
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = FRA_Fourth_Republic
+		text = "Proclaim The Fourth Republic"
+		icon = GFX_focus_fra_french_union
+		x = 20
+		y = 8
+		prerequisite = {focus = FRA_Crack_Extremeism}
+		prerequisite = {focus = FRA_Outlaw_Blueshirts}
+		prerequisite = {focus = FRA_Hunt_Radicals}
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+				factor = 1
+		}
+		search_filters = {Political}
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = FRA_Demo_America
+		text = "Democracy in America"
+		icon = GFX_focus_chi_mission_to_the_us
+		x = 17
+		y = 9
+		prerequisite = {focus = FRA_Fourth_Republic}
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+				factor = 1
+		}
+		search_filters = {Political}
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = FRA_Demo_Italy
+		text = "Democracy in Italy"
+		icon = GFX_focus_befriend_italy
+		x = 17
+		y = 10
+		prerequisite = {focus = FRA_Demo_America}
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+				factor = 1
+		}
+		search_filters = {Political}
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = FRA_Demo_China
+		text = "Democracy in China"
+		icon = GFX_focus_chi_cooperation_with_the_nationalists
+		x = 17
+		y = 11
+		prerequisite = {focus = FRA_Demo_Italy}
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+				factor = 1
+		}
+		search_filters = {Political}
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = FRA_Rap_Germany
+		text = "Rapprochement with Germany"
+		icon = GFX_focus_generic_diplomacy_weimar_germany
+		x = 20
+		y = 9
+		prerequisite = {focus = FRA_Fourth_Republic}
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+				factor = 1
+		}
+		search_filters = {Political}
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = FRA_Alsace_Question
+		text = "The Alsace Question"
+		icon = GFX_goal_generic_position_armies
+		x = 20
+		y = 10
+		prerequisite = {focus = FRA_Rap_Germany}
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+				factor = 1
+		}
+		search_filters = {Political}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = FRA_EU_Membership
+		text = "Join the European Union"
+		icon = GFX_goal_generic_national_unity
+		x = 20
+		y = 11
+		prerequisite = {focus = FRA_Alsace_Question}
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+				factor = 1
+		}
+		search_filters = {Political}
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = FRA_Back_Hungary
+		text = "Back Hungary"
+		icon = GFX_focus_generic_diplomacy_hungary
+		x = 23
+		y = 9
+		prerequisite = {focus = FRA_Fourth_Republic}
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+				factor = 1
+		}
+		search_filters = {Political}
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = FRA_Break_Romania
+		text = "Break Relations with Romania"
+		icon = GFX_focus_spr_the_anti_fascist_workers_revolution
+		x = 23
+		y = 10
+		prerequisite = {focus = FRA_Back_Hungary}
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+				factor = 1
+		}
+		search_filters = {Political}
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = FRA_Yugoslav_Hungary
+		text = "Yugoslav-Hungarian Relations"
+		icon = GFX_focus_spr_the_anti_fascist_workers_revolution
+		x = 23
+		y = 11
+		prerequisite = {focus = FRA_Break_Romania}
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+				factor = 1
+		}
+		search_filters = {Political}
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = FRA_Introduce_Euro
+		text = "Introduce the Euro"
+		icon = GFX_goal_generic_trade
+		x = 20
+		y = 12
+		prerequisite = {focus = FRA_EU_Membership}
+		prerequisite = {focus = FRA_Demo_China}
+		prerequisite = {focus = FRA_Yugoslav_Hungary}
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+				factor = 1
+		}
+		search_filters = {Political}
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = FRA_Democracy_International
+		text = "Democracy International!"
+		icon = GFX_goal_generic_support_democracy
+		x = 20
+		y = 13
+		prerequisite = {focus = FRA_Introduce_Euro}
 		cost = 5
 		available_if_capitulated = yes
 		ai_will_do = {
@@ -1844,7 +2279,7 @@ focus_tree = {
 			id = FRA_French_Navy
 			text = "French Navy"
 			icon = GFX_focus_fra_french_navy
-			x = 24
+			x = 30
 			y = 0
 			offset = {
 					x = 0
@@ -2356,7 +2791,7 @@ focus_tree = {
 			id = FRA_French_Airforce
 			text = "French Airforce"
 			icon = GFX_focus_fra_french_air
-			x = 35
+			x = 41
 			y = 0
 			cost = 5
 			available_if_capitulated = yes
@@ -2669,7 +3104,7 @@ focus_tree = {
 			id = FRA_French_Military
 			text = "French Military"
 			icon = GFX_focus_generic_little_entente
-			x = 45
+			x = 51
 			y = 0
 			offset = {
 					x = 0
