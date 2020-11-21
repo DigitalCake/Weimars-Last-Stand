@@ -1,4 +1,4 @@
-version="0.019"
+version="0.02"
 tags={
 	"Alternative History"
 	"Map"
