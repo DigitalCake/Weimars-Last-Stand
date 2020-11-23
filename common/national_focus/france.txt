@@ -1262,7 +1262,7 @@ focus_tree = {
 	focus = {
 		id = FRA_Lib_Conv
 		text = "Liberal Conservatism"
-		icon = GFX_focus_spr_the_anti_fascist_workers_revolution
+		icon = GFX_goal_tripartite_pact
 		x = 17
 		y = 6
 		prerequisite = {focus = FRA_Install_Moderates}
@@ -1588,7 +1588,7 @@ focus_tree = {
 	focus = {
 		id = FRA_Break_Romania
 		text = "Break Relations with Romania"
-		icon = GFX_focus_spr_the_anti_fascist_workers_revolution
+		icon = GFX_focus_invite_romania
 		x = 23
 		y = 10
 		prerequisite = {focus = FRA_Back_Hungary}
@@ -1606,7 +1606,7 @@ focus_tree = {
 	focus = {
 		id = FRA_Yugoslav_Hungary
 		text = "Yugoslav-Hungarian Relations"
-		icon = GFX_focus_spr_the_anti_fascist_workers_revolution
+		icon = GFX_focus_invite_yugoslavia
 		x = 23
 		y = 11
 		prerequisite = {focus = FRA_Break_Romania}
@@ -1644,7 +1644,7 @@ focus_tree = {
 	focus = {
 		id = FRA_Democracy_International
 		text = "Democracy International!"
-		icon = GFX_goal_generic_support_democracy
+		icon = GFX_goal_support_democracy
 		x = 20
 		y = 13
 		prerequisite = {focus = FRA_Introduce_Euro}
@@ -1674,6 +1674,35 @@ focus_tree = {
 		search_filters = {Industry}
 		completion_reward = {
 			
+		}
+	}
+	
+	focus = {
+		id = FRA_Infrastructure
+		text = "Infrastructure Effort"
+		icon = GFX_goal_generic_construction2
+		x = -7
+		y = 1
+		prerequisite = {focus = FRA_French_Economy}
+		cost = 5
+		available_if_capitulated = yes
+		relative_position_id = FRA_French_Economy
+		ai_will_do = {
+				factor = 0.5
+		}
+		search_filters = {Industry}
+		completion_reward = {
+			random_owned_state = {
+				limit = { 
+					is_core_of = ROOT 
+					infrastructure < 9
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
 		}
 	}
 	
@@ -2086,35 +2115,6 @@ focus_tree = {
 					instant_build = yes
 				}
 				set_state_flag = FRA_autoroutes_target
-			}
-		}
-	}
-
-	focus = {
-		id = FRA_Infrastructure
-		text = "Infrastructure Effort"
-		icon = GFX_goal_generic_construction2
-		x = -7
-		y = 1
-		prerequisite = {focus = FRA_French_Economy}
-		cost = 5
-		available_if_capitulated = yes
-		relative_position_id = FRA_French_Economy
-		ai_will_do = {
-				factor = 0.5
-		}
-		search_filters = {Industry}
-		completion_reward = {
-			random_owned_state = {
-				limit = { 
-					is_core_of = ROOT 
-					infrastructure < 9
-				}
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
 			}
 		}
 	}
