@@ -1,0 +1,122 @@
+FRA_historical_plan = {
+	name = "France historical plan"
+	desc = "Historical behavior for France"
+
+	allowed = {
+		original_tag = FRA
+	}
+	enable = {
+		OR = {
+			AND = {
+				is_historical_focus_on = yes
+				has_game_rule = {
+					rule = FRA_ai_behavior
+					option = DEFAULT
+				}	
+			}
+			has_game_rule = {
+				rule = FRA_ai_behavior
+				option = DEMOCRATIC_HISTORICAL
+			}
+			has_country_flag = FRA_AI_DEMOCRATIC_HISTORICAL
+		}
+	}
+	
+	abort = {
+		has_game_rule = {
+			rule = FRA_ai_behavior
+			option = DEFAULT
+		}
+	}
+
+	ai_national_focuses = {
+		FRA_French_Military
+		FRA_First_Supreme_Election 	
+		FRA_French_Navy
+		FRA_Naval Chief Elections
+		FRA_French_Economy
+		FRA_Production
+		FRA_French_Airforce
+		FRA_Air_Election
+		FRA_Denain_Victory
+		#1934
+		FRA_Civilian
+		FRA_Civilian2
+		FRA_Military3
+		FRA_Civilian3
+		FRA_Infastructure
+		FRA_road
+		FRA_road2
+		FRA_road3
+		FRA_Ports
+		FRA_Ports2
+		FRA_Airports
+		FRA_Airports2
+		FRA_Fiscal_Responsibility
+		FRA_Rid_Gold_Standard
+		FRA_Cut_Social_Spending
+		#1935
+		FRA_Vichy
+		FRA_Victory_Nat
+		FRA_Nat_Rev
+		FRA_Travail
+		FRA_Invest_Seine
+		FRA_Darlan_Victory
+		FRA_Interwar_Battleships
+		FRA_Light_Cruisers
+		FRA_New_Carriers
+		FRA_Heavy_Cruisers
+		FRA_Carrier_Battlegroups
+		FRA_French_Recovery
+		FRA_Pétain_Victory
+		FRA_Infantry_Tanks
+		FRA_Modernize_The_Cavalry
+		FRA_Increased_Cooperation
+		FRA_Revist_Great_War
+		FRA_Expand_Maginot
+		FRA_Dismantle_Reserves
+		#1936
+		FRA_Famille
+		FRA_Higher_Births
+		FRA_Rebuild_Homes
+		FRA_Rid_Loanwords
+		FRA_Patire
+		FRA_Work_Forts
+		FRA_Impose_Tariffs
+		FRA_New_Nation
+		FRA_Economic_Aus
+		FRA_Smash_Partis
+		FRA_Nat_Franc
+		FRA_Reformed_Mil
+		FRA_Military_Budget
+		FRA_Cult_Marshal
+		FRA_Civilian4
+		FRA_Military
+		FRA_Military2
+		#1937
+		FRA_Crush_Diss
+		FRA_Nat_Regen
+		FRA_Nous_Voi
+		FRA_En_Marche
+		FRA_French_State
+		
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
