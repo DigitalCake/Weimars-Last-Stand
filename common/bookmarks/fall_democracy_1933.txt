@@ -67,8 +67,8 @@ bookmarks = {
 
 			}		
 		}
-		SOV = {
-			history = SOVIET_UNION_FALL_DEMOCRACY_DESC_LOC
+		RSR = {
+			history = RUSSIA_FALL_DEMOCRACY_DESC_LOC
 			ideology = communism
 			ideas = {
 
