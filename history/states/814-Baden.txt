@@ -1,0 +1,25 @@
+state={
+	id=814
+	name="STATE_814"
+	resources={
+		aluminium=1.000
+	}
+	
+	history={
+		owner = GER
+		buildings = {
+			infrastructure = 5
+			arms_factory = 1
+		}
+		add_core_of = GER
+		
+		set_demilitarized_zone = yes
+	}
+	
+	provinces={
+		3530 3692 6542 6568 6712 11640 
+	}
+	manpower=1758341
+	buildings_max_level_factor=1.000
+	state_category=rural
+}
