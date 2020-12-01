@@ -6,6 +6,8 @@ tags={
 	"Events"
 }
 replace_path ="common/bookmarks"
+replace_path ="common/ai_strategy"
+replace_path ="common/ai_strategy_plans"
 #replace_path ="events"
 #replace_path ="common/ideas"
 #replace_path ="on_actions"
