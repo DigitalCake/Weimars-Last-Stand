@@ -1,0 +1,6 @@
+
+
+graphical_culture = easterm_european_gfx
+graphical_culture_2d = eastern_european_3d
+	
+color = { 180 18 34 }
