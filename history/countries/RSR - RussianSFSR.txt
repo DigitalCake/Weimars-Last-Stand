@@ -74,6 +74,65 @@ if = {
 
 set_convoys = 50
 
+if = {
+	limit = {
+		OR = {
+			has_dlc = "Together for Victory"
+			has_dlc = "Man the Guns"
+		}
+	}
+	set_autonomy = {
+		target = BSR
+		autonomous_state = autonomy_puppet
+		freedom_level = 0.3
+	}
+	set_autonomy = {
+		target = BTS
+		autonomous_state = autonomy_puppet
+		freedom_level = 0.3
+	}
+	set_autonomy = {
+		target = CSR
+		autonomous_state = autonomy_puppet
+		freedom_level = 0.3
+	}
+	set_autonomy = {
+		target = TSR
+		autonomous_state = autonomy_puppet
+		freedom_level = 0.3
+	}
+	set_autonomy = {
+		target = USR
+		autonomous_state = autonomy_puppet
+		freedom_level = 0.4
+	}
+	set_autonomy = {
+		target = MON
+		autonomous_state = autonomy_colony
+		freedom_level = 0.5
+	}
+	set_autonomy = {
+		target = TAN
+		autonomous_state = autonomy_integrated_puppet
+		freedom_level = 0.35
+	}
+	set_autonomy = {
+		target = TUR
+		autonomous_state = autonomy_colony
+		freedom_level = 0.5
+	}
+	else = {
+		puppet = BSR
+		puppet = BTS
+		puppet = CSR
+		puppet = TSR
+		puppet = USR
+		puppet = MON
+		puppet = TAN
+		puppet = TUR
+	}
+}
+
 set_politics = {
 	ruling_party = communism
 	last_election = "1933.7.1"
@@ -91,6 +150,10 @@ add_to_faction = RSR
 add_to_faction = USR
 add_to_faction = BSR
 add_to_faction = TSR
+add_to_faction = CSR
+add_to_faction = MON
+add_to_faction = TAN
+add_to_faction = TUR
 
 add_ideas = {
 	home_of_revolution
