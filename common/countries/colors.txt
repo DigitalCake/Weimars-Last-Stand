@@ -748,3 +748,8 @@ TUR = {
 	color = rgb { 180 18 34 }
 	color_ui = rgb { 180 18 34 }
 }
+
+SHC = {
+	color = rgb { 148 21 129 }
+	color_ui = rgb { 148 21 129 }
+}
