@@ -1,0 +1,21 @@
+state={
+	id=816
+	name="STATE_816"
+	
+	history={
+		owner = GXC
+		add_core_of = GXC
+		add_core_of = CHI
+		add_core_of = PRC
+		buildings = {
+			infrastructure = 2
+		}
+	}
+	
+	provinces={
+		4160 7135 
+	}
+	manpower=280000
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+}
