@@ -1,0 +1,38 @@
+state={
+	id=817
+	name="STATE_817"
+	resources={
+		rubber=22.000
+		steel=2.000
+		tungsten=11.000
+		aluminium=5.000
+	}
+	
+	history={
+		owner = MAL
+		victory_points = {
+			12299 10 
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			air_base = 2
+			12299 = {
+				naval_base = 8
+				coastal_bunker = 3
+
+			}
+
+		}
+		add_core_of = MAL
+
+	}
+	
+	provinces={
+		12299 
+	}
+	
+	manpower=81020
+	buildings_max_level_factor=1.000
+	state_category=city
+}
