@@ -334,7 +334,7 @@
  STATE_333:1 "North Borneo"
  STATE_334:1 "Kalimantan"
  STATE_335:0 "Java"
- STATE_336:0 "Singapore"
+ STATE_336:0 "Peninsular Malaya"
  STATE_337:0 "Faroe Islands"
  STATE_338:0 "Gloucestershire"
  STATE_339:0 "Izmir"
@@ -815,4 +815,5 @@
  STATE_814:0 "Baden"
  STATE_815:0 "Ningbo"
  STATE_816:0 "Leizhou"
+ STATE_817:0 "Singapore"
  
