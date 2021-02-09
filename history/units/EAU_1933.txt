@@ -1,0 +1,478 @@
+﻿division_template = {
+	name = "Infantry Divisions"
+
+	division_names_group = EAU_Inf_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+	support = {
+		artillery = { x = 0 y = 0 }  # US Hvy Field Arty consisted of 2 Bns, 155mm howitzers
+		engineer = { x = 0 y = 1 }   # US Eng Rgt consisted of 2 Bns
+	}
+}
+division_template = {
+	name = "Militia"				# Militia units (lowest experience, oldest equipment)
+
+	division_names_group = EAU_GAR_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 1 y = 2 }
+	}
+	priority = 0
+}
+
+units = {
+	# South Carolina Forces #
+	division = {
+		division_name = {  
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 11927
+		division_template = "Infantry"
+		start_equipment_factor = 0.3
+
+	}
+	
+	division = {
+		division_name = {  
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 11927
+		division_template = "Militia"
+		start_equipment_factor = 0.3
+
+	}
+
+	division = {
+		division_name = {  
+			is_name_ordered = yes
+			name_order = 2
+		}
+		location = 7134
+		division_template = "Infantry"
+		start_equipment_factor = 0.3
+
+	}
+
+	division = {
+		division_name = {  
+			is_name_ordered = yes
+			name_order = 2
+		}
+		location = 7134
+		division_template = "Milita"
+		start_equipment_factor = 0.3
+
+	}
+
+	division = {
+		division_name = {  
+			is_name_ordered = yes
+			name_order = 3
+		}
+		location = 4491
+		division_template = "Infantry"
+		start_equipment_factor = 0.3
+
+	}
+
+	division = {
+		division_name = {  
+			is_name_ordered = yes
+			name_order = 3
+		}
+		location = 4491
+		division_template = "Militia"
+		start_equipment_factor = 0.3
+
+	}
+
+	division = {
+		division_name = {  
+			is_name_ordered = yes
+			name_order = 4
+		}
+		location = 4653
+		division_template = "Infantry"
+		start_equipment_factor = 0.3
+
+	}
+
+	division = {
+		division_name = {  
+			is_name_ordered = yes
+			name_order = 4
+		}
+		location = 4563
+		division_template = "Militia"
+		start_equipment_factor = 0.3
+
+	}
+
+	division = {
+		division_name = {  
+			is_name_ordered = yes
+			name_order = 5
+		}
+		location = 1485
+		division_template = "Infantry"
+		start_equipment_factor = 0.3
+
+	}
+
+	division = {
+		division_name = {  
+			is_name_ordered = yes
+			name_order = 5
+		}
+		location = 1485
+		division_template = "Militia"
+		start_equipment_factor = 0.3
+
+	}
+
+
+
+	# Georgia Forces #
+
+	division = {
+		division_name = {  
+			is_name_ordered = yes
+			name_order = 6
+		}
+		location = 9949
+		division_template = "Infantry"
+		start_equipment_factor = 0.3
+
+	}
+
+	division = {
+		division_name = {  
+			is_name_ordered = yes
+			name_order = 6
+		}
+		location = 9949
+		division_template = "Militia"
+		start_equipment_factor = 0.3
+
+	}
+
+	division = {
+		division_name = {  
+			is_name_ordered = yes
+			name_order = 7
+		}
+		location = 5090
+		division_template = "Infantry"
+		start_equipment_factor = 0.3
+
+	}
+
+	division = {
+		division_name = {  
+			is_name_ordered = yes
+			name_order = 7
+		}
+		location = 5090
+		division_template = "Militia"
+		start_equipment_factor = 0.3
+
+	}
+
+	division = {
+		division_name = {  
+			is_name_ordered = yes
+			name_order = 8
+		}
+		location = 968
+		division_template = "Infantry"
+		start_equipment_factor = 0.3
+
+	}
+
+	division = {
+		division_name = {  
+			is_name_ordered = yes
+			name_order = 8
+		}
+		location = 968
+		division_template = "Militia"
+		start_equipment_factor = 0.3
+
+	}
+
+	# Mississippi Forces #
+
+	division = {
+		division_name = {  
+			is_name_ordered = yes
+			name_order = 9
+		}
+		location = 10753
+		division_template = "Infantry"
+		start_equipment_factor = 0.3
+
+	}
+
+	division = {
+		division_name = {  
+			is_name_ordered = yes
+			name_order = 9
+		}
+		location = 10753
+		division_template = "Militia"
+		start_equipment_factor = 0.3
+
+	}
+
+	division = {
+		division_name = {  
+			is_name_ordered = yes
+			name_order = 10
+		}
+		location = 7464
+		division_template = "Infantry"
+		start_equipment_factor = 0.3
+
+	}
+
+	division = {
+		division_name = {  
+			is_name_ordered = yes
+			name_order = 10
+		}
+		location = 7464
+		division_template = "Militia"
+		start_equipment_factor = 0.3
+
+	}
+
+	# Alabama Forces #
+
+	division = {
+		division_name = {  
+			is_name_ordered = yes
+			name_order = 11
+		}
+		location = 5059
+		division_template = "Infantry"
+		start_equipment_factor = 0.3
+
+	}
+
+	division = {
+		division_name = {  
+			is_name_ordered = yes
+			name_order = 11
+		}
+		location = 5059
+		division_template = "Militia"
+		start_equipment_factor = 0.3
+
+	}
+
+	division = {
+		division_name = {  
+			is_name_ordered = yes
+			name_order = 12
+		}
+		location = 12803
+		division_template = "Infantry"
+		start_equipment_factor = 0.3
+
+	}
+
+	division = {
+		division_name = {  
+			is_name_ordered = yes
+			name_order = 12
+		}
+		location = 12803
+		division_template = "Militia"
+		start_equipment_factor = 0.3
+
+	}
+
+	division = {
+		division_name = {  
+			is_name_ordered = yes
+			name_order = 13
+		}
+		location = 12803
+		division_template = "Infantry"
+		start_equipment_factor = 0.3
+
+	}
+
+	division = {
+		division_name = {  
+			is_name_ordered = yes
+			name_order = 13
+		}
+		location = 10192
+		division_template = "Militia"
+		start_equipment_factor = 0.3
+
+	}
+
+	division = {
+		division_name = {  
+			is_name_ordered = yes
+			name_order = 14
+		}
+		location = 10192
+		division_template = "Infantry"
+		start_equipment_factor = 0.3
+
+	}
+
+	# Arkansas Forces #
+
+	division = {
+		division_name = {  
+			is_name_ordered = yes
+			name_order = 14
+		}
+		location = 1646
+		division_template = "Militia"
+		start_equipment_factor = 0.3
+
+	}
+
+	division = {
+		division_name = {  
+			is_name_ordered = yes
+			name_order = 15
+		}
+		location = 1646
+		division_template = "Infantry"
+		start_equipment_factor = 0.3
+
+	}
+
+	division = {
+		division_name = {  
+			is_name_ordered = yes
+			name_order = 15
+		}
+		location = 4625
+		division_template = "Militia"
+		start_equipment_factor = 0.3
+
+	}
+
+	division = {
+		division_name = {  
+			is_name_ordered = yes
+			name_order = 16
+		}
+		location = 4625
+		division_template = "Infantry"
+		start_equipment_factor = 0.3
+
+	}
+
+	division = {
+		division_name = {  
+			is_name_ordered = yes
+			name_order = 16
+		}
+		location = 7586
+		division_template = "Militia"
+		start_equipment_factor = 0.3
+
+	}
+
+	division = {
+		division_name = {  
+			is_name_ordered = yes
+			name_order = 17
+		}
+		location = 7586
+		division_template = "Infantry"
+		start_equipment_factor = 0.3
+
+	}
+
+	division = {
+		division_name = {  
+			is_name_ordered = yes
+			name_order = 17
+		}
+		location = 4597
+		division_template = "Militia"
+		start_equipment_factor = 0.3
+
+	}
+
+	division = {
+		division_name = {  
+			is_name_ordered = yes
+			name_order = 18
+		}
+		location = 4567
+		division_template = "Infantry"
+		start_equipment_factor = 0.3
+
+	}
+
+	division = {
+		division_name = {  
+			is_name_ordered = yes
+			name_order = 18
+		}
+		location = 4597
+		division_template = "Militia"
+		start_equipment_factor = 0.3
+
+	}
+
+}
+### Starting Equipment ###
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_1
+			creator = "EAU"
+		}
+		requested_factories = 2
+		progress = 0.1
+		efficiency = 50
+	}
+
+	add_equipment_production = {
+		equipment = {
+			type = support_equipment_1
+			creator = "EAU" 
+		}
+		requested_factories = 1
+		progress = 0.3
+		efficiency = 50
+	}
+
+	add_equipment_production = {
+		equipment = {
+			type = artillery_equipment_1
+			creator = "EAU" 
+		}
+		requested_factories = 1
+		progress = 0.3
+		efficiency = 50
+	}
+}

@@ -1,0 +1,259 @@
+﻿division_template = {
+	name = "Infantry Division"
+
+	division_names_group = COA_INF_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+	support = {
+		artillery = { x = 0, y = 0 }
+		engineer = { x = 0, y = 1 }
+	}
+}
+division_template = {
+	name = "Militia"				# Militia units (lowest experience, oldest equipment)
+
+	division_names_group = COA_GAR_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 1 y = 2 }
+	}
+	priority = 0
+}
+
+units = {
+	# Wisconsin Forces #
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 7776
+		division_template = "Infantry Division"
+		start_experience_factor = 0.3
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 3699
+		division_template = "Militia"
+		start_equipment_factor = 0.3
+
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 2
+		}
+		location = 10526
+		division_template = "Militia"
+		start_equipment_factor = 0.3
+
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 3
+		}
+		location = 10341
+		division_template = "Militia"
+		start_equipment_factor = 0.3
+
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 4
+		}
+		location = 10341
+		division_template = "Militia"
+		start_equipment_factor = 0.3
+
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 5
+		}
+		location = 1560
+		division_template = "Militia"
+		start_equipment_factor = 0.3
+
+	}
+
+	# Illinois Forces #
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 6
+		}
+		location = 11589
+		division_template = "Militia"
+		start_equipment_factor = 0.3
+
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 7
+		}
+		location = 45901
+		division_template = "Militia"
+		start_equipment_factor = 0.3
+
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 8
+		}
+		location = 12365
+		division_template = "Militia"
+		start_equipment_factor = 0.3
+
+	}	
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 9
+		}
+		location = 12305
+		division_template = "Militia"
+		start_equipment_factor = 0.3
+
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 10
+		}
+		location = 7831
+		division_template = "Militia"
+		start_equipment_factor = 0.3
+
+	}
+
+	# Indiana Forces #
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 11
+		}
+		location = 11635
+		division_template = "Militia"
+		start_equipment_factor = 0.3
+
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 12
+		}
+		location = 11621
+		division_template = "Militia"
+		start_equipment_factor = 0.3
+
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 13
+		}
+		location = 1881
+		division_template = "Militia"
+		start_equipment_factor = 0.3
+
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 14
+		}
+		location = 4527
+		division_template = "Militia"
+		start_equipment_factor = 0.3
+
+	}
+
+	# Ohio Forces #
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 15
+		}
+		location = 4601
+		division_template = "Militia"
+		start_equipment_factor = 0.3
+
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 16
+		}
+		location = 11890
+		division_template = "Militia"
+		start_equipment_factor = 0.3
+
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 17
+		}
+		location = 971
+		division_template = "Militia"
+		start_equipment_factor = 0.3
+
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 18
+		}
+		location = 7528
+		division_template = "Militia"
+		start_equipment_factor = 0.3
+
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 19
+		}
+		location = 3829
+		division_template = "Militia"
+		start_equipment_factor = 0.3
+
+	}
+
+}
+
+### Starting Equipment ###
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_0
+			creator = "COA"
+		}
+		requested_factories = 1
+		progress = 0.28
+		efficiency = 100
+	}
+}

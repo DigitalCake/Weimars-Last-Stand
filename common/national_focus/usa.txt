@@ -1,0 +1,696 @@
+﻿### search_filters = {FOCUS_FILTER_POLITICAL}
+### search_filters = {FOCUS_FILTER_RESEARCH}
+### search_filters = {FOCUS_FILTER_INDUSTRY}
+### search_filters = {FOCUS_FILTER_STABILITY}
+### search_filters = {FOCUS_FILTER_WAR_SUPPORT}
+### search_filters = {FOCUS_FILTER_MANPOWER}
+### search_filters = {FOCUS_FILTER_ANNEXATION}
+### search_filters = {FOCUS_FILTER_USA_CONGRESS}
+
+focus_tree = {
+	id = usa_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = USA
+		}
+		
+		modifier = {
+			add = 10
+			original_tag = USA
+		}
+	}
+	continuous_focus_position = { x = 50 y = 1600 }
+	default = no
+#	focus = {
+#		id = USA_
+#		#icon = GFX_
+#		prerequisite = { focus = }
+#		mutually_exclusive = { focus =  }
+#		x = -3
+#		y = 0
+#		relative_position_id = 
+#
+#		cost = 10
+#
+#		ai_will_do = {
+#			factor = 1
+#		}
+#
+#		available = {
+#
+#		}
+#		
+#		bypass = {
+#
+#		}
+#
+#		cancel_if_invalid = yes
+#		continue_if_invalid = no
+#		available_if_capitulated = no
+#
+#		complete_tooltip = {
+#
+#		}
+#
+#		completion_reward = {
+#
+#		}
+#	}
+
+	focus = {
+		id = USA_fdr_divides_america
+		icon = GFX_goal_fdr_divides_america
+		x = 14
+		y = 0
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		available = {
+			has_government = democratic
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+		    news_event = {
+        	    id = americanevents.1	
+		}
+	}
+}
+
+focus = {
+		id = USA_bold_moves
+		icon = GFX_goal_bold_moves
+		x = 14
+		y = 1
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		cost = 1
+        prerequisite = { focus = USA_fdr_divides_america }
+		
+		ai_will_do = {
+			factor = 100
+		}
+
+		available = {
+			has_government = democratic
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+		    news_event = {
+        	    id = americanevents.2	
+		}
+	}
+}
+
+focus = {
+		id = USA_factions_form
+		icon = GFX_goal_factions_form
+		x = 14
+		y = 2
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		cost = 1
+        prerequisite = { focus = USA_bold_moves }
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		available = {
+			has_government = democratic
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+		    add_political_power = -200			
+            add_popularity	= {
+                ideology = fascism
+                popularity = 0.2
+            }
+            add_popularity	= {
+                ideology = neutrality
+                popularity = 0.2
+            }
+            add_popularity	= {
+                ideology = communism
+                popularity = 0.19
+            }			
+		}
+	}
+	
+focus = {
+		id = USA_fdr_dies
+		icon = GFX_goal_fdr_dies
+		x = 14
+		y = 4
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		cost = 1
+        prerequisite = { focus = USA_factions_form }
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		available = {
+			has_government = democratic
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+		    kill_country_leader = yes
+			create_country_leader = {
+			        name = "John Nance Garner"
+					desc = LEADER_DESC
+					picture = "john_nance_garner.dds"
+					expire = "1945.1.1"
+					ideology = liberalism
+					traits = {
+					
+					}
+			}
+            country_event = {
+			        id = americanevents.3       
+		}
+	}	
+}
+
+focus = {
+		id = USA_join_anarchists
+		icon = GFX_goal_join_anarchists
+		x = 13
+		y = 5
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		mutually_exclusive = { focus = USA_join_technocrats }
+		mutually_exclusive = { focus = USA_join_new_england }
+		mutually_exclusive = { focus = USA_join_communists }
+		mutually_exclusive = { focus = USA_join_texas }
+		mutually_exclusive = { focus = USA_join_native_americans }
+		mutually_exclusive = { focus = USA_join_mormons }
+		mutually_exclusive = { focus = USA_join_fascists }
+		mutually_exclusive = { focus = USA_join_republicans }
+		mutually_exclusive = { focus = USA_stay_as_america }
+		cost = 1
+		prerequisite = { focus = USA_fdr_dies }
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		available = {
+			has_government = democratic
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			PAS = { change_tag_from = USA }
+	}	
+}
+
+focus = {
+		id = USA_join_technocrats
+		icon = GFX_goal_join_technocrats
+		x = 7
+		y = 5
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		mutually_exclusive = { focus = USA_join_anarchists }
+		mutually_exclusive = { focus = USA_join_new_england }
+		mutually_exclusive = { focus = USA_join_communists }
+		mutually_exclusive = { focus = USA_join_texas }
+		mutually_exclusive = { focus = USA_join_native_americans }
+		mutually_exclusive = { focus = USA_join_mormons }
+		mutually_exclusive = { focus = USA_join_fascists }
+		mutually_exclusive = { focus = USA_join_republicans }
+		mutually_exclusive = { focus = USA_stay_as_america }
+		cost = 1
+		prerequisite = { focus = USA_fdr_dies }
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		available = {
+			has_government = democratic
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			AMT = { change_tag_from = USA }
+	}	
+}
+
+focus = {
+		id = USA_join_new_england
+		icon = GFX_goal_join_new_england
+		x = 11
+		y = 5
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		mutually_exclusive = { focus = USA_join_anarchists }
+		mutually_exclusive = { focus = USA_join_technocrats }
+		mutually_exclusive = { focus = USA_join_communists }
+		mutually_exclusive = { focus = USA_join_texas }
+		mutually_exclusive = { focus = USA_join_native_americans }
+		mutually_exclusive = { focus = USA_join_mormons }
+		mutually_exclusive = { focus = USA_join_fascists }
+		mutually_exclusive = { focus = USA_join_republicans }
+		mutually_exclusive = { focus = USA_stay_as_america }
+		cost = 1
+		prerequisite = { focus = USA_fdr_dies }
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		available = {
+			has_government = democratic
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			NEG = { change_tag_from = USA }
+	}	
+}
+focus = {
+		id = USA_join_communists
+		icon = GFX_goal_join_communists
+		x = 15
+		y = 5
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		mutually_exclusive = { focus = USA_join_anarchists }
+		mutually_exclusive = { focus = USA_join_technocrats }
+		mutually_exclusive = { focus = USA_join_new_england }
+		mutually_exclusive = { focus = USA_join_texas }
+		mutually_exclusive = { focus = USA_join_native_americans }
+		mutually_exclusive = { focus = USA_join_mormons }
+		mutually_exclusive = { focus = USA_join_fascists }
+		mutually_exclusive = { focus = USA_join_republicans }
+		mutually_exclusive = { focus = USA_stay_as_america }
+		cost = 1
+		prerequisite = { focus = USA_fdr_dies }
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		available = {
+			has_government = democratic
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			COA = { change_tag_from = USA }
+	}	
+}
+
+focus = {
+		id = USA_join_texas
+		icon = GFX_goal_join_texas
+		x = 17
+		y = 5
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		mutually_exclusive = { focus = USA_join_anarchists }
+		mutually_exclusive = { focus = USA_join_technocrats }
+		mutually_exclusive = { focus = USA_join_new_england }
+		mutually_exclusive = { focus = USA_join_communists }
+		mutually_exclusive = { focus = USA_join_native_americans }
+		mutually_exclusive = { focus = USA_join_mormons }
+		mutually_exclusive = { focus = USA_join_fascists }
+		mutually_exclusive = { focus = USA_join_republicans }
+		mutually_exclusive = { focus = USA_stay_as_america }
+		cost = 1
+		prerequisite = { focus = USA_fdr_dies }
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		available = {
+			has_government = democratic
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			FTR = { change_tag_from = USA }
+	}	
+}
+
+focus = {
+		id = USA_join_mormons
+		icon = GFX_goal_join_mormons
+		x = 9
+		y = 5
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		mutually_exclusive = { focus = USA_join_anarchists }
+		mutually_exclusive = { focus = USA_join_technocrats }
+		mutually_exclusive = { focus = USA_join_new_england }
+		mutually_exclusive = { focus = USA_join_communists }
+		mutually_exclusive = { focus = USA_join_texas }
+		mutually_exclusive = { focus = USA_join_native_americans }
+		mutually_exclusive = { focus = USA_join_fascists }
+		mutually_exclusive = { focus = USA_join_republicans }
+		mutually_exclusive = { focus = USA_stay_as_america }
+		cost = 1
+		prerequisite = { focus = USA_fdr_dies }
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		available = {
+			has_government = democratic
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			MST = { change_tag_from = USA }
+	}	
+}
+
+focus = {
+		id = USA_join_native_americans
+		icon = GFX_goal_join_native_americas
+		x = 19
+		y = 5
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		mutually_exclusive = { focus = USA_join_anarchists }
+		mutually_exclusive = { focus = USA_join_technocrats }
+		mutually_exclusive = { focus = USA_join_new_england }
+		mutually_exclusive = { focus = USA_join_communists }
+		mutually_exclusive = { focus = USA_join_texas }
+		mutually_exclusive = { focus = USA_join_mormons }
+		mutually_exclusive = { focus = USA_join_fascists }
+		mutually_exclusive = { focus = USA_join_republicans }
+		mutually_exclusive = { focus = USA_stay_as_america }
+		cost = 1
+		prerequisite = { focus = USA_fdr_dies }
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		available = {
+			has_government = democratic
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			NAR = { change_tag_from = USA }
+	}	
+}
+
+focus = {
+		id = USA_join_fascists
+		icon = GFX_goal_join_fascists
+		x = 21
+		y = 5
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		mutually_exclusive = { focus = USA_join_anarchists }
+		mutually_exclusive = { focus = USA_join_technocrats }
+		mutually_exclusive = { focus = USA_join_new_england }
+		mutually_exclusive = { focus = USA_join_communists }
+		mutually_exclusive = { focus = USA_join_texas }
+		mutually_exclusive = { focus = USA_join_native_americans }
+		mutually_exclusive = { focus = USA_join_mormons }
+		mutually_exclusive = { focus = USA_join_republicans }
+		mutually_exclusive = { focus = USA_stay_as_america }
+		cost = 1
+		prerequisite = { focus = USA_fdr_dies }
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		available = {
+			has_government = democratic
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			EAU = { change_tag_from = USA }
+	}	
+}
+
+focus = {
+		id = USA_join_republicans
+		icon = GFX_goal_join_republicans
+		x = 23
+		y = 5
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		mutually_exclusive = { focus = USA_join_anarchists }
+		mutually_exclusive = { focus = USA_join_technocrats }
+		mutually_exclusive = { focus = USA_join_new_england }
+		mutually_exclusive = { focus = USA_join_communists }
+		mutually_exclusive = { focus = USA_join_texas }
+		mutually_exclusive = { focus = USA_join_native_americans }
+		mutually_exclusive = { focus = USA_join_mormons }
+		mutually_exclusive = { focus = USA_join_fascists }
+		mutually_exclusive = { focus = USA_stay_as_america }
+		cost = 1
+		prerequisite = { focus = USA_fdr_dies }
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		available = {
+			has_government = democratic
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			AMR = { change_tag_from = USA }
+	}	
+}
+
+focus = {
+		id = USA_stay_as_america
+		icon = GFX_goal_stay_as_america
+		x = 25
+		y = 5
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		mutually_exclusive = { focus = USA_join_anarchists }
+		mutually_exclusive = { focus = USA_join_technocrats }
+		mutually_exclusive = { focus = USA_join_new_england }
+		mutually_exclusive = { focus = USA_join_communists }
+		mutually_exclusive = { focus = USA_join_texas }
+		mutually_exclusive = { focus = USA_join_native_americans }
+		mutually_exclusive = { focus = USA_join_mormons }
+		mutually_exclusive = { focus = USA_join_fascists }
+		mutually_exclusive = { focus = USA_join_republicans }
+		cost = 1
+		prerequisite = { focus = USA_fdr_dies }
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		available = {
+			has_government = democratic
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+	}	
+}

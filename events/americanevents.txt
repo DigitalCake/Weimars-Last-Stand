@@ -1,0 +1,359 @@
+add_namespace = americanevents
+
+news_event = {
+	id = americanevents.1
+	title = americanevents.1.t
+	desc = americanevents.1.d
+	picture = news_event_001
+	
+	is_triggered_only = yes
+	
+	trigger = {
+	    tag = USA
+		AND = {
+		    date = 1933.1.1
+		}
+		has_complete_focus = {
+		    USA_fdr_divides_america
+		}
+	}
+	
+	option = {
+		name = Okay
+		ai_chance = { factor = 100 }
+		set_stability = -0.5
+		}
+	}
+
+news_event = {
+	id = americanevents.2
+	title = americanevents.2.t
+	desc = americanevents.2.d
+	picture = news_event_002
+	
+	is_triggered_only = yes
+	
+	trigger = {
+	    tag = USA
+		AND = {
+		    date = 1933.1.28
+		}
+		has_complete_focus = {
+		    USA_bold_moves
+		}
+	}
+	
+	option = {
+		name = Okay
+		ai_chance = { factor = 100 }
+		}
+	}
+	
+country_event = {
+	id = americanevents.3
+	title = americanevents.3.t
+	desc = americanevents.3.d
+	picture = news_event_002
+	
+	is_triggered_only = yes
+	
+	trigger = {
+	    tag = USA
+		AND = {
+		    date = 1933.1.28
+		}
+		has_complete_focus = {
+		    USA_fdr_dies
+		}
+	}
+	
+	immediate = {
+		hidden_effect = {
+			if = {
+				limit = {
+					tag = USA
+					USA = {
+						has_country_leader = {
+							name = "Franklin Delano Roosevelt"
+						}
+					}
+				}
+			}	
+				# All states MUST be transfered before wars are declared
+				AMR = {
+					transfer_state = 392
+					transfer_state = 391
+					transfer_state = 390
+					transfer_state = 389
+					transfer_state = 388
+					transfer_state = 384
+					transfer_state = 383
+					transfer_state = 382
+					transfer_state = 373
+				}
+				AMT = {
+					transfer_state = 360
+					transfer_state = 359
+					transfer_state = 358
+				}
+				NEG = {
+					transfer_state = 357
+					add_manpower = 100
+					load_oob = NEG_1933 
+				}
+				MST = {
+					transfer_state = 387
+					transfer_state = 381
+					transfer_state = 380
+					transfer_state = 379
+				}
+				FTR = {
+					transfer_state = 375
+				}
+				NAR = {
+					transfer_state = 376
+					transfer_state = 374
+				}
+				PAS = {
+					transfer_state = 386
+					transfer_state = 385
+					transfer_state = 378
+					transfer_state = 377
+					load_oob = PAS_1933
+					add_manpower = 100
+				}
+				COA = {
+					transfer_state = 396
+					transfer_state = 395
+					transfer_state = 394
+					transfer_state = 393
+					transfer_state = 261
+					load_oob = COA_1933
+					add_manpower = 100
+				}
+				EAU = {
+					transfer_state = 372
+					transfer_state = 371
+					transfer_state = 370
+					transfer_state = 367
+					transfer_state = 365
+					transfer_state = 366
+					transfer_state = 364
+					add_manpower = 100
+					load_oob = EAU_1933
+				}
+				
+				AMR = {
+					declare_war_on = {
+						target = USA
+						type = annex_everything
+					}
+					declare_war_on = {
+						target = AMT
+						type = annex_everything
+					}
+					declare_war_on = {
+						target = COA
+						type = annex_everything
+					}
+					declare_war_on = {
+						target = EAU
+						type = annex_everything
+					}
+					declare_war_on = {
+						target = MST
+						type = annex_everything
+					}
+					declare_war_on = {
+						target = NEG
+						type = annex_everything
+					}
+					declare_war_on = {
+						target = PAS
+						type = annex_everything
+					}
+				}
+				AMT = {
+					declare_war_on = {
+						target = USA
+						type = annex_everything
+					}
+					declare_war_on = {
+						target = AMR
+						type = annex_everything
+					}
+					declare_war_on = {
+						target = COA
+						type = annex_everything
+					}
+					declare_war_on = {
+						target = EAU
+						type = annex_everything
+					}
+					declare_war_on = {
+						target = MST
+						type = annex_everything
+					}
+					declare_war_on = {
+						target = NEG
+						type = annex_everything
+					}
+					declare_war_on = {
+						target = PAS
+						type = annex_everything
+					}
+				}
+				COA = {
+					declare_war_on = {
+						target = USA
+						type = annex_everything
+					}
+					declare_war_on = {
+						target = AMT
+						type = annex_everything
+					}
+					declare_war_on = {
+						target = AMR
+						type = annex_everything
+					}
+					declare_war_on = {
+						target = EAU
+						type = annex_everything
+					}
+					declare_war_on = {
+						target = MST
+						type = annex_everything
+					}
+					declare_war_on = {
+						target = NEG
+						type = annex_everything
+					}
+					declare_war_on = {
+						target = PAS
+						type = annex_everything
+					}
+				}
+				MST = {
+					declare_war_on = {
+						target = USA
+						type = annex_everything
+					}
+					declare_war_on = {
+						target = AMT
+						type = annex_everything
+					}
+					declare_war_on = {
+						target = COA
+						type = annex_everything
+					}
+					declare_war_on = {
+						target = EAU
+						type = annex_everything
+					}
+					declare_war_on = {
+						target = AMR
+						type = annex_everything
+					}
+					declare_war_on = {
+						target = NEG
+						type = annex_everything
+					}
+					declare_war_on = {
+						target = PAS
+						type = annex_everything
+					}
+				}
+				EAU = {
+					declare_war_on = {
+						target = USA
+						type = annex_everything
+					}
+					declare_war_on = {
+						target = AMT
+						type = annex_everything
+					}
+					declare_war_on = {
+						target = COA
+						type = annex_everything
+					}
+					declare_war_on = {
+						target = AMR
+						type = annex_everything
+					}
+					declare_war_on = {
+						target = MST
+						type = annex_everything
+					}
+					declare_war_on = {
+						target = NEG
+						type = annex_everything
+					}
+					declare_war_on = {
+						target = PAS
+						type = annex_everything
+					}
+				}
+				PAS = {
+					declare_war_on = {
+						target = USA
+						type = annex_everything
+					}
+					declare_war_on = {
+						target = AMT
+						type = annex_everything
+					}
+					declare_war_on = {
+						target = COA
+						type = annex_everything
+					}
+					declare_war_on = {
+						target = EAU
+						type = annex_everything
+					}
+					declare_war_on = {
+						target = MST
+						type = annex_everything
+					}
+					declare_war_on = {
+						target = NEG
+						type = annex_everything
+					}
+					declare_war_on = {
+						target = AMR
+						type = annex_everything
+					}
+				}
+				NEG = {
+					declare_war_on = {
+						target = USA
+						type = annex_everything
+					}
+					declare_war_on = {
+						target = AMT
+						type = annex_everything
+					}
+					declare_war_on = {
+						target = COA
+						type = annex_everything
+					}
+					declare_war_on = {
+						target = EAU
+						type = annex_everything
+					}
+					declare_war_on = {
+						target = MST
+						type = annex_everything
+					}
+					declare_war_on = {
+						target = AMR
+						type = annex_everything
+					}
+					declare_war_on = {
+						target = PAS
+						type = annex_everything
+					}
+				}
+				
+		}
+	}	
+}

@@ -1,0 +1,383 @@
+USA_alternate_plan_1 = {
+	name = "US alternate plan - democratic - interventionist"
+	desc = "FDR's dream"
+
+	allowed = {
+		original_tag = USA
+	}
+	enable = {
+		NOT = {
+			AND = {
+				is_historical_focus_on = yes
+				has_game_rule = {
+					rule = USA_ai_behavior
+					option = DEFAULT
+				}
+			}
+		}
+		has_government = democratic
+		OR = {
+			GER = {
+				has_war = yes
+				has_government = fascism
+			}
+			JAP = {
+				has_war = yes
+			}
+			has_country_flag = USA_AI_RANDOM_DEMOCRATIC_ALTERNATE
+			has_game_rule = {
+				rule = USA_ai_behavior
+				option = DEMOCRATIC_ALTERNATE
+			}
+		}
+	}
+	abort = {
+		has_war = yes
+	}
+
+	ai_national_focuses = {
+		USA_fdr_divides_america
+		USA_bold_moves
+		USA_factions_form
+		USA_fdr_dies
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+	traits = {
+		war_industrialist = 5
+		financial_expert = 10
+		silent_workhorse = 25
+	}
+
+	ai_strategy = {
+		type = support
+		id = "ENG"			
+		value = 200
+	}
+
+	ai_strategy = {
+		type = support
+		id = "CHI"			
+		value = 200
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+USA_alternate_plan_2 = {
+	name = "US alternate plan - democratic - neutral"
+	desc = "Standard alternate plan"
+
+	allowed = {
+		original_tag = USA
+	}
+	enable = {
+		not = {
+			OR = {
+				has_game_rule = {
+					rule = USA_ai_behavior
+					option = DEMOCRATIC_ALTERNATE
+				}
+				has_game_rule = {
+					rule = USA_ai_behavior
+					option = DEMOCRATIC_HISTORICAL
+				}
+				has_game_rule = {
+					rule = USA_ai_behavior
+					option = FASCIST
+				}
+				has_game_rule = {
+					rule = USA_ai_behavior
+					option = COMMUNIST
+				}
+			}
+		}
+	}
+	abort = {
+		has_war = yes
+	}
+
+	focus_factors = {
+		USA_fdr_divides_america = 15
+		USA_bold_moves = 5
+		USA_factions_form = 15
+		USA_fdr_dies = 5
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+	traits = {
+		war_industrialist = 5
+		financial_expert = 10
+		silent_workhorse = 25
+	}
+
+	ai_strategy = {
+		type = support
+		id = "ENG"			
+		value = 200
+	}
+
+	ai_strategy = {
+		type = support
+		id = "CHI"			
+		value = 200
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+USA_war_emergency = {
+	name = "US war emergency plan"
+	desc = "Plan for the US in case of war happening early"
+
+	allowed = {
+		original_tag = USA
+	}
+	enable = {
+		is_historical_focus_on = no
+		has_war = yes
+	}
+	abort = {
+		has_war = no
+	}
+
+	focus_factors = {
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+	traits = {
+		war_industrialist = 5
+		
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+USA_britain_hostile = {
+	name = "US plan against hostile Britain"
+	desc = "Plan for the US in case of Britain being of a different ideology"
+
+	allowed = {
+		original_tag = USA
+	}
+	enable = {
+		is_historical_focus_on = no
+		ENG = { not = { has_government = ROOT } }
+	}
+	abort = {
+		
+	}
+
+	focus_factors = {
+	}
+	ai_strategy = {
+		type = support
+		id = "ENG"			
+		value = -500
+	}
+	ai_strategy = {
+		type = support
+		id = "CAN"			
+		value = -500
+	}
+	ai_strategy = {
+		type = support
+		id = "AST"			
+		value = -500
+	}
+	ai_strategy = {
+		type = support
+		id = "NZL"			
+		value = -500
+	}
+	ai_strategy = {
+		type = support
+		id = "RAJ"			
+		value = -500
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+USA_germany_friendly = {
+	name = "US plan for friendly Germany"
+	desc = "Plan for the US in case of Germany being of same ideology"
+
+	allowed = {
+		original_tag = USA
+	}
+	enable = {
+		is_historical_focus_on = no
+		GER = { has_government = ROOT } 
+	}
+	abort = {
+		NOT = { GER = { has_government = ROOT } }
+	}
+
+	focus_factors = {
+	}
+	ai_strategy = {
+		type = support
+		id = "GER"			
+		value = 200
+	}
+	
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+USA_fascist = {
+	name = "US Fascist Plan"
+	desc = "Plan for the US to go fascist"
+
+	allowed = {
+		original_tag = USA
+		has_dlc = "Man the Guns"
+	}
+	enable = {
+		OR = {
+			OR = {
+				has_country_flag = USA_AI_RANDOM_FASCIST
+				has_game_rule = {
+					rule = USA_ai_behavior
+					option = FASCIST
+				}
+			}
+			tag = CSA
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+	traits = {
+		fascist_demagogue = 15
+		
+	}
+
+	
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+USA_communist = {
+	name = "US Communist Plan"
+	desc = "Plan for the US to go Communist"
+
+	allowed = {
+		original_tag = USA
+		has_dlc = "Man the Guns"
+	}
+	enable = {
+		OR = {
+			has_country_flag = USA_AI_RANDOM_COMMUNIST
+			has_game_rule = {
+				rule = USA_ai_behavior
+				option = COMMUNIST
+			}
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+		earl_browder = 10
+	}
+	traits = {
+		communist_revolutionary = 15
+		
+	}
+
+	
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}

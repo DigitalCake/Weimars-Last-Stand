@@ -1,0 +1,508 @@
+﻿# Division template historical names system. Is a new method of naming the divisions based on the names-group assigned to it's template.
+# If we run out of all historical names, the names will be assigned in the old way.
+#
+# Each group has a made up tag. Use it if you want to append more, or replace existing names with the extra txt files (modding).
+#
+# for_countries - lists all countries that can use it. If empty, or entire tag is missing, all countries in the world can use it.
+#
+# can_use - is a trigger that locks/unlocks the group under specific circumstances. The trigger is in a country scope.
+#
+# division_types - is a list of tokens to corresponding unit types. A player can in fact use any group of names for a div.template
+#                  however this tag is a helper for an automated choice (for AI, or if the group must switch on it's own, because
+#                  for example the current one is no longer available due to the can_use trigger saying so).
+#                  In automated choice, the division template must have at least 1 of the following types for it to be chosen.
+#
+# fallback_name - Is going to be used if we run out of the scripted historical names. If you want to use the old division naming
+#                 mechanics to be used for fallbacks, then just skip this option.
+#
+# unordered - It's a list of historical division names that did not have a number. Regardless if such names happened in history or not
+#             this option is available here mainly for a mods.
+#
+# ordered - Is a list of all historical names. 
+#           Numbers must start from 1 and up. 
+#           Numbers can't repeat in one scope.
+#           If you script the name for this group, at the same number (for example in a mod in another file), the name will be override.
+#           All arguments between the brackets must be separated by spaces. Each argument is wrapped in "quotas".
+#           1st argument = The name. It must contain either: 
+#                          %d (for decimal number placement)
+#                          %s (for string number placement - ROMAN numbers like XIV).
+#           2nd argument is optional = A localizable text describing this historical division. The text will be visible in the tooltip
+#                                      where you choose the historical division name.
+#           3rd argument is optional = An URL preferably pointing to the WIKI. It's a future feature that is not currently working in
+#                                      the current game version.
+
+NEG_INF_01 = 
+{
+	name = "Infantry Divisions"
+
+	for_countries = { NEG }
+
+	can_use = { always = yes }
+
+	division_types = { "infantry" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { AFG_GAR_01 }
+
+	fallback_name = "%d. Division"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "Boston Division" }
+		2 = { "Worcester Division" }
+		3 = { "Providence Division" }
+		4 = { "Springfield Division" }
+		5 = { "Bridgeport Division" }
+		6 = { "New Haven Division" }
+		7 = { "Stamford Division" }
+		8 = { "Hartford Division" }
+		9 = { "Cambridge Division" }
+		10 = { "Manchester Division" }
+		11 = { "Lowell Division" }
+		12 = { "Waterbury Division" }
+		13 = { "Brockton Division" }
+		14 = { "New Bedford Division" }
+		15 = { "Portland Division" }
+		16 = { "Quincy Division" }
+		17 = { "Lynn Division" }
+		18 = { "Fall River Division" }
+		19 = { "Nashua Division" }
+		20 = { "Norwalk Division" }
+		21 = { "Newton Division" }
+		22 = { "Danbury Division" }
+		23 = { "Cranston Division" }
+		24 = { "Somerville Gan Division" }
+		25 = { "Stratford Division" }
+		26 = { "%d. Division" }
+		27 = { "%d. Division" }
+		28 = { "%d. Division" }
+		29 = { "%d. Division" }
+		30 = { "%d. Division" }
+
+	}
+}
+
+NEG_CAV_01 = 
+{
+	name = "Cavalry Divisions"
+
+	for_countries = { NEG }
+
+	can_use = { always = yes }
+
+	division_types = { "cavalry" }
+
+	# Number reservation system will tie to another group.
+	link_numbering_with = { NEG_INF_01 }
+
+	fallback_name = "%d. Cavalry"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "Boston Cavalry" }
+		2 = { "Worcester Cavalry" }
+		3 = { "Providence Cavalry" }
+		4 = { "Springfield Cavalry" }
+		5 = { "Bridgeport Cavalry" }
+		6 = { "New Haven Cavalry" }
+		7 = { "Stamford Cavalry" }
+		8 = { "Hartford Cavalry" }
+		9 = { "Cambridge Cavalry" }
+		10 = { "Manchester Cavalry" }
+		11 = { "Lowell Cavalry" }
+		12 = { "Waterbury Cavalry" }
+		13 = { "Brockton Cavalry" }
+		14 = { "New Bedford Cavalry" }
+		15 = { "Portland Cavalry" }
+		16 = { "Quincy Cavalry" }
+		17 = { "Lynn Cavalry" }
+		18 = { "Fall River Cavalry" }
+		19 = { "Nashua Cavalry" }
+		20 = { "Norwalk Cavalry" }
+		21 = { "Danbury Cavalry" }
+		22 = { "Cranston Cavalry" }
+		23 = { "Somerville Cavalry" }
+		24 = { "Newton Gan Cavalry" }
+		25 = { "Stratford Cavalry" }
+		26 = { "%d. Cavalry" }
+		27 = { "%d. Cavalry" }
+		28 = { "%d. Cavalry" }
+		29 = { "%d. Cavalry" }
+		30 = { "%d. Cavalry" }
+
+	}
+}
+
+NEG_MOT_01 = 
+{
+	name = "Motorised Divisions"
+
+	for_countries = { NEG }
+
+	can_use = { always = yes }
+
+	division_types = { "motorized" }
+
+	# Number reservation system will tie to another group.
+	link_numbering_with = { NEG_INF_01 }
+
+	fallback_name = "%d. Motor Division"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "Boston Motorized" }
+		2 = { "Worcester Motorized" }
+		3 = { "Providence Motorized" }
+		4 = { "Springfield Motorized" }
+		5 = { "Bridgeport Motorized" }
+		6 = { "New Haven Motorized" }
+		7 = { "Stamford Motorized" }
+		8 = { "Hartford Motorized" }
+		9 = { "Cambridge Motorized" }
+		10 = { "Manchester Motorized" }
+		11 = { "Lowell Motorized" }
+		12 = { "Waterbury Motorized" }
+		13 = { "Brockton Motorized" }
+		14 = { "New Bedford Motorized" }
+		15 = { "Portland Motorized" }
+		16 = { "Quincy Motorized" }
+		17 = { "Lynn Motorized" }
+		18 = { "Fall River Motorized" }
+		19 = { "Nashua Motorized" }
+		20 = { "Norwalk Motorized" }
+		21 = { "Newton Motorized" }
+		22 = { "Danbury Motorized" }
+		23 = { "Cranston Motorized" }
+		24 = { "Somerville Gan Motorized" }
+		25 = { "Stratford Motorized" }
+		26 = { "%d. Motorized" }
+		27 = { "%d. Motorized" }
+		28 = { "%d. Motorized" }
+		29 = { "%d. Motorized" }
+		30 = { "%d. Motorized" }
+
+	}
+}
+
+NEG_ARM_01 = 
+{
+	name = "Armored Divisions"
+
+	for_countries = { NEG }
+
+	can_use = { always = yes }
+
+	division_types = { "light_armor" "medium_armor" "heavy_armor" "modern_armor" }
+
+	# Number reservation system will tie to another group.
+	link_numbering_with = { NEG_INF_01 }
+
+	fallback_name = "%d. Armored Division"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "Boston Armored Div." }
+		2 = { "Worcester Armored Div." }
+		3 = { "Providence Armored Div." }
+		4 = { "Springfield Armored Div." }
+		5 = { "Bridgeport Armored Div." }
+		6 = { "New Haven Armored Div." }
+		7 = { "Stamford Armored Div." }
+		8 = { "Hartford Armored Div." }
+		9 = { "Cambridge Armored Div." }
+		10 = { "Manchester Armored Div." }
+		11 = { "Lowell Armored Div." }
+		12 = { "Waterbury Armored Div." }
+		13 = { "Brockton Armored Div." }
+		14 = { "New Bedford Armored Div." }
+		15 = { "Portland Armored Div." }
+		16 = { "Quincy Armored Div." }
+		17 = { "Lynn Armored Div." }
+		18 = { "Fall River Armored Div." }
+		19 = { "Nashua Armored Div." }
+		20 = { "Norwalk Armored Div." }
+		21 = { "Newton Armored Div." }
+		22 = { "Danbury Armored Div." }
+		23 = { "Cranston Armored Div." }
+		24 = { "Somerville Gan Armored Div." }
+		25 = { "Stratford Armored Div." }
+		26 = { "%d. Armored Division" }
+		27 = { "%d. Armored Division" }
+		28 = { "%d. Armored Division" }
+		29 = { "%d. Armored Division" }
+		30 = { "%d. Armored Division" }
+
+	}
+}
+
+NEG_MEC_01 = 
+{
+	name = "Mechanised Divisions"
+
+	for_countries = { NEG }
+
+	can_use = { always = yes }
+
+	division_types = { "mechanized"  }
+
+	# Number reservation system will tie to another group.
+	link_numbering_with = { NEG_INF_01 }
+
+	fallback_name = "%d. Half Track Division"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "Boston Half Track Div." }
+		2 = { "Worcester Half Track Div." }
+		3 = { "Providence Half Track Div." }
+		4 = { "Springfield Half Track Div." }
+		5 = { "Bridgeport Half Track Div." }
+		6 = { "New Haven Half Track Div." }
+		7 = { "Stamford Half Track Div." }
+		8 = { "Hartford Half Track Div." }
+		9 = { "Cambridge Half Track Div." }
+		10 = { "Manchester Half Track Div." }
+		11 = { "Lowell Half Track Div." }
+		12 = { "Waterbury Half Track Div." }
+		13 = { "Brockton Half Track Div." }
+		14 = { "New Bedford Half Track Div." }
+		15 = { "Portland Half Track Div." }
+		16 = { "Quincy Half Track Div." }
+		17 = { "Lynn Half Track Div." }
+		18 = { "Fall River Half Track Div." }
+		19 = { "Nashua Half Track Div." }
+		20 = { "Norwalk Half Track Div." }
+		21 = { "Newton Half Track Div." }
+		22 = { "Danbury Half Track Div." }
+		23 = { "Cranston Half Track Div." }
+		24 = { "Somerville Gan Half Track Div." }
+		25 = { "Stratford Half Track Div." }
+		26 = { "%d. Half Track Division" }
+		27 = { "%d. Half Track Division" }
+		28 = { "%d. Half Track Division" }
+		29 = { "%d. Half Track Division" }
+		30 = { "%d. Half Track Division" }
+
+	}
+}
+
+NEG_GAR_01 = 
+{
+	name = "Garrison Divisions"
+
+	for_countries = { NEG }
+
+	can_use = { always = yes }
+
+	division_types = { "infantry" }
+
+	# Number reservation system will tie to another group.
+	link_numbering_with = { NEG_INF_01 }
+
+	fallback_name = "%d. Militia"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "Boston Militia" }
+		2 = { "Worcester Militia" }
+		3 = { "Providence Militia" }
+		4 = { "Springfield Militia" }
+		5 = { "Bridgeport Militia" }
+		6 = { "New Haven Militia" }
+		7 = { "Stamford Militia" }
+		8 = { "Hartford Militia" }
+		9 = { "Cambridge Militia" }
+		10 = { "Manchester Militia" }
+		11 = { "Lowell Militia" }
+		12 = { "Waterbury Militia" }
+		13 = { "Brockton Militia" }
+		14 = { "New Bedford Militia" }
+		15 = { "Portland Militia" }
+		16 = { "Quincy Militia" }
+		17 = { "Lynn Militia" }
+		18 = { "Fall River Militia" }
+		19 = { "Nashua Militia" }
+		20 = { "Norwalk Militia" }
+		21 = { "Newton Militia" }
+		22 = { "Danbury Militia" }
+		23 = { "Cranston Militia" }
+		24 = { "Somerville Gan Militia" }
+		25 = { "Stratford Militia" }
+		27 = { "%d. Militia" }
+		28 = { "%d. Militia" }
+		29 = { "%d. Militia" }
+		30 = { "%d. Militia" }
+
+	}
+}
+
+NEG_MAR_01 = 
+{
+	name = "Marine Divisions"
+
+	for_countries = { NEG }
+
+	can_use = { always = yes }
+
+	division_types = { "marine" }
+
+	# Number reservation system will tie to another group.
+	link_numbering_with = { NEG_INF_01 }
+
+	fallback_name = "%d. Marine Division"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "Boston Marine Division" }
+		2 = { "Worcester Marine Division" }
+		3 = { "Providence Marine Division" }
+		4 = { "Springfield Marine Division" }
+		5 = { "Bridgeport Marine Division" }
+		6 = { "New Haven Marine Division" }
+		7 = { "Stamford Marine Division" }
+		8 = { "Hartford Marine Division" }
+		9 = { "Cambridge Marine Division" }
+		10 = { "Manchester Marine Division" }
+		11 = { "Lowell Marine Division" }
+		12 = { "Waterbury Marine Division" }
+		13 = { "Brockton Marine Division" }
+		14 = { "New Bedford Marine Division" }
+		15 = { "Portland Marine Division" }
+		16 = { "Quincy Marine Division" }
+		17 = { "Lynn Marine Division" }
+		18 = { "Fall River Marine Division" }
+		19 = { "Nashua Marine Division" }
+		20 = { "Norwalk Marine Division" }
+		21 = { "Newton Marine Division" }
+		22 = { "Danbury Marine Division" }
+		23 = { "Cranston Marine Division" }
+		24 = { "Somerville Gan Marine Division" }
+		25 = { "Stratford Marine Division" }
+		26 = { "%d. Marine Division" }
+		27 = { "%d. Marine Division" }
+		28 = { "%d. Marine Division" }
+		29 = { "%d. Marine Division" }
+		30 = { "%d. Marine Division" }
+
+	}
+}
+
+NEG_MTN_01 = 
+{
+	name = "Mountain Divisions"
+
+	for_countries = { NEG }
+
+	can_use = { always = yes }
+
+	division_types = { "mountaineers" }
+
+	# Number reservation system will tie to another group.
+	link_numbering_with = { NEG_INF_01 }
+
+	fallback_name = "%d. Mountain Division"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "Boston Mountain Division" }
+		2 = { "Worcester Mountain Division" }
+		3 = { "Providence Mountain Division" }
+		4 = { "Springfield Mountain Division" }
+		5 = { "Bridgeport Mountain Division" }
+		6 = { "New Haven Mountain Division" }
+		7 = { "Stamford Mountain Division" }
+		8 = { "Hartford Mountain Division" }
+		9 = { "Cambridge Mountain Division" }
+		10 = { "Manchester Mountain Division" }
+		11 = { "Lowell Mountain Division" }
+		12 = { "Waterbury Mountain Division" }
+		13 = { "Brockton Mountain Division" }
+		14 = { "New Bedford Mountain Division" }
+		15 = { "Portland Mountain Division" }
+		16 = { "Quincy Mountain Division" }
+		17 = { "Lynn Mountain Division" }
+		18 = { "Fall River Mountain Division" }
+		19 = { "Nashua Mountain Division" }
+		20 = { "Norwalk Mountain Division" }
+		21 = { "Newton Mountain Division" }
+		22 = { "Danbury Mountain Division" }
+		23 = { "Cranston Mountain Division" }
+		24 = { "Somerville Gan Mountain Division" }
+		25 = { "Stratford Mountain Division" }
+		26 = { "%d. Mountain Division" }
+		27 = { "%d. Mountain Division" }
+		28 = { "%d. Mountain Division" }
+		29 = { "%d. Mountain Division" }
+		30 = { "%d. Mountain Division" }
+
+	}
+}
+
+NEG_PAR_01 = 
+{
+	name = "Paratrooper Divisions"
+
+	for_countries = { NEG }
+
+	can_use = { always = yes }
+
+	division_types = { "paratrooper" }
+
+	# Number reservation system will tie to another group.
+	link_numbering_with = { NEG_INF_01 }
+
+	fallback_name = "%d. Para Division"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "Boston Para Division" }
+		2 = { "Worcester Para Division" }
+		3 = { "Providence Para Division" }
+		4 = { "Springfield Para Division" }
+		5 = { "Bridgeport Para Division" }
+		6 = { "New Haven Para Division" }
+		7 = { "Stamford Para Division" }
+		8 = { "Hartford Para Division" }
+		9 = { "Cambridge Para Division" }
+		10 = { "Manchester Para Division" }
+		11 = { "Lowell Para Division" }
+		12 = { "Waterbury Para Division" }
+		13 = { "Brockton Para Division" }
+		14 = { "New Bedford Para Division" }
+		15 = { "Portland Para Division" }
+		16 = { "Quincy Para Division" }
+		17 = { "Lynn Para Division" }
+		18 = { "Fall River Para Division" }
+		19 = { "Nashua Para Division" }
+		20 = { "Norwalk Para Division" }
+		21 = { "Newton Para Division" }
+		22 = { "Danbury Para Division" }
+		23 = { "Cranston Para Division" }
+		24 = { "Somerville Gan Para Division" }
+		25 = { "Stratford Para Division" }
+		26 = { "%d. Para Division" }
+		27 = { "%d. Para Division" }
+		28 = { "%d. Para Division" }
+		29 = { "%d. Para Division" }
+		30 = { "%d. Para Division" }
+
+	}
+}
